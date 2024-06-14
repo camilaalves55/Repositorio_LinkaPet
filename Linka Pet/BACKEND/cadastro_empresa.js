@@ -1,6 +1,5 @@
 const NOME = document.getElementById('nome');
 const TELEFONE = document.getElementById('telefone');
-// const NASCIMENTO = document.getElementById('dataNascimento');
 const NOME_EMPRESA = document.getElementById('nomeEmpresa');
 const ENDERECO = document.getElementById('endereco');
 const EMAIL = document.getElementById('email');

@@ -72,12 +72,6 @@ main {
 }
 
 .buscar{
-    /* border: 2px solid var(--branco);
-    background-color: var(--cinza_claro);
-    width: 340px;
-    height: 30px;
-    border-radius: 25px; */
-
     width: 340px;
     height: 30px;
     display: flex;
@@ -87,21 +81,15 @@ main {
 
 .buscar #buscarInput{
     background-color: var(--cinza_claro);
-    /* margin-left: 1vw; */
     width: 340px;
-    /* border: none; */
     border-radius: 25px 0px 0px 25px;
-    /* height: 30px; */
     border: 2px solid var(--branco);
-    /* border: 1px solid rgb(133, 29, 29); */
 }
 
 .buscar #buscarButton{
     background-color: var(--cor_fundo);
     border-radius: 0px 25px 25px 0px;
     border: 2px solid var(--branco);
-    /* height: 30px; */
-    /* border: none; */
 }
 
 #buscarButton:hover {

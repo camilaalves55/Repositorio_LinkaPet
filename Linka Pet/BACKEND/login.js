@@ -8,17 +8,15 @@ BOTAO.addEventListener('click', async function(e) {
     const emailAtual = EMAIL.value;
     const senhaAtual = SENHA.value;
 
-    // Verificação localStorage
     const usuarioSalvo = window.localStorage.getItem('usuario');
     const senhaSalva = window.localStorage.getItem('senha');
 
     if (emailAtual === usuarioSalvo && senhaAtual === senhaSalva) {
         alert('Login bem-sucedido com dados salvos localmente!');
-        window.location.href = 'inicio1.html'; // Redireciona para a página inicial
+        window.location.href = 'inicio1.html'; 
         return;
     }
 
-    // Se dados não estão no localStorage ou não coincidem, verifica no servidor
     const data = {
         email: emailAtual,
         senha: senhaAtual
@@ -33,11 +31,11 @@ BOTAO.addEventListener('click', async function(e) {
 
         const content = await response.json();
 
-        console.log('Response content:', content); // Log para depuração
+        console.log('Response content:', content); 
 
         if (content.success) {
             alert('Login bem-sucedido!');
-            window.location.href = 'inicio1.html'; // Redireciona para a página inicial
+            window.location.href = 'inicio1.html'; 
         } else {
             alert('Erro no login: ' + content.message);
         }

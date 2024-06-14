@@ -50,7 +50,6 @@ label {
     margin-top: 10px;
     padding: 5px 10px;
     font-size: 20px;
-    /* font-weight: 600; */
     color: var(--cinza_claro);
 }
 
@@ -59,7 +58,6 @@ input {
     width: 93%;
     margin: auto;
     padding: 13px;
-    /* border: 1px solid var(--branco); */
     border-radius: 15px;
     font-family: "Roboto",sans-serif;
     opacity: 0.80;

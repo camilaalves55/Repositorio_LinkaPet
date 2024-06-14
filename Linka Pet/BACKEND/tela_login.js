@@ -16,27 +16,3 @@ BOTAO.addEventListener('click', function(){
         alert("Usuário ou Senha incorretos")
     }
 })
-
-
-let enviar = document.querySelector('.submit');
-
-enviar.onclick = async function(e) {
-    e.preventDefault();
-    let email       = document.getElementById("usuario").value;
-    let senha = document.getElementById("senha").value;
-    let data        = {email,senha}
-
-    const response = await fetch('http://localhost:3003/api/store/login', {
-        method: "POST",
-        headers: {"Content-type": "application/json;charset=UTF-8"},
-        body: JSON.stringify(data)
-    });
-
-    let content = await response.json();
-
-    if(content.success) {
-        alert("Sucesso")
-    } else {
-        alert('Não');
-    }
-}
