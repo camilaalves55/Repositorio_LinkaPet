@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário com Estilização de Date Picker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="form">
+        <fieldset>
+            <legend>Escolha seu gênero:</legend>
+            <label for="masculino">
+                <input type="radio" id="masculino" name="genero" value="Masculino"> Masculino
+            </label>
+            <label for="feminino">
+                <input type="radio" id="feminino" name="genero" value="Feminino"> Feminino
+            </label>
+            <label for="outro">
+                <input type="radio" id="outro" name="genero" value="Outro"> Outro
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Escolha sua data de nascimento:</legend>
+            <label for="dataNascimento">
+                <input type="date" id="dataNascimento" name="dataNascimento">
+            </label>
+        </fieldset>
+        <button type="submit" class="submit">Enviar</button>
+    </form>
+    <script src="form.js"></script>
+</body>
+</html>

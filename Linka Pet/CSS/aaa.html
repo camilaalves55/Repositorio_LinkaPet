@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Estilização do Calendário com Flatpickr</title>
+    <!-- Incluindo Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        /* Estilo do calendário */
+        .flatpickr-calendar {
+            font-family: Arial, sans-serif;
+            border: 1px solid #53EAFF;
+            border-radius: 5px;
+            background-color: #918c8c;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          
+        }
+        .flatpickr-calendar .flatpickr-day {
+            padding: 10px;
+        }
+        .flatpickr-calendar .flatpickr-day.today {
+            background-color: #53EAFF;
+            color: #40A8B6;
+            border-radius: 50%;
+        }
+        .flatpickr-calendar .flatpickr-day:hover {
+            background-color: #40A8B6;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <fieldset>
+            <legend>Escolha sua data de nascimento:</legend>
+            <label for="dataNascimento">
+                <input type="text" id="dataNascimento" name="dataNascimento" placeholder="Selecionar data">
+            </label>
+        </fieldset>
+        <button type="submit" class="submit">Enviar</button>
+    </form>
+    <!-- Incluindo Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="form.js"></script>
+</body>
+</html>
