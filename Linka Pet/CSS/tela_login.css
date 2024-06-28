@@ -86,14 +86,15 @@ input.submit {
     background-color: var(--verde_agua);
     cursor: pointer;
     margin-top: 4vh;
-    border: 1px solid var(--preto);
+    border: 1px solid var(--azul);
 }
 
 
 .submit:hover {
     background-color: var(--azul);
     color: white;
-    transform: scale(1.1)
+    transform: scale(1.1);
+    border: 1px solid var(var(--verde_agua));
 }
 
 #menssagem{

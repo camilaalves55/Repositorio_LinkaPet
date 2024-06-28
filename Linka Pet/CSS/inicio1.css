@@ -19,6 +19,13 @@ body{
     --preto: #000;
 }
 
+/* #logo_pagina {
+    height: 10vh;
+    width: 15vw;
+
+    border: 1px solid black;
+} */
+
 .tela {
     display: flex;
     background-color: var(--cor_fundo);
@@ -47,7 +54,7 @@ body{
     height: 12vh;
     width: 6px;
 }
-
+radius
 .tela::-webkit-scrollbar-thumb {
     background-color: var(--verde_agua);
 }
@@ -77,19 +84,29 @@ main {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    border: 1px solid var(--branco);
+    border-radius: 25px;
 }
 
 .buscar #buscarInput{
     background-color: var(--cinza_claro);
     width: 340px;
     border-radius: 25px 0px 0px 25px;
-    border: 2px solid var(--branco);
+    /* border: 2px solid var(--branco); */
+    padding: 1vw;
+    border: none;
+}
+
+::placeholder{
+    font-size: 15px;
+    /* margin-left: 15vw; */
 }
 
 .buscar #buscarButton{
     background-color: var(--cor_fundo);
     border-radius: 0px 25px 25px 0px;
-    border: 2px solid var(--branco);
+    border: none;
+    /* border: 2px solid var(--branco); */
 }
 
 #buscarButton:hover {
