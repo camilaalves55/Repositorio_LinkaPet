@@ -71,7 +71,7 @@ input {
     font-family: "Roboto",sans-serif;
     opacity: 0.80;
     background-color: var(--cinza_claro);
-    font-size: 15px;;
+    font-size: 15px;
 }
 
 input.submit{

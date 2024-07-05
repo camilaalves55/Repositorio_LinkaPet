@@ -5,21 +5,22 @@ const ENDERECO = document.getElementById('endereco');
 const EMAIL = document.getElementById('email');
 const SENHA = document.getElementById('senha');
 const CONFIRMA_SENHA = document.getElementById('confirmaSenha');
+// let tipo_cliente = "fisico";
 
 const BOTAO = document.querySelector('.submit');
 
-window.localStorage.clear();
+// window.localStorage.clear();
 
 BOTAO.addEventListener('click', async function(e) {
     e.preventDefault();
 
     if (SENHA.value === CONFIRMA_SENHA.value && SENHA.value !== '') {
-        window.localStorage.setItem('nome', NOME.value);
-        window.localStorage.setItem('telefone', TELEFONE.value);
-        window.localStorage.setItem('nomeUsuario', NOME_USUARIO.value);
-        window.localStorage.setItem('endereco', ENDERECO.value);
-        window.localStorage.setItem('usuario', EMAIL.value);
-        window.localStorage.setItem('senha', SENHA.value);
+        // window.localStorage.setItem('nome', NOME.value);
+        // window.localStorage.setItem('telefone', TELEFONE.value);
+        // window.localStorage.setItem('nomeUsuario', NOME_USUARIO.value);
+        // window.localStorage.setItem('endereco', ENDERECO.value);
+        // window.localStorage.setItem('usuario', EMAIL.value);
+        // window.localStorage.setItem('senha', SENHA.value);
 
         let data = {
             nome: NOME.value,
@@ -27,7 +28,8 @@ BOTAO.addEventListener('click', async function(e) {
             nome_usuario: NOME_USUARIO.value,
             endereco: ENDERECO.value,
             email: EMAIL.value,
-            senha: SENHA.value
+            senha: SENHA.value,
+            tipo_cliente: "fisico"
         };
 
         try {

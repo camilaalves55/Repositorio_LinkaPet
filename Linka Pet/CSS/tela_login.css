@@ -75,6 +75,10 @@ input {
     font-size: 17px;;
 }
 
+input {
+    font-size: 15px;
+}
+
 input.submit {
     width: 8vw;
     border-radius: 25px;
