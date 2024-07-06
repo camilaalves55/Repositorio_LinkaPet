@@ -29,12 +29,13 @@ body{
 .tela {
     display: flex;
     background-color: var(--cor_fundo);
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
-    align-items: center;
+    /* align-items: start; */
     position: relative;
     width: 30vw;
     height: 97vh;
+    margin-left: 3vw;
     margin: auto;
     box-shadow: 3px 6px 13px 3px #424141;
     /* border-radius: 3vh; */
@@ -63,6 +64,7 @@ body{
 main {
     margin-bottom: 4.5vh;
     margin-top: 10vh;
+    margin-left: 3vw;
 }
 
 .letras_branco{

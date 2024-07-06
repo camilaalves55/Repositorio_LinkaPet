@@ -1,21 +1,11 @@
-const EMAIL = document.getElementById('usuario');
-const SENHA = document.getElementById('senha');
+// const form = document.getElementById('loginForm');
 const BOTAO = document.querySelector('.submit');
 
 BOTAO.addEventListener('click', async function(e) {
     e.preventDefault();
 
-    const emailAtual = ''.value;
-    const senhaAtual = ''.value;
-
-    const usuarioSalvo = getItem('usuario');
-    const senhaSalva = getItem('senha');
-
-    if (emailAtual === usuarioSalvo && senhaAtual === senhaSalva) {
-        alert('Login bem-sucedido com dados salvos localmente!');
-        window.location.href = 'inicio1.html'; 
-        return;
-    }
+    const emailAtual = document.getElementById('email').value;
+    const senhaAtual = document.getElementById('senha').value;
 
     const data = {
         email: emailAtual,
@@ -23,15 +13,17 @@ BOTAO.addEventListener('click', async function(e) {
     };
 
     try {
-        const response = await fetch('http://localhost:3004/api/store/login', {
+        const response = await fetch('http://localhost:3004/api/store/cadastro_cliente', 'http://localhost:3004/api/store/cadastro_empresa', {
             method: 'GET',
-            headers: { 'Content-Type': 'application/json;charset=UTF-8' },
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify(data)
         });
 
         const content = await response.json();
 
-        console.log('Response content:', content); 
+        console.log('Response content:', content);
 
         if (content.success) {
             alert('Login bem-sucedido!');
@@ -44,6 +36,65 @@ BOTAO.addEventListener('click', async function(e) {
         alert('Ocorreu um erro ao tentar fazer login. Tente novamente mais tarde.');
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* // const EMAIL = document.getElementById('usuario');
+// const SENHA = document.getElementById('senha');
+// const BOTAO = document.querySelector('.submit');
+
+// BOTAO.addEventListener('click', async function(e) { */}
+//     e.preventDefault();
+
+//     const emailAtual = ''.value;
+//     const senhaAtual = ''.value;
+
+//     const email = getItem('email');
+//     const senha = getItem('senha');
+
+//     if (emailAtual === email && senhaAtual === senha) {
+//         // alert('Login bem-sucedido com dados salvos localmente!');
+//         // window.location.href = 'inicio1.html'; 
+//         // return;
+//     }
+
+//     const data = {
+//         email: emailAtual,
+//         senha: senhaAtual
+//     };
+
+//     try {
+//         const response = await fetch('http://localhost:3004/api/store/cadastro_cliente', 'http://localhost:3004/api/store/cadastro_empresa', {
+//             method: 'GET',
+//             headers: { 'Content-Type': 'application/json;charset=UTF-8' },
+//             body: JSON.stringify(data)
+//         });
+
+//         const content = await response.json();
+
+//         console.log('Response content:', content); 
+
+//         if (content.success) {
+//             alert('Login bem-sucedido!');
+//             window.location.href = 'inicio1.html'; 
+//         } else {
+//             alert('Erro no login: ' + content.message);
+//         }
+//     } catch (error) {
+//         console.error('Erro:', error);
+//         alert('Ocorreu um erro ao tentar fazer login. Tente novamente mais tarde.');
+//     }
+// });
 
 
 
