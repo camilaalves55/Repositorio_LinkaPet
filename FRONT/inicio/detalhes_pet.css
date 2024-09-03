@@ -1,0 +1,147 @@
+* {
+    color: var(--branco);
+}
+
+body {
+    background-color: var(--branco);
+}
+
+:root {
+    --cor_fundo: #292626;
+    --branco: #FFFFFF;
+    --verde_agua: #53EAFF;
+    --cinza_claro: #918c8c;
+    /* 80% */
+    --cinza_escuro: #D9D9D9;
+    /* 50% */
+    --azul: #40A8B6;
+    --cor_linha: #998A8A;
+    --preto: #000;
+}
+
+.tela {
+    display: flex;
+    background-color: var(--cor_fundo);
+    flex-direction: column;
+    position: relative;
+    width: 30vw;
+    height: 97vh;
+    margin-left: 3vw;
+    margin: auto;
+    box-shadow: 3px 6px 13px 3px #424141;
+    border: 1px solid rgb(189, 178, 178);
+    overflow: scroll;
+}
+
+.tela::-webkit-scrollbar-track {
+    width: 30vw;
+    background-color: var(--cinza_escuro);
+    box-shadow: inset 0 0 10px 5px var(--cor_fundo);
+    position: fixed;
+    bottom: 0.5vh;
+    left: 2vw;
+}
+
+.tela::-webkit-scrollbar {
+    height: 12vh;
+    width: 6px;
+}
+
+.tela::-webkit-scrollbar-thumb {
+    background-color: var(--verde_agua);
+}
+
+.footer {
+    height: 15vh;
+    width: 30vw;
+    background-color: var(--cinza_escuro);
+    box-shadow: inset 0 0 10px 5px var(--cor_fundo);
+    position: fixed;
+    bottom: 1.2vh;
+    right: 35vw;
+}
+
+.botoes-paginas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.botoes-paginas a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra_de_icones {
+    height: 15vh;
+    width: 10vw;
+}
+
+h1 {
+    margin-left: 2vw;
+    margin-top: 10vh;
+}
+
+h3 {
+    color: var(--verde_agua);
+    font-weight: lighter;
+}
+
+#servicos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.servico-item {
+    border: 1px solid black;
+    background-color: var(--cinza_claro);
+    border-radius: 10px;
+
+    height: 15vh;
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 1vh;
+
+}
+
+.servico-info {
+
+
+
+
+    height: 15vh;
+    width: 12vw;
+
+}
+
+.servico-botao {
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    height: 15vh;
+    width: 10vw;
+
+}
+
+button {
+    background-color: var(--verde_agua);
+    color: var(--branco);
+    border: 1px solid var(--azul);
+    border-radius: 2px;
+    padding: 4px;
+}
+
+button:hover {
+    background-color: var(--azul);
+    color: var(--branco);
+    border: 1px solid var(--verde_agua);
+}

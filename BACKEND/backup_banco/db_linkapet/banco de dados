@@ -1,0 +1,126 @@
+CREATE DATABASE linka_pet;
+
+USE linka_pet;
+
+CREATE TABLE cadastro_cliente (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    telefone VARCHAR(14) NOT NULL,
+    nome_usuario VARCHAR(30) NOT NULL,
+    cpf VARCHAR(120) NOT NULL,
+    endereco VARCHAR(255) NOT NULL,
+    tipo_cliente ENUM('fisico') NOT NULL,
+    email VARCHAR(120) NOT NULL UNIQUE,
+    senha VARCHAR(120) NOT NULL,
+    foto_perfil varchar(255),
+    status ENUM('ATIVO', 'INATIVO') DEFAULT 'ATIVO',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE cadastro_empresa (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nome_empresa VARCHAR(30) NOT NULL,
+    nome_usuario VARCHAR(30) NOT NULL,
+    cnpj VARCHAR(120) NOT NULL,
+    tipo_cliente ENUM('juridico') NOT NULL,
+    email VARCHAR(120) NOT NULL UNIQUE,
+    senha VARCHAR(120) NOT NULL,
+    status ENUM('ATIVO', 'INATIVO') DEFAULT 'ATIVO',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE pets_cadastrados (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nome_pet VARCHAR(255) NOT NULL,
+    raca VARCHAR(255) NOT NULL,
+    idade INT NOT NULL,
+    imagem VARCHAR(255),
+    descricao TEXT,
+    especie VARCHAR(255) NOT NULL,
+    data_nascimento DATE,
+    cliente_id INT NOT NULL,
+    FOREIGN KEY (cliente_id) REFERENCES cadastro_cliente(id) ON DELETE CASCADE
+);
+
+CREATE TABLE servicos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome_servico VARCHAR(255) NOT NULL,
+    descricao_servico TEXT,
+    duracao INT 
+);
+
+CREATE TABLE empresas_servicos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    empresa_id INT NOT NULL,
+    servico_id INT NOT NULL,
+    servico VARCHAR(255) NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    horarios_disponiveis varchar(255) NOT NULL,
+    disponibilidade BOOLEAN DEFAULT TRUE,
+    FOREIGN KEY (empresa_id) REFERENCES cadastro_empresa(id) ON DELETE CASCADE,
+    FOREIGN KEY (servico_id) REFERENCES servicos(id) ON DELETE CASCADE
+);
+
+CREATE TABLE agendamentos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    cliente_id INT NOT NULL,
+    empresa_id INT NOT NULL,
+    servico_id INT NOT NULL,
+    pet_id INT NOT NULL,
+    horario varchar(100) NOT NULL,
+    data_agendada DATE NOT NULL,
+    status ENUM('PENDENTE', 'CONFIRMADO', 'CONCLUIDO', 'CANCELADO') DEFAULT 'PENDENTE',
+    FOREIGN KEY (cliente_id) REFERENCES cadastro_cliente(id) ON DELETE CASCADE,
+    FOREIGN KEY (empresa_id) REFERENCES cadastro_empresa(id) ON DELETE CASCADE,
+    FOREIGN KEY (servico_id) REFERENCES empresas_servicos(servico_id) ON DELETE CASCADE
+);
+
+CREATE TABLE perfil_empresa (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    empresa_id INT NOT NULL,
+    logo varchar(255),
+    nome_empresa VARCHAR(255),
+    sobre_empresa VARCHAR(255) NOT NULL,
+    tipos_servico VARCHAR(255),
+    horario_funcionamento VARCHAR(255),
+	telefone VARCHAR(14) NOT NULL,
+    endereco VARCHAR(255) NOT NULL,
+    FOREIGN KEY (empresa_id) REFERENCES cadastro_empresa(id) ON DELETE CASCADE
+);
+
+INSERT INTO servicos (nome_servico, descricao_servico, duracao)
+VALUES 
+('Banho Completo', 'Banho completo com produtos específicos para o tipo de pelagem do pet.', 60),
+('Tosa Completa', 'Tosa completa de acordo com o padrão da raça ou preferência do cliente.', 90),
+('Tosa Higiênica', 'Corte de pelos em áreas higiênicas (patinhas, barriga, e região íntima).', 30),
+('Tosa Especializada', 'Tosa específica, como tosa bebê ou na tesoura.', 120),
+('Desembaraçamento de Pelos', 'Desembaraçamento de nós e pelo embolado.', 45),
+('Corte de Unhas', 'Corte e lixamento de unhas.', 15),
+('Limpeza de Ouvidos', 'Limpeza de ouvidos com produtos específicos.', 15),
+('Hidratação dos Pelos', 'Tratamento hidratante para pelos ressecados ou danificados.', 30),
+('Escovação Dental', 'Escovação dos dentes com produtos veterinários.', 20),
+('Tintura de Pelos', 'Aplicação de tintura específica para pelos de pets.', 60),
+('Penteados e Laços', 'Penteado especial com aplicação de laços e acessórios.', 30),
+('Aplicação de Perfumes', 'Aplicação de perfume específico para pets.', 10),
+('Tratamento contra Pulgas e Carrapatos', 'Aplicação de produtos para eliminação de parasitas.', 45),
+('Limpeza de Glândulas Anais', 'Limpeza de glândulas anais do pet.', 20),
+('Banho Seco', 'Banho a seco, indicado para pets que não podem tomar banho convencional.', 30),
+('Massagem para Pets', 'Massagem relaxante para cães e gatos.', 45),
+('Aromaterapia para Pets', 'Tratamento de aromaterapia para relaxamento do pet.', 30),
+('Spa para Pets', 'Pacote completo de relaxamento e cuidados para o pet.', 120),
+('Diária de Hospedagem', 'Hospedagem do pet por 24 horas.', 1440),
+('Meio Período na Creche', 'Cuidado do pet na creche por meio período.', 240),
+('Diária Completa na Creche', 'Cuidado do pet na creche por um dia inteiro.', 480),
+('Hospedagem em Períodos Festivos', 'Hospedagem durante períodos festivos como Natal e Ano Novo.', 1440),
+('Sessão de Adestramento Básico', 'Sessão de adestramento para comandos básicos.', 60),
+('Sessão de Adestramento Avançado', 'Sessão de adestramento para comandos avançados.', 90),
+('Treinamento de Obediência', 'Treinamento focado em obediência e comportamento.', 60),
+('Treinamento para Socialização', 'Treinamento para melhorar a socialização com outros animais e pessoas.', 60);
+
+select * from linka_pet.cadastro_cliente;
+select * from linka_pet.cadastro_empresa;
+select * from linka_pet.empresas_servicos;
+select * from linka_pet.perfil_empresa;
+select * from linka_pet.pets_cadastrados;
+select * from linka_pet.servicos;
+select * from linka_pet.agendamentos;

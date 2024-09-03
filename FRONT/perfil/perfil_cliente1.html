@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="perfil_cliente1.css">
+    <link rel="icon" type="image/x-icon" href="../icones/logo_site.png">
+    <title>Linka Pet</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <section class="tela">
+        <header>
+            <div id="cabeçalho">
+                <h1>PERFIL</h1>
+                <a href="menu_cliente.html">
+                    <img id="menu" src="../icones/icone-menu.png" alt="Ícone de menu">
+                </a>
+            </div>
+            <div id="linha"></div>
+        </header>
+        <main>
+            <div id="perfil">
+                <button id="foto_perfil">
+                    <img id="imagem_perfil" src="../imagens/foto_perfil.png" alt="Foto de perfil">
+                </button>
+
+                <div id="modal" class="modal" style="display: none;">
+                    <div class="modal-content">
+                        <span id="close">&times;</span>
+                        <img id="previewImg" src="../imagens/foto_perfil.png" alt="Pré-visualização da foto">
+                        <input type="file" id="fileInput" style="display: none;">
+                        <button id="trocarFotoBtn">Trocar Foto</button>
+                        <button id="okBtn" style="display: none;">OK</button>
+                    </div>
+                </div>
+
+                <div id="info_perfil">
+                    <p id="nome"><span class="titulo">Nome:</span></p>
+                    <p id="nome_usuario"><span class="titulo">Nome de Usuário:</span></p>
+                    <p id="email"><span class="titulo">Email:</span></p>
+                    <p id="telefone"><span class="titulo">Telefone:</span></p>
+                    <p id="endereco"><span class="titulo">Endereço:</span></p>
+                </div>
+            </div>
+            <div id="barra_pet">
+                <h3>PET's</h3>
+                <button id="adicionar_pet">Novo +</button>
+            </div>
+
+            
+        <div class="pets_lista"></div>
+
+            <div class="pets_cadastrados">
+                <div class="div_cards"></div>
+            </div>
+        </main>
+        <div class="footer">
+            <div class="botoes-paginas">
+                <a href="../inicio/inicio1.html">
+                    <img class="barra_de_icones" src="../icones/inicio_cinza.png" alt="Início">
+                </a>
+                <a href="../suporte/suporte.html">
+                    <img class="barra_de_icones" src="../icones/suporte_cinza.png" alt="Suporte">
+                </a>
+                <a href="">
+                    <img class="barra_de_icones" src="../icones/perfil_azul.png" alt="Perfil">
+                </a>
+            </div>
+        </div>
+        <footer></footer>
+    </section>
+    <script src="perfil_cliente1.js"></script>
+</body>
+</html>

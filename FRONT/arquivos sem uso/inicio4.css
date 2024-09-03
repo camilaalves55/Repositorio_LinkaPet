@@ -1,0 +1,222 @@
+body{
+    background-color: var(--branco);
+}
+
+:root{
+    --cor_fundo: #292626;
+    --branco: #FFFFFF;
+    --verde_agua: #53EAFF;
+    --cinza_claro: #918c8c;
+    /* 80% */
+    --cinza_escuro: #D9D9D9;
+    /* 50% */
+    --azul: #40A8B6;
+    --cor_linha: #998A8A;
+    --preto: #000;
+}
+
+.tela {
+    display: flex;
+    background-color: var(--cor_fundo);
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 30vw;
+    height: 97vh;
+    margin: auto;
+    box-shadow: 3px 6px 13px 3px #424141;
+    color: var(--branco);
+}
+
+#area_tela {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: start;
+
+    width: 25vw;
+    height: 70vh;
+}
+
+.horarios {
+    width: 320px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: var(--cinza_claro);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+#hora {
+    border: 1px solid var(--verde_agua);
+    color: var(--branco);
+}
+
+#hora:hover {
+    background-color: var(--azul);
+}
+
+#hora:active {
+    border: 2px solid var(--branco);
+}
+
+#agenda {
+    background-color: var(--cinza_claro);
+    color: var(--verde_agua);
+}
+
+#agendar{
+    width: 120px;
+    height: 40px;
+    border-radius: 40px;
+    border: solid 1px var(--verde_agua);
+    color: var(--branco);
+    background-color: var(--verde_agua);
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+
+    margin-left: 35%;
+}
+#agendar:hover{
+    background-color: var(--azul);
+    transform: scale(1.1)
+}
+
+#agendar:active {
+    border: 2px solid var(--branco);
+}
+
+.botoes-paginas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.botoes-paginas a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra_de_icones{
+    height: 15vh;
+    width: 10vw;
+}
+
+p {
+    font-size: 23px;
+}
+
+.footer{
+    height: 15vh;
+    width: 30vw;
+    background-color: var(--cinza_escuro);
+    box-shadow: inset 0 0 10px 5px var(--cor_fundo);
+    position: fixed;
+    bottom: 1.2vh;
+    right: 35vw;
+}
+
+.botoes-paginas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.botoes-paginas a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra_de_icones{
+    height: 15vh;
+    width: 10vw;
+}
+
+#agendar{
+    width: 120px;
+    height: 40px;
+    border-radius: 40px;
+    border: solid 1px var(--verde_agua);
+    color: var(--branco);
+    background-color: var(--verde_agua);
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+#agendar:hover{
+    background-color: var(--azul);
+    transform: scale(1.1)
+}
+
+#agendar:active {
+    border: 2px solid var(--branco);
+}
+
+
+.horarios {
+    width: 290px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: var(--cinza_claro);
+    padding: 2vh;
+}
+
+.horarios button {
+    width: 60px;
+    height: 25px;
+    border-radius: 5px; 
+    background-color: var(--verde_agua);
+    margin-bottom: 4px;
+}
+
+
+.buttonClicked {
+    background-color: var(--azul) !important;
+    border: 1px solid var(--branco);
+}
+
+
+.flatpickr-calendar {
+    font-family: Arial, sans-serif;
+    border: 3px solid #53EAFF;
+    border-radius: 5px;
+    background-color: #918c8c;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+  
+}
+.flatpickr-calendar .flatpickr-day {
+    padding: 10px;
+}
+.flatpickr-calendar .flatpickr-day.today {
+    background-color: #53EAFF;
+    color: #40A8B6;
+    border-radius: 50%;
+}
+.flatpickr-calendar .flatpickr-day:hover {
+    background-color: #40A8B6;
+    color: white;
+}
+
+label {
+    display: block;      
+    margin-bottom: 10px;
+    font-size: 14px;     
+    border-radius: 5vh;
+}
+
+input {
+    width: 200px;        
+    padding: 10px;        
+    border: 2px solid var(--verde_agua); 
+    border-radius: 2vh;    
+    font-size: 16px;      
+    color: var(--verde_agua);          
+    background-color: var(--cinza_claro); 
+}
+
+::placeholder{
+    color: var(--verde_agua);
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="servico_empresa.css">
+    <link rel="icon" id="logo_pagina" type="image/x-icon" href="../icones/logo_site.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Linka Pet</title>
+</head>
+<body>
+    <section class="tela">
+        <header>
+            <img id="imagem_site" src="../imagens/logo_LinkaPet.png" alt="Logo Linka Pet">
+        </header>
+        <main>
+            <div class="container">
+                <h1 class="my-4">Cadastro de Pet Shop</h1>
+                <button id="botao" class="btn btn-primary mb-3">Adicionar Empresa</button>
+                <div id="formContainer" style="display: none;">
+                    <form id="serviceForm">
+                        <div class="form-group">
+                            <label for="logo">Logo da Empresa</label>
+                            <input id="logo" type="file" class="form-control" required>
+                            <div id="fileName" class="file-name">Nenhum arquivo selecionado</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="nome_empresa">Nome da Empresa</label>
+                            <input type="text" class="form-control" id="nome_empresa" placeholder="Nome da Empresa" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sobre_empresa">Sobre a Empresa</label>
+                            <input type="text" class="form-control" id="sobre_empresa" placeholder="Sobre a Empresa" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nome_empresa">Telefone da Empresa</label>
+                            <input type="text" class="form-control" id="telefone" placeholder="Telefone da Empresa" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sobre_empresa">Endereçoa Empresa</label>
+                            <input type="text" class="form-control" id="endereco" placeholder="Endereço a Empresa" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="horario_funcionamento">Horário de Funcionamento</label>
+                            <input type="text" class="form-control" id="horario_funcionamento" placeholder="Horário de Funcionamento" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipos_servico">Tipos de Serviço Realizados</label>
+                            <input type="text" class="form-control" id="tipos_servico" placeholder="Tipos de Serviço" name="tipos_servico[]" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Salvar</button>
+        
+                    </form>
+                </div>
+            </div>
+        </main>
+        <div class="footer">
+            <div class="botoes-paginas">
+                <a href="../inicio/inicio1E.html">
+                    <img class="barra_de_icones" src="../icones/inicio_cinza.png" alt="">
+                </a>
+                <a href="../suporte/suporte_empresa.html">
+                    <img class="barra_de_icones" src="../icones/suporte_cinza.png" alt="">
+                </a>
+                <a href="../perfil/perfil_empresa.html">
+                    <img class="barra_de_icones" src="../icones/perfil_azul.png" alt="">
+                </a>
+            </div>
+        </div> 
+    </section>
+    <script src="servico_empresa.js" defer></script>
+</body>
+</html>
