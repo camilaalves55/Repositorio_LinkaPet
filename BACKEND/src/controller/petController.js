@@ -77,7 +77,7 @@ async function getPets(request, response) {
         });
     }
 
-    const query = "SELECT * FROM pets_cadastrados WHERE cliente_id = ? ORDER BY id DESC";
+    const query = "SELECT * FROM pets_cadastrados WHERE cliente_id = ? ORDER BY id ASC";
 
     connection.query(query, [clienteId], (err, results) => {
         if (err) {

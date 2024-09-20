@@ -1,14 +1,66 @@
-const multer = require("multer");
+// const multer = require("multer");
 
-var storage = multer.diskStorage({
+// var storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//         return cb(null, "./src/public");
+//     },
+//     filename: function (req, file, cb) {
+//         return cb(null, `${Date.now()}_${file.originalname}`);
+//     }
+// });
+
+// var upload = multer({ storage });
+
+// module.exports = upload;
+
+
+
+// const multer = require("multer");
+// const path = require("path");
+
+// const storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//         cb(null, path.join(__dirname, '..', 'uploads')); // Corrigir para o caminho correto
+//     },
+//     filename: function (req, file, cb) {
+//         cb(null, `${Date.now()}_${file.originalname}`);
+//     }
+// });
+
+// const upload = multer({ storage });
+
+// module.exports = upload;
+
+
+
+
+
+
+
+
+
+
+
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
+
+const uploadPath = path.join(__dirname, '..', 'uploads');
+
+if (!fs.existsSync(uploadPath)) {
+    fs.mkdirSync(uploadPath, { recursive: true });
+}
+
+const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        return cb(null, "./src/public");
+        cb(null, uploadPath);
     },
     filename: function (req, file, cb) {
-        return cb(null, `${Date.now()}_${file.originalname}`);
+        cb(null, `${Date.now()}_${file.originalname}`);
     }
 });
 
-var upload = multer({ storage });
+const upload = multer({ storage });
 
 module.exports = upload;
+
