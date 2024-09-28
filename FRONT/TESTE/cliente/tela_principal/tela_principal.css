@@ -1,7 +1,7 @@
 *{
     color: rgb(40, 40, 40);
     margin: 0;
-    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    font-family: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif';
 }
 
 /* body{
@@ -76,7 +76,7 @@ a{
 }
 
 a:hover{
-    color: var(--azul);
+    color: var(--verde_agua);
 }
 
 #link{
@@ -151,7 +151,7 @@ aside {
 article {
     height: 85vh;
     width: 85%;
-    background-color: #ffffffd4;
+    background-color: #fefefe;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -187,25 +187,30 @@ article {
     width: 27vw;
 
     display: flex;
-    justify-content: start;
+    justify-content: space-around;
     align-items:first baseline;
     flex-direction: column;
 }
 
 .boas_vindas h1 {
     color: var(--azul);
-    font-size: 35px;
-    margin-bottom: 3vh;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+
+    font-family: 'Cambria, Cochin, Georgia, Times, 'Times New Roman', serif';
+}
+
+.boas_vindas #nome_usuario {
+    color: #43cee1;
 }
 
 .boas_vindas p {
-    font-size: 19px;
+    font-size: 18px;
+    margin-top: 2vh;
 }
 
 .secao2 { 
  
-    /* background-color: #98f0fa50; */
+    background-color: #ffffff;
     height: 35vh;
     width: 32vw;
     /* border: 1px solid #40A8B6; */

@@ -1,0 +1,210 @@
+
+*{
+    color: rgb(0, 0, 0);
+    margin: 0;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--branco);
+    background: linear-gradient(to bottom, #c6eef9, #75dae1, #5dc5d2, #00bcd4);
+}
+
+
+/* -------------------------------------MAIN------------------------------------- */
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Or adjust as needed */
+    width: 60vw; /* Or adjust as needed */
+}
+
+.secao {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 80vh;
+    width: 60vw;
+    border:none;
+    /* border-radius: 2vw 0vw 0vw 2vw; */
+    border: 2px solid white;
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.584);
+    /* background-color: rgb(180, 251, 227); */
+    /* background-color: rgba(255, 255, 255, 0.216); */
+}
+
+.imagem_cadastro {
+    height: 80vh;
+    width: 23vw;
+    background-color: rgba(255, 255, 255, 0.216);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+ 
+    font-family: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif';
+/*    
+    border: 1px solid black; */
+}
+/* 
+h2{
+    color: #143a44;
+    font-size: 35px;
+} */
+
+h1 {
+    height: 40vh;
+    font-size: 26px;
+    color: #40A8B6;
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+    line-height: 1.4;
+    /* border: 2px solid #000000; */
+    width: 20vw;
+    /* Ajuste o valor conforme necessário */
+}
+
+
+.imagem_cadastro img{
+    height: 40vh;
+    width: 25vw;
+    margin-bottom: 5vh;
+    /* border: 1px solid black; */
+}
+
+.area_cadastro {
+    height: 80vh;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+    border-radius: 0vw 2vw 2vw 0vw;
+    background-color: white;
+    box-shadow: 0px 0px 8px 1px rgb(167, 165, 165);
+    /* border: 2px solid rgb(169, 17, 17); */
+}
+
+
+.formulario {
+    height: 70vh;
+    width: 30vw;
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    flex-direction: column;
+  
+    /* border: 2px solid white; */
+}
+
+
+
+
+input::placeholder{
+    color: #918c8c;
+    margin-left: 5px;
+}
+
+.input-linha {
+    border: none; 
+    border-bottom: 2px solid #918c8c;
+    outline: none;
+    padding: 5px 0; 
+    width: 100%; 
+    font-size: 14px; 
+    background-color: transparent;
+    margin-bottom: 12px;
+}
+
+.input-linha:focus {
+    border-bottom: 3px solid #2cd0df; 
+}
+
+
+
+label {
+    color: #40A8B6;
+    font-weight: bold;
+    font-size: 19px;
+    font-family: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif';
+}
+/* 
+h1 {
+    font-family: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif';
+    font-size: 36px;
+    color: #40A8B6;
+} */
+
+
+.select-linha {
+    border: none; 
+    border-bottom: 2px solid #918c8c; 
+    outline: none; 
+    background: transparent; 
+    padding: 5px 0;
+    font-size: 16px;
+    width: 100%;
+    appearance: none; 
+    color: #918c8c;
+}
+
+.select-linha:focus {
+    border-bottom: 2px solid #2cd0df; 
+}
+
+
+.select-linha::after {
+    content: '▼';
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; 
+}
+
+#enviar {
+    height: 7vh;
+    width: 9vw;
+
+}
+
+.submit {
+    height: 10vh;
+    width: 9vw;
+    border: 2px solid #918c8c;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s;
+    color: #918c8c;
+  
+}
+
+.submit:hover {
+    background-color: aqua;
+    border: none;
+    color: #40A8B6;
+}
+
+#menssagem {
+    color: white;
+}
+
+#cadastre-se {
+    color: #0b6a77;
+    text-decoration: none;
+    font-weight: bolder;
+}

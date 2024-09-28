@@ -313,6 +313,7 @@ botaoAdicionar.onclick = async function () {
                 input: 'text',
                 inputPlaceholder: "Digite aqui"
             });
+          
 
             if (idade_criar) {
                 formData.append('idade', idade_criar);

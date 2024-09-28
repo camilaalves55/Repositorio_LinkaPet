@@ -282,7 +282,6 @@ async function updateProfile(req, res) {
             });
         }
 
-        // Verifica se o campo é um dos permitidos
         const allowedFields = ['nome', 'nome_usuario', 'email', 'telefone', 'endereco'];
         if (!allowedFields.includes(field)) {
             return res.status(400).json({
@@ -291,7 +290,6 @@ async function updateProfile(req, res) {
             });
         }
 
-        // Atualiza o perfil do cliente
         const query = `UPDATE cadastro_cliente SET ${field} = ? WHERE id = ?`;
         connection.query(query, [value, cliente_id], (err, results) => {
             if (err) {
