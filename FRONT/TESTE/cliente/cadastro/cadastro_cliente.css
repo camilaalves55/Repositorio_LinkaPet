@@ -38,17 +38,19 @@ main {
     height: 80vh;
     width: 60vw;
     border:none;
+    border-radius: 2vw;
     /* border-radius: 2vw 0vw 0vw 2vw; */
     border: 2px solid white;
-    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.584);
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.486);
+    background-color: rgba(255, 255, 255, 0.329);
     /* background-color: rgb(180, 251, 227); */
     /* background-color: rgba(255, 255, 255, 0.216); */
 }
 
 .imagem_cadastro {
     height: 80vh;
-    width: 23vw;
-    background-color: rgba(255, 255, 255, 0.216);
+    width: 25vw;
+    /* background-color: rgba(255, 255, 255, 0.216); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,7 +69,7 @@ h2{
 
 h1 {
     height: 40vh;
-    font-size: 26px;
+    font-size: 28px;
     color: #40A8B6;
     letter-spacing: 0.5px; /* Espaçamento entre letras */
     line-height: 1.4;
@@ -79,29 +81,29 @@ h1 {
 
 .imagem_cadastro img{
     height: 40vh;
-    width: 25vw;
+    width: 20vw;
     margin-bottom: 5vh;
     /* border: 1px solid black; */
 }
 
 .area_cadastro {
     height: 80vh;
-    width: 40vw;
+    width: 35vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   
-    border-radius: 0vw 2vw 2vw 0vw;
+    border-radius: 2vw;
     background-color: white;
-    box-shadow: 0px 0px 8px 1px rgb(167, 165, 165);
+    box-shadow: 0px 0px 8px 1px rgb(107, 107, 107);
     /* border: 2px solid rgb(169, 17, 17); */
 }
 
 
 .formulario {
     height: 70vh;
-    width: 30vw;
+    width: 28vw;
     display: flex;
     align-items: start;
     justify-content: space-evenly;

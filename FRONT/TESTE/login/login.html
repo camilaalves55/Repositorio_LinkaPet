@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
     <link rel="icon" type="image/x-icon" href="../icones/logo_site.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Linka Pet</title>
 </head>
 <body>
@@ -17,11 +20,16 @@
                 <h1>Login</h1>
                 <div class="formulario">
                     <label>E-mail</label>
-                    <input placeholder="Email de usuário..."  class="input-linha" type="text" id="email">
+                    <input placeholder="Email de usuário..."  class="input-linha" type="text" id="email" required>
                     
                     <label>Senha</label>
-                    <input placeholder="Digite sua senha..."  class="input-linha" type="password" id="senha">
+                    <div class="password-container">
+                        <input placeholder="Digite sua senha..." class="input-linha" type="password" id="senha" required>
+                        <span id="togglePassword" class="eye-icon"><i class="material-icons">visibility</i></span>
+                    </div>
                     
+                    
+
                     <label>Tipo de Conta</label>
                     <select id="tipoUsuario" class="select-linha">
                         <option id="opcoes" value="cliente">Cliente</option>
@@ -29,8 +37,8 @@
                     </select>
     
                 </div>
-                <input class="submit" id="submit" onclick="handleSubmit(event)" value="Entrar" type="submit">
-                <p id="menssagem">Ainda não tem uma conta? <a id="cadastre-se" href="../cadastro/cadastro_cliente.html">Cadastre-se.</a></p>
+                <input class="submit" id="submit" value="Entrar" type="submit">
+                <p id="menssagem">Ainda não tem uma conta? <a id="cadastre-se" href="../cliente/cadastro/aaa.html">Cadastre-se.</a></p>
             </div>
 
             <div class="imagem_login">

@@ -30,6 +30,7 @@ main {
 }
 
 .secao {
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,106 +39,128 @@ main {
     width: 60vw;
     border:none;
     border-radius: 2vw;
+    /* border-radius: 2vw 0vw 0vw 2vw; */
     border: 2px solid white;
-    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.584);
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.486);
+    /* background-color: rgba(255, 255, 255, 0.329); */
+    background-color: white;
     /* background-color: rgb(180, 251, 227); */
-    background-color: rgba(255, 255, 255, 0.216);
+    /* background-color: rgba(255, 255, 255, 0.216); */
 }
 
-.area_login {
-    height: 80vh;
-    width: 35vw;
-   
- 
-}
-
-.imagem_login {
+.imagem_cadastro {
     height: 80vh;
     width: 25vw;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 8px 1px rgb(167, 165, 165);
-    border-radius: 2vw 2vw 2vw 2vw;
-}
-
-#imagem {
-    height: 60vh;
-    width: 27vw;
-
-}
-
-.area_login {
-    height: 80vh;
-    width: 40vw;
-
+    /* background-color: rgba(255, 255, 255, 0.216); */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* border: 2px solid rgb(182, 40, 40); */
+  
+ 
+    font-family: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif';
+/*    
+    border: 1px solid black; */
+}
+/* 
+h2{
+    color: #143a44;
+    font-size: 35px;
+} */
 
+h1 {
+    height: 40vh;
+    font-size: 28px;
+    color: #40A8B6;
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+    line-height: 1.4;
+    /* border: 2px solid #000000; */
+    width: 20vw;
+    /* Ajuste o valor conforme necessário */
 }
 
+
+.imagem_cadastro img{
+    height: 40vh;
+    width: 20vw;
+    margin-bottom: 5vh;
+    /* border: 1px solid black; */
+}
+
+.area_cadastro {
+    height: 80vh;
+    width: 35vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* , #00bbd4a1 */
+    border-radius: 2vw;
+    background-color: white;
+    background: linear-gradient(to bottom, #25d6e3c1, #16c5dcb0);
+    box-shadow: 0px 0px 8px 1px rgb(107, 107, 107);
+    /* border: 2px solid rgb(169, 17, 17); */
+}
+
+
+
 .formulario {
-    height: 55vh;
-    width: 25vw;
+    height: 60vh;
+    width: 28vw;
     display: flex;
     align-items: start;
     justify-content: space-evenly;
     flex-direction: column;
-    /* border: 2px solid white; */
+  
+    /* border: 2px solid rgb(199, 33, 33); */
 }
 
-/* 
-.formulario input{
-    height: 5vh;
-    width: 24vw;
-    border-radius: 35px;
- 
-    background-color: transparent;
-    color: white;
-    border: none;
-} */
+
+
 
 input::placeholder{
+    /* color: #0b6a77; */
     color: white;
     margin-left: 5px;
 }
 
-
 .input-linha {
     border: none; 
-    border-bottom: 2px solid #ffffff;
+    /* border-bottom: 2px solid #0b6a77; */
+    border-bottom: 2px solid  #ffffffcf;
     outline: none;
     padding: 5px 0; 
     width: 100%; 
     font-size: 16px; 
     background-color: transparent;
+    margin-bottom: 20px;
+    color: #292626;
 }
 
 .input-linha:focus {
     border-bottom: 3px solid #2cd0df; 
 }
 
-label {
-    color: #40A8B6;
-    font-weight: bold;
-    font-size: 23px;
-    font-family: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif';
-}
 
+
+label {
+    color:  #338994;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif';
+    /* font-family: 'Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif'; */
+}
+/* 
 h1 {
     font-family: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif';
     font-size: 36px;
     color: #40A8B6;
-}
+} */
 
 
 .select-linha {
     border: none; 
-    border-bottom: 2px solid #ffffff; 
+    border-bottom: 2px solid rgb(255, 255, 255); 
     outline: none; 
     background: transparent; 
     padding: 5px 0;
@@ -161,17 +184,26 @@ h1 {
     pointer-events: none; 
 }
 
+/* #enviar {
+    height: 7vh;
+    width: 9vw;
+
+} */
 
 .submit {
-    height: 6vh;
-    width: 9vw;
+    height: 7vh;
+    width: 11vw;
     border: 2px solid #ffffff;
     background-color: transparent;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, border 0.3s;
-    color: white;
-    margin-bottom: 20px;
+    color: #ffffff;
+    margin-top: 3vh;
+    font-size: 19px;
+   
+
+  
 }
 
 .submit:hover {
@@ -193,6 +225,9 @@ h1 {
 
 
 
+
+
+
 .password-container {
    
     display: flex;
@@ -201,6 +236,7 @@ h1 {
 .eye-icon {
     cursor: pointer;
     margin-left: -30px;
+    margin-bottom: 20px;
     font-size: 17px;
     color: white; 
 }
@@ -211,5 +247,5 @@ h1 {
 
 
 #senha {
-    width: 25vw;
+    width: 28vw;
 }

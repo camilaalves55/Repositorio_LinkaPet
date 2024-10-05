@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aa.css">
+    <link rel="icon" type="image/x-icon" href="../../icones/logo_site.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Linka Pet</title>
+</head>
+<body>
+
+    <header></header>
+
+    <main>
+        <section class="secao">
+
+            <div class="imagem_cadastro">
+                <img  id="imagem"  src="../../imagens/pata_logo.png" alt="">
+                <!-- <h2>Ainda não possui uma conta?</h2> -->
+                <h1>Cadastre-se aqui como empresa ou <a id="cadastre-se" href="../../cliente/cadastro/aaa.html">Clique aqui!</a> Para se cadastrar como Cliente.</h1>
+              
+
+            </div>
+
+            <div class="area_cadastro">
+                <div class="formulario">
+                    <form action="">
+                    <label>Nome da Empresa</label>
+                    <input class="input-linha" id="nomeEmpresa" placeholder="Nome da Instituição..." type="text" required>
+    
+                    <!-- <label>Telefone</label>
+                    <input id="telefone" placeholder="Telefone..." type="text" required> -->
+                
+                    <label>Nome de Usuário</label>
+                    <input class="input-linha" id="nomeUsuario" placeholder="Nome de usuario..." type="text" required>
+                    
+                    <label>CNPJ</label>
+                    <input class="input-linha" id="cnpj" placeholder="CNPJ da empresa..." type="text" required>
+    
+                    <!-- <label>Endereço</label>
+                    <input id="endereco" placeholder="Endereço..." type="text"> -->
+                    
+                    <label>E-mail</label>
+                    <input class="input-linha" id="email" placeholder="Email..." type="text" required>	
+                
+                    <label>Senha</label>
+                    <div class="password-container">
+                        <input placeholder="Senha..." class="input-linha" type="password" id="senha" required>
+                        <span id="togglePassword" class="eye-icon"><i class="material-icons">visibility</i></span>
+                    </div>
+                    
+                    <label>Confirmação de Senha</label>
+                    <div class="password-container">
+                        <input placeholder="Confirmação de senha..." class="input-linha" type="password" id="confirmaSenha" required>
+                        <span id="toggleConfirmPassword" class="eye-icon"><i class="material-icons">visibility</i></span>
+                    </div>
+                    <!-- <input class="submit" value="Cadastre-se" type="submit">	 -->
+                    </form>
+                    <!-- <input class="submit" value="Cadastre-se" type="submit">	 -->
+                </div>
+                <input class="submit" value="Cadastre-se" type="submit">	
+                <!-- <a id="cadastrar" id="enviar" href="cadastro_cliente.html">Cadastrar cliente ></a>
+     -->
+            </div>
+
+            
+           
+
+            <!-- <a id="cadastrar" href="cadastro_empresa.html">Cadastrar empresa ></a> -->
+
+        </div>
+
+        </section>
+        
+    </main>
+    <footer></footer>
+
+    <script src="cadastro_empresa.js"></script>
+    
+</body>
+</html>

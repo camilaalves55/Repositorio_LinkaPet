@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #4a90e2, #d4e1e5);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        .profile-header {
+            background: #2cd0df;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            color: white;
+        }
+
+        .profile-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .profile-header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .profile-header img:hover {
+            transform: scale(1.1);
+        }
+
+        h1 {
+            margin: 10px 0;
+            font-size: 30px;
+            z-index: 2;
+        }
+
+        h2 {
+            margin: 5px 0;
+            font-size: 18px;
+            z-index: 2;
+        }
+
+        .profile-info {
+            padding: 30px 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-item {
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-radius: 10px;
+            background: #f8f8f8;
+            transition: background 0.3s;
+        }
+
+        .info-item:hover {
+            background: #e0f7fa;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #2cd0df;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 20px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #1aa7b5;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            text-align: center;
+            background: #2cd0df;
+            color: white;
+            border-radius: 0 0 20px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-header">
+            <img id="foto_perfil" src="../../imagens/default.png" alt="Foto do Usuário">
+            <h1 id="nome">Nome do Usuário</h1>
+            <h2 id="email_usuario">email@exemplo.com</h2>
+        </div>
+        <div class="profile-info">
+            <h3>Informações do Perfil</h3>
+            <div class="info-item">
+                <strong>Nome de Usuário:</strong>
+                <span id="nome_usuario">usuario123</span>
+            </div>
+            <div class="info-item">
+                <strong>Telefone:</strong>
+                <span id="telefone">+55 11 99999-9999</span>
+            </div>
+            <div class="info-item">
+                <strong>Endereço:</strong>
+                <span id="endereco">Rua Exemplo, 123</span>
+            </div>
+            <div class="info-item">
+                <strong>Data de Nascimento:</strong>
+                <span id="data_nascimento">01/01/1990</span>
+            </div>
+            <button id="edit-button" class="btn">Editar Perfil</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Linka Pet. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Simulação de dados do usuário
+            const usuarioData = {
+                nome: "João Silva",
+                email: "joao.silva@exemplo.com",
+                nome_usuario: "joaosilva",
+                telefone: "+55 11 99999-9999",
+                endereco: "Rua Exemplo, 123",
+                data_nascimento: "01/01/1990",
+                foto_perfil: "http://localhost:3005/upload/exemplo.jpg" // URL da foto
+            };
+
+            // Preenchendo os dados na tela
+            document.getElementById('nome').textContent = usuarioData.nome;
+            document.getElementById('email_usuario').textContent = usuarioData.email;
+            document.getElementById('nome_usuario').textContent = usuarioData.nome_usuario;
+            document.getElementById('telefone').textContent = usuarioData.telefone;
+            document.getElementById('endereco').textContent = usuarioData.endereco;
+            document.getElementById('data_nascimento').textContent = usuarioData.data_nascimento;
+            document.getElementById('foto_perfil').src = usuarioData.foto_perfil || "../../imagens/default.png";
+
+            // Ação para o botão de editar
+            document.getElementById('edit-button').addEventListener('click', () => {
+                alert('Aqui você pode implementar a lógica para editar o perfil.');
+            });
+        });
+    </script>
+</body>
+</html>

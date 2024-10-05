@@ -230,6 +230,46 @@ async function getEmpresa(request, response) {
 
 
 
+// async function updateFotoPerfil(req, res) {
+//     try {
+//         const clienteId = req.body.cliente_id;
+//         const fotoPerfil = req.file ? req.file.filename : null;
+
+//         if (!clienteId || !fotoPerfil) {
+//             return res.status(400).json({
+//                 success: false,
+//                 message: "ID do cliente ou foto não fornecidos."
+//             });
+//         }
+
+//         const query = "UPDATE cadastro_cliente SET foto_perfil = ? WHERE id = ?";
+//         connection.query(query, [fotoPerfil, clienteId], (err, results) => {
+//             if (err) {
+//                 console.error('Erro ao atualizar foto de perfil:', err);
+//                 return res.status(500).json({
+//                     success: false,
+//                     message: "Erro ao atualizar foto de perfil.",
+//                     error: err.message
+//                 });
+//             }
+
+//             res.status(200).json({
+//                 success: true,
+//                 message: "Foto de perfil atualizada com sucesso!",
+//                 data: { foto_perfil: fotoPerfil }
+//             });
+//         });
+//     } catch (error) {
+//         console.error('Erro ao processar a solicitação:', error);
+//         res.status(500).json({
+//             success: false,
+//             message: "Erro interno do servidor.",
+//             error: error.message
+//         });
+//     }
+// }
+
+
 async function updateFotoPerfil(req, res) {
     try {
         const clienteId = req.body.cliente_id;
@@ -268,8 +308,6 @@ async function updateFotoPerfil(req, res) {
         });
     }
 }
-
-
 
 async function updateProfile(req, res) {
     try {

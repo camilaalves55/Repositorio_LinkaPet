@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cadastro_cliente.css">
+    <link rel="stylesheet" href="aaa.css">
     <link rel="icon" type="image/x-icon" href="../../icones/logo_site.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <title>Linka Pet</title>
 </head>
 <body>
@@ -17,7 +20,7 @@
             <div class="imagem_cadastro">
                 <img  id="imagem"  src="../../imagens/pata_logo.png" alt="">
                 <!-- <h2>Ainda não possui uma conta?</h2> -->
-                <h1>Cadastre-se aqui como cliente ou <a id="cadastre-se" href="../cadastro/cadastro_cliente.html">Clique aqui!</a> Para se cadastrar como Empresa.</h1>
+                <h1>Cadastre-se aqui como cliente ou <a id="cadastre-se" href="../../empresa/cadastro/aa.html">Clique aqui!</a> Para se cadastrar como Empresa.</h1>
               
 
             </div>
@@ -44,11 +47,17 @@
                     <input  class="input-linha" id="email" placeholder="Email..." type="text" required>	
                 
                     <label>Senha</label>
-                    <input  class="input-linha" id="senha" placeholder="Senha..." type="password" required>
-                
-                    <label>Confirmação da Senha</label>
-                    <input   class="input-linha" id="confirmaSenha" placeholder="Confirmação de senha..." type="password">
-                	
+                    <div class="password-container">
+                        <input placeholder="Senha..." class="input-linha" type="password" id="senha" required>
+                        <span id="togglePassword" class="eye-icon"><i class="material-icons">visibility</i></span>
+                    </div>
+                    
+                    <label>Confirmação de Senha</label>
+                    <div class="password-container">
+                        <input placeholder="Confirmação de senha..." class="input-linha" type="password" id="confirmaSenha" required>
+                        <span id="toggleConfirmPassword" class="eye-icon"><i class="material-icons">visibility</i></span>
+                    </div>
+                    
                     
                     </form>
                 </div>
@@ -71,6 +80,8 @@
 
 
     <footer></footer>
+
+    <script src="cadastro_cliente.js"></script>
     
 </body>
 </html>

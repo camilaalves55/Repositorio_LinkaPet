@@ -91,12 +91,13 @@ a:hover{
 
 #buscar{
     background-color:#e8e8e8;
-    border:none;
+    border: 2px solid transparent;
     border-radius:2vw;
     width:25vw;
     display: flex;
     align-items: center;
     margin-left: 10vw;
+    transition: border-color 0.3s;
 }
   
 #input_busca{
@@ -109,12 +110,43 @@ a:hover{
     height:32px;
     width:330px;
     border-radius:2vw 0vw 0vw 2vw;
+    appearance: none; 
+    outline: none;
 }
 
 #botao_busca {
     height: 3vh;
     width: 2vw;
     background: transparent;
+}
+
+
+
+
+/* #input {
+    border: none; 
+    border-bottom: 2px solid #ffffff; 
+    outline: none; 
+    background: transparent; 
+    padding: 5px 0;
+    font-size: 16px;
+    width: 100%;
+    appearance: none; 
+    color: white;
+} */
+
+#buscar:focus-within {
+    border-color: #8d8d8d;
+}
+
+
+.select-linha::after {
+    content: '▼';
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; 
 }
 
 
@@ -138,21 +170,28 @@ main{
 }
 .logo {
     height: 50vh;
-    width: 30vw;
+    width: 25vw;
   
     display: flex;
     align-items: stretch;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    /* border: 1px solid black; */
 }
 
 .logo img {
-    width: 80%; /* Adiciona 100% de largura */
-    height: 100%; /* Adiciona 100% de altura */
+    height: 50vh;
+    width: 25vw;
+}
+
+/* .logo img {
+    width: 100%; 
+    height: 100%;  */
     /* object-fit: cover; 
     display: block; */
-}
+/* } */
+
 
 
 .boas_vindas {
@@ -221,14 +260,24 @@ main{
 .botao_login {
     background-color: #43cee1;
     color: var(--branco);
+    /* border: 2px solid rgb(92, 225, 255); */
     border: none;
     font-size: 23px;
     height: 10vh;
     width: 30vw;
-    border-radius: 2px;
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0px 0px 8px 1px rgb(153, 225, 241);
+    /* box-shadow: 0px 0px 8px 1px rgba(153, 225, 241, 0.719); */
+    /* box-shadow: 0px 0px 10px rgb(37, 215, 255),
+            0px 0px 10px rgb(37, 215, 255) inset; */
 
+}
+
+a{
+    text-decoration: none;
+    color: var(--branco);
+
+    font-size: 23px;
 }
 
 .texto_login h1 {
@@ -242,6 +291,9 @@ main{
     background-color: var(--verde_agua);
     color: var(--branco);
     transform: scale(1.05); 
+    /* box-shadow: 0px 0px 10px rgb(37, 215, 255),
+    0px 0px 10px rgb(37, 215, 255) inset;
+    border: 2px solid rgb(153, 225, 241); */
     /* transform: translate(10px); */
 }
 
@@ -472,7 +524,6 @@ main{
     font-size: 16px;
     text-align: center;
 }
-
 
 
 
