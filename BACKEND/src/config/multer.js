@@ -33,24 +33,19 @@
 
 
 
-
-
-
-
-
-
-
-
-const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
+const multer = require('multer');
 
+// Configuração do diretório de upload
 const uploadPath = path.join(__dirname, '..', 'uploads');
 
+// Cria o diretório se não existir
 if (!fs.existsSync(uploadPath)) {
-    fs.mkdirSync(uploadPath, { recursive: true });
+    fs.mkdirSync(uploadPath);
 }
 
+// Configuração do Multer
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, uploadPath);
@@ -62,7 +57,34 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+// Exportando o upload para uso em outros módulos
 module.exports = upload;
+
+
+
+
+// const multer = require('multer');
+// const path = require('path');
+// const fs = require('fs');
+
+// const uploadPath = path.join(__dirname, '..', 'uploads');
+
+// if (!fs.existsSync(uploadPath)) {
+//     fs.mkdirSync(uploadPath, { recursive: true });
+// }
+
+// const storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//         cb(null, uploadPath);
+//     },
+//     filename: function (req, file, cb) {
+//         cb(null, `${Date.now()}_${file.originalname}`);
+//     }
+// });
+
+// const upload = multer({ storage });
+
+// module.exports = upload;
 
 
 

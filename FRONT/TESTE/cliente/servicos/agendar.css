@@ -123,12 +123,7 @@ aside {
 article {
     height: 100vh;
     width: 88vw;
-<<<<<<< HEAD
     background-color: #98f0fab3;
-=======
-    /* background-color: #98f0fab3; */
-    background-color: #ffffff;
->>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,19 +134,13 @@ article {
     margin-left: 5%;
     height: 100vh;
     width: 88vw;
-    display: flex;
-<<<<<<< HEAD
-    align-items: self-start;
-    justify-content: start;
     flex-direction: column;
-    /* background-color: #98f0fab3; */
-=======
+    display: flex;
     flex-wrap: wrap; /* Cards se alinham na próxima linha após 3 */
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     overflow-y: auto; /* Habilita rolagem apenas na seção principal */
     scrollbar-width: none; /* Oculta barra de rolagem no Firefox */
->>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
 }
 
 .main_coluna {
@@ -168,195 +157,145 @@ article {
     display: none;
 }
 
-
-<<<<<<< HEAD
-
-
-
-
-
-
-
-.pets_lista {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-
-   width: 27vw;
-   font-size: 15px;
-   font-weight: normal;
-   margin-top: 5vh;
-}
-
-.bloco_card {
+.main_coluna {
+    height: 100vh;
+    width: 50vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-    width: 25vw;
-    height: 33vh;
-    margin-bottom: 5vh;
-    color: #635f5f;
-    border-radius: 1vw;
-    background-color: #98f0fa4f;
-    padding: auto;
-
-}
-
-.bloco_card h2{
-    color: #40A8B6;
-}
-
-.bloco_card img { 
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.bloco_card .info {
-    display: flex;
-    align-items: start;
-    justify-content: space-evenly;
     flex-direction: column;
-    margin-top: 0;
-    width: 12vw;
-    height: 32vh;
-  
-
+    background-color: #ffffff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    background-image: url(../../imagens/fundo.png);
 }
 
-
-.bloco_card .info2 {
-    display: flex;
-    align-items: start;
-    justify-content: space-evenly;
-    flex-direction: column;
-    margin-bottom: 0px;
-    margin-top: 0;
-    width: 12vw;
-    height: 32vh;
-   
-   
-   /* Adicione um pouco de padding para evitar que os elementos grudem nas bordas */
-}
-
-
-
-.foto_div {
-    margin: 0; /* Remove margens */
-    width: 5vw;
-    height: 10vh;
-    overflow: hidden; 
-    border: 2px solid #53eaff;
-    border-radius: 50%;
- 
-  
-   /* Mantém a posição relativa */
-}
-
-.bloco_card span {
-    font-weight: bold;
-    color: #43cee1;
-
-}
-
-=======
 h1 {
-    margin-top: 2vh;
+
     color: #40A8B6;
     font-size: 50px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
-#servicos {
-  
-    /* border: 1px solid black; */
+
+
+.form_consulta {
+/*   
+    border: 1px solid rgb(147, 19, 19); */
     display: flex;
-    flex-wrap: wrap; /* Cards vão para a próxima linha quando necessário */
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
     gap: 2vw; 
-    width: 58vw; /* Certifica-se de que os elementos se adaptem à largura da seção */
+    width: 36vw; 
 
   
     margin-bottom: 27vh;
    
-    flex-direction: row;
-
- 
-
- 
+    flex-direction: column;
   
 }
 
-
-.servico_item {
+.card_servico {
+    height: 30vh;
+    width: 35vw; 
     /* border: 1px solid black; */
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 17vh;
-    width: 25vw;
-    margin-right: 2vw;
-    background-color: #98f0fab3;
+    border: none;
+    background-color: white;
     border-radius: 1vw;
-    font-size: 18px;
-}
-
-
-.servico_info {
-    /* border: 1px solid rgb(172, 27, 27); */
-    height: 12vh;
-    width: 12vw;
     display: flex;
-    
+    align-items: first baseline;
     justify-content: space-evenly;
     flex-direction: column;
-    color: #635f5f;
 }
 
-.servico_info h3 { 
+#nome_servico {
+    margin-left: 2vw;
+
     color: #40A8B6;
-  
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.servico_info .titulo{ 
-    color: #215a61;
-    font-weight: bold;
-}
+.horarios {
+    /* border: 1px solid black; */
 
-.servico_botao {
-    /* border: 1px solid rgb(40, 69, 232); */
-    height: 15vh;
-    width: 11vw;
+    width: 30vw; 
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 
-
-.servico_botao button {
-    /* font-weight: bold; */
-    font-size: 16px;
-    height: 6vh;
-    width: 6vw;
+.hora {
     border: 1px solid #40A8B6;
-    /* border: none; */
+    color: white;
+    margin-left: 10px;
+    width: 5vw; 
+    border-radius: 5px;
+    height: 5vh;
+    font-size: 17px;
+    background-color: #53EAFF;
+}
+
+.hora:hover {
+    background-color: var(--azul);
+    border: 1px solid #53EAFF;
+}
+
+.hora:active {
+    border: 3px solid #53EAFF;
+}
+
+.buttonClicked {
+    /* background-color: var(--azul);
+    color: var(--branco);
+    border: 2px solid #53EAFF; */
+    background-color: #30bdd1;
+    color: var(--branco);
+    border: 2px solid #52eaff;
+}
+
+
+#dataNascimento {
+    padding-left: 2vw;
+    height: 6vh;
+    width: 33vw; 
+    border-radius: 10px;
+    border: none;
     color: #40A8B6;
-    background-color: transparent;
+    font-size: 28px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* #dataNascimento::placeholder { 
+    margin-left: 10vw;
+} */
+
+
+#agendar {
+    height: 7vh;
+    width: 12vw;
+    font-size: 18px; 
+    border: 2px solid #40A8B6;
+    /* border: none; */
+    color: #ffffff;
+    background-color: #30bdd1;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, border 0.3s;
-    /* background-color: white; */
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
 
 
-.servico_botao button:hover {
+#agendar:hover {
     /* background-color: aqua; */
     background-color: rgba(48, 190, 209, 0.429);
     border: none;
     color: var(--branco);
 }
->>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
+
+
+
+

@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const clienteId = localStorage.getItem('id_cliente');
     const urlParams = new URLSearchParams(window.location.search);
     const empresaId = urlParams.get('empresa_id');
+    console.log(`Valor de empresa_id: ${empresaId}`);
     const petId = urlParams.get('id');
 
     if (!clienteId || !empresaId || !petId) {
@@ -17,9 +18,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         });
 
-        const result = await response.json();
-        console.log(result); 
+      
 
+        
+        console.log(`URL chamada: http://localhost:3005/api/get/servicos?empresa_id=${empresaId}`);
+        const result = await response.json();
+        console.log(result);
+        
 
         if (result.success) {
             const servicosDiv = document.getElementById('servicos');

@@ -372,6 +372,13 @@ function preencherInformacoesCliente(clienteData) {
     document.getElementById('edit-endereco').addEventListener('click', () => editField('endereco', 'endereco-text'));
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
+
+
 function atualizarFotoPerfil(fotoPerfil) {
     const fotoPerfilSrc = fotoPerfil ? `http://localhost:3005/upload/${fotoPerfil}?t=${new Date().getTime()}` : 'default.png';
     document.getElementById('foto_perfil').src = fotoPerfilSrc;

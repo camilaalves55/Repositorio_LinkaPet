@@ -1,37 +1,83 @@
-const connection = require('../config/db');
+// const connection = require('../config/db');
+
+// async function storeServico(request, response) {
+
+//         const empresaId = request.body.empresa_id;
+//         const servicoId = request.body.servico_id;
+
+//         const params = [
+//             servicoId,
+//             request.body.servico,
+//             request.body.preco,
+//             request.body.horarios_disponiveis,
+//             empresaId
+//         ];
+
+//         const query = "INSERT INTO empresas_servicos (servico_id, servico, preco, horarios_disponiveis, empresa_id) VALUES (?, ?, ?, ?, ?)";
+
+//         connection.query(query, params, (err, results) => {
+//             if (err) {
+//                 return response.status(400).json({
+//                     success: false,
+//                     message: "Ops! Não deu...",
+//                     query: err.sql,
+//                     sqlMessage: err.sqlMessage
+//                 });
+//             }
+
+//             response.status(201).json({
+//                 success: true,
+//                 message: "Sucesso!",
+//                 data: results
+//             });
+//         });
+// };
+
+
+const connection = require('../config/db'); 
 
 async function storeServico(request, response) {
+    const empresaId = request.body.empresa_id;
+    const servicoId = request.body.servico_id;
 
-        const empresaId = request.body.empresa_id;
-        const servicoId = request.body.servico_id;
-
-        const params = [
-            servicoId,
-            request.body.servico,
-            request.body.preco,
-            request.body.horarios_disponiveis,
-            empresaId
-        ];
-
-        const query = "INSERT INTO empresas_servicos (servico_id, servico, preco, horarios_disponiveis, empresa_id) VALUES (?, ?, ?, ?, ?)";
-
-        connection.query(query, params, (err, results) => {
-            if (err) {
-                return response.status(400).json({
-                    success: false,
-                    message: "Ops! Não deu...",
-                    query: err.sql,
-                    sqlMessage: err.sqlMessage
-                });
-            }
-
-            response.status(201).json({
-                success: true,
-                message: "Sucesso!",
-                data: results
-            });
+    // Validação dos dados recebidos
+    if (!request.body.servico || !request.body.preco || !request.body.horarios_disponiveis || !servicoId  || !empresaId ) {
+        return response.status(400).json({
+            success: false,
+            message: "Todos os campos são obrigatórios."
         });
+    }
+
+    const params = [
+        request.body.servico,
+        request.body.preco,
+        request.body.horarios_disponiveis,
+        servicoId,
+        empresaId
+    ];
+
+    const query = "INSERT INTO empresas_servicos ( servico, preco, horarios_disponiveis, servico_id, empresa_id) VALUES (?, ?, ?, ?, ?)";
+
+    connection.query(query, params, (err, results) => {
+        if (err) {
+            return response.status(400).json({
+                success: false,
+                message: "Ops! Não deu...",
+                query: err.sql,
+                sqlMessage: err.sqlMessage
+            });
+        }
+
+        response.status(201).json({
+            success: true,
+            message: "Sucesso!",
+            data: results
+        });
+    });
 };
+
+
+
 
 async function getServicos(request, response) {
     const empresaId = request.query.empresa_id;
@@ -47,19 +93,22 @@ async function getServicos(request, response) {
 
     connection.query(query, [empresaId], (err, results) => {
         if (err) {
+            console.log("Erro ao executar a query:", err);
             return response.status(500).json({
                 success: false,
-                message: "Erro ao buscar os servios.",
+                message: "Erro ao buscar os serviços.",
                 error: err
             });
         }
-
+    
+        console.log("Resultado da consulta:", results); // Adicionar log aqui
         response.status(200).json({
             success: true,
             message: "Serviços encontrados com sucesso.",
             data: results
         });
     });
+    
 }
 
 

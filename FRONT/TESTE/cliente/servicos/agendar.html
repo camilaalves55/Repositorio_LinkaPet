@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="servicos.css">
-<<<<<<< HEAD
-    <link rel="icon" type="image/x-icon" href="../icones/logo_site.png">
-=======
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="agendar.css">
     <link rel="icon" type="image/x-icon" href="../../icones/logo_site.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
->>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
     <title>Linka Pet</title>
 </head>
 <body>
@@ -43,21 +40,28 @@
 
 
                     <div class="texto_inicial">
-<<<<<<< HEAD
-                        <h1>Encontre uma Pet!</h1>
-=======
-                        <h1>Escolha um Serviço!</h1>
->>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
+                        <h1>Agende sua Consulta!</h1>
                       
                     </div>
 
 
 
-<<<<<<< HEAD
-                    <div class="pets_lista"></div>
-=======
-                    <div id="servicos"></div>
->>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
+                    <div class="form_consulta">
+                        <div class="card_servico">
+
+                            <p id="nome_servico"></p>
+            
+                            <div id="horarios" class="horarios"></div>
+                        </div>
+            
+                        <div class="datas">
+                            <label for="dataNascimento">
+                                <input type="text" id="dataNascimento" name="dataNascimento" placeholder="Selecionar data">
+                            </label>
+                        </div>
+            
+                        <button id="agendar" class="agendamento">Agendar</button>
+                    </div>
 
                
                 </section>
@@ -71,6 +75,7 @@
 
     </main>
 
-    <script src="servicos.js"></script>
+    <script src="agendar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </body>
 </html>

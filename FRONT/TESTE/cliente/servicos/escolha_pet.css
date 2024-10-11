@@ -123,12 +123,7 @@ aside {
 article {
     height: 100vh;
     width: 88vw;
-<<<<<<< HEAD
-    background-color: #98f0fab3;
-=======
     /* background-color: #98f0fab3; */
-    background-color: #ffffff;
->>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,18 +135,11 @@ article {
     height: 100vh;
     width: 88vw;
     display: flex;
-<<<<<<< HEAD
-    align-items: self-start;
-    justify-content: start;
-    flex-direction: column;
-    /* background-color: #98f0fab3; */
-=======
     flex-wrap: wrap; /* Cards se alinham na próxima linha após 3 */
     align-items: flex-start;
     justify-content: flex-start;
     overflow-y: auto; /* Habilita rolagem apenas na seção principal */
     scrollbar-width: none; /* Oculta barra de rolagem no Firefox */
->>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
 }
 
 .main_coluna {
@@ -169,7 +157,6 @@ article {
 }
 
 
-<<<<<<< HEAD
 
 
 
@@ -179,14 +166,13 @@ article {
 
 .pets_lista {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-
-   width: 27vw;
-   font-size: 15px;
-   font-weight: normal;
-   margin-top: 5vh;
+    flex-wrap: wrap; /* Cards vão para a próxima linha quando necessário */
+    gap: 2vw; 
+    width: 88vw; /* Certifica-se de que os elementos se adaptem à largura da seção */
+    justify-content: flex-start; 
+    margin-top: 5vh;
+    margin-bottom: 7vh;
+    padding: 10px; 
 }
 
 .bloco_card {
@@ -196,7 +182,7 @@ article {
     flex-direction: row;
     width: 25vw;
     height: 33vh;
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
     color: #635f5f;
     border-radius: 1vw;
     background-color: #98f0fa4f;
@@ -245,8 +231,8 @@ article {
 
 .foto_div {
     margin: 0; /* Remove margens */
-    width: 5vw;
-    height: 10vh;
+    width: 8vw;
+    height: 16vh;
     overflow: hidden; 
     border: 2px solid #53eaff;
     border-radius: 50%;
@@ -261,102 +247,10 @@ article {
 
 }
 
-=======
+
 h1 {
     margin-top: 2vh;
     color: #40A8B6;
     font-size: 50px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
-
-#servicos {
-  
-    /* border: 1px solid black; */
-    display: flex;
-    flex-wrap: wrap; /* Cards vão para a próxima linha quando necessário */
-    gap: 2vw; 
-    width: 58vw; /* Certifica-se de que os elementos se adaptem à largura da seção */
-
-  
-    margin-bottom: 27vh;
-   
-    flex-direction: row;
-
- 
-
- 
-  
-}
-
-
-.servico_item {
-    /* border: 1px solid black; */
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 17vh;
-    width: 25vw;
-    margin-right: 2vw;
-    background-color: #98f0fab3;
-    border-radius: 1vw;
-    font-size: 18px;
-}
-
-
-.servico_info {
-    /* border: 1px solid rgb(172, 27, 27); */
-    height: 12vh;
-    width: 12vw;
-    display: flex;
-    
-    justify-content: space-evenly;
-    flex-direction: column;
-    color: #635f5f;
-}
-
-.servico_info h3 { 
-    color: #40A8B6;
-  
-}
-
-.servico_info .titulo{ 
-    color: #215a61;
-    font-weight: bold;
-}
-
-.servico_botao {
-    /* border: 1px solid rgb(40, 69, 232); */
-    height: 15vh;
-    width: 11vw;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-
-
-.servico_botao button {
-    /* font-weight: bold; */
-    font-size: 16px;
-    height: 6vh;
-    width: 6vw;
-    border: 1px solid #40A8B6;
-    /* border: none; */
-    color: #40A8B6;
-    background-color: transparent;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, border 0.3s;
-    /* background-color: white; */
-}
-
-
-.servico_botao button:hover {
-    /* background-color: aqua; */
-    background-color: rgba(48, 190, 209, 0.429);
-    border: none;
-    color: var(--branco);
-}
->>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
