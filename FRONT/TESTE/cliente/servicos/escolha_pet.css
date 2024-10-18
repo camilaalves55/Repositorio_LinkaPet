@@ -12,17 +12,12 @@ body {
     --branco: #FFFFFF;
     --verde_agua: #53EAFF;
     --cinza_claro: #918c8c;
-    /* 80% */
     --cinza_escuro: #D9D9D9;
-    /* 50% */
     --azul: #40A8B6;
     --cor_linha: #998A8A;
     --preto: #000;
     --marrom: #534E4E;
 }
-
-/* ---------------------HEADER------------------------ */
-
 
 .logo {
     display: flex;
@@ -123,7 +118,6 @@ aside {
 article {
     height: 100vh;
     width: 88vw;
-    /* background-color: #98f0fab3; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,20 +125,19 @@ article {
 }
 
 .main_secao {
-    margin-left: 5%;
     height: 100vh;
-    width: 88vw;
+    width: 58vw;
     display: flex;
-    flex-wrap: wrap; /* Cards se alinham na próxima linha após 3 */
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
-    overflow-y: auto; /* Habilita rolagem apenas na seção principal */
-    scrollbar-width: none; /* Oculta barra de rolagem no Firefox */
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
 .main_coluna {
     height: 100vh;
-    width: 45vw;
+    width: 30vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,27 +145,19 @@ article {
     background-color: #ffffff;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     z-index: 1;
-
-    display: none;
+    background-image: url(../../imagens/fundo.png);
 }
-
-
-
-
-
-
-
-
 
 .pets_lista {
     display: flex;
-    flex-wrap: wrap; /* Cards vão para a próxima linha quando necessário */
+    flex-wrap: wrap;
     gap: 2vw; 
-    width: 88vw; /* Certifica-se de que os elementos se adaptem à largura da seção */
+    width: 88vw;
     justify-content: flex-start; 
     margin-top: 5vh;
     margin-bottom: 7vh;
     padding: 10px; 
+    margin-left: 5%;
 }
 
 .bloco_card {
@@ -187,7 +172,6 @@ article {
     border-radius: 1vw;
     background-color: #98f0fa4f;
     padding: auto;
-
 }
 
 .bloco_card h2{
@@ -208,10 +192,7 @@ article {
     margin-top: 0;
     width: 12vw;
     height: 32vh;
-  
-
 }
-
 
 .bloco_card .info2 {
     display: flex;
@@ -222,35 +203,40 @@ article {
     margin-top: 0;
     width: 12vw;
     height: 32vh;
-   
-   
-   /* Adicione um pouco de padding para evitar que os elementos grudem nas bordas */
 }
 
-
-
 .foto_div {
-    margin: 0; /* Remove margens */
+    margin: 0;
     width: 8vw;
     height: 16vh;
     overflow: hidden; 
     border: 2px solid #53eaff;
     border-radius: 50%;
- 
-  
-   /* Mantém a posição relativa */
 }
 
 .bloco_card span {
     font-weight: bold;
     color: #43cee1;
-
 }
-
 
 h1 {
     margin-top: 2vh;
     color: #40A8B6;
     font-size: 50px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.texto_inicial {
+    margin-left: 5%;
+}
+
+.mensagem_erro {
+    font-size: 28px; 
+    color: red;
+    padding: 10px;   
+    background-color: #ffe6e6; 
+    border: 1px solid red;     
+    border-radius: 5px;        
+    height: 25vh;
+    width: 30vw;
 }

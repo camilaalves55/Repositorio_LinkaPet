@@ -1,5 +1,7 @@
 const connection = require('../config/db');
 
+// funcao para verficar o usuario e logar a empresa ou o cliente
+
 async function login(request, response) {
     const email = request.body.email;
     const senha = request.body.senha;

@@ -133,14 +133,14 @@ article {
 .main_secao {
     margin-left: 5%;
     height: 100vh;
-    width: 88vw;
+    width: 58vw;
     flex-direction: column;
     display: flex;
-    flex-wrap: wrap; /* Cards se alinham na próxima linha após 3 */
+    flex-wrap: wrap; 
     align-items: flex-start;
     justify-content: space-evenly;
-    overflow-y: auto; /* Habilita rolagem apenas na seção principal */
-    scrollbar-width: none; /* Oculta barra de rolagem no Firefox */
+    overflow-y: auto; 
+    scrollbar-width: none; 
 }
 
 .main_coluna {
@@ -153,13 +153,12 @@ article {
     background-color: #ffffff;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     z-index: 1;
-
     display: none;
 }
 
 .main_coluna {
     height: 100vh;
-    width: 50vw;
+    width: 33vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,36 +170,24 @@ article {
 }
 
 h1 {
-
     color: #40A8B6;
     font-size: 50px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
-
-
 .form_consulta {
-/*   
-    border: 1px solid rgb(147, 19, 19); */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* flex-wrap: wrap; */
     gap: 2vw; 
     width: 36vw; 
-
-  
     margin-bottom: 27vh;
-   
     flex-direction: column;
-  
 }
 
 .card_servico {
     height: 30vh;
     width: 35vw; 
-    /* border: 1px solid black; */
     border: none;
     background-color: white;
     border-radius: 1vw;
@@ -212,21 +199,17 @@ h1 {
 
 #nome_servico {
     margin-left: 2vw;
-
     color: #40A8B6;
     font-size: 30px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .horarios {
-    /* border: 1px solid black; */
-
     width: 30vw; 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
-
 
 .hora {
     border: 1px solid #40A8B6;
@@ -249,14 +232,10 @@ h1 {
 }
 
 .buttonClicked {
-    /* background-color: var(--azul);
-    color: var(--branco);
-    border: 2px solid #53EAFF; */
     background-color: #30bdd1;
     color: var(--branco);
     border: 2px solid #52eaff;
 }
-
 
 #dataNascimento {
     padding-left: 2vw;
@@ -269,17 +248,11 @@ h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-/* #dataNascimento::placeholder { 
-    margin-left: 10vw;
-} */
-
-
 #agendar {
     height: 7vh;
     width: 12vw;
     font-size: 18px; 
     border: 2px solid #40A8B6;
-    /* border: none; */
     color: #ffffff;
     background-color: #30bdd1;
     border-radius: 5px;
@@ -288,14 +261,8 @@ h1 {
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
 
-
 #agendar:hover {
-    /* background-color: aqua; */
     background-color: rgba(48, 190, 209, 0.429);
     border: none;
     color: var(--branco);
 }
-
-
-
-

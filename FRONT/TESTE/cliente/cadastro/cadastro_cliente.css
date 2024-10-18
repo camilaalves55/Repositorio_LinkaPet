@@ -1,8 +1,7 @@
-
 *{
     color: rgb(0, 0, 0);
     margin: 0;
-   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 html, body {
@@ -18,15 +17,14 @@ body {
     background: linear-gradient(to bottom, #c6eef9, #75dae1, #5dc5d2, #00bcd4);
 }
 
-
 /* -------------------------------------MAIN------------------------------------- */
 
 main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh; /* Or adjust as needed */
-    width: 60vw; /* Or adjust as needed */
+    height: 80vh;
+    width: 60vw;
 }
 
 .secao {
@@ -39,51 +37,34 @@ main {
     width: 60vw;
     border:none;
     border-radius: 2vw;
-    /* border-radius: 2vw 0vw 0vw 2vw; */
     border: 2px solid white;
     box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.486);
-    background-color: rgba(255, 255, 255, 0.329);
-    /* background-color: rgb(180, 251, 227); */
-    /* background-color: rgba(255, 255, 255, 0.216); */
+    background-color: white;
 }
 
 .imagem_cadastro {
     height: 80vh;
     width: 25vw;
-    /* background-color: rgba(255, 255, 255, 0.216); */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  
- 
     font-family: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif';
-/*    
-    border: 1px solid black; */
 }
-/* 
-h2{
-    color: #143a44;
-    font-size: 35px;
-} */
 
 h1 {
     height: 40vh;
     font-size: 28px;
     color: #40A8B6;
-    letter-spacing: 0.5px; /* Espaçamento entre letras */
+    letter-spacing: 0.5px;
     line-height: 1.4;
-    /* border: 2px solid #000000; */
     width: 20vw;
-    /* Ajuste o valor conforme necessário */
 }
-
 
 .imagem_cadastro img{
     height: 40vh;
     width: 20vw;
     margin-bottom: 5vh;
-    /* border: 1px solid black; */
 }
 
 .area_cadastro {
@@ -93,13 +74,11 @@ h1 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  
     border-radius: 2vw;
     background-color: white;
+    background: linear-gradient(to bottom, #25d6e3c1, #16c5dcb0);
     box-shadow: 0px 0px 8px 1px rgb(107, 107, 107);
-    /* border: 2px solid rgb(169, 17, 17); */
 }
-
 
 .formulario {
     height: 70vh;
@@ -108,65 +87,50 @@ h1 {
     align-items: start;
     justify-content: space-evenly;
     flex-direction: column;
-  
-    /* border: 2px solid white; */
 }
 
-
-
-
-input::placeholder{
-    color: #918c8c;
+input::placeholder {
+    color: #fbffff;
     margin-left: 5px;
 }
 
 .input-linha {
     border: none; 
-    border-bottom: 2px solid #918c8c;
+    border-bottom: 2px solid #ffffff;
     outline: none;
     padding: 5px 0; 
     width: 100%; 
     font-size: 14px; 
     background-color: transparent;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .input-linha:focus {
     border-bottom: 3px solid #2cd0df; 
 }
 
-
-
 label {
-    color: #40A8B6;
+    color:  #338994;
     font-weight: bold;
     font-size: 19px;
     font-family: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif';
 }
-/* 
-h1 {
-    font-family: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif';
-    font-size: 36px;
-    color: #40A8B6;
-} */
-
 
 .select-linha {
     border: none; 
-    border-bottom: 2px solid #918c8c; 
+    border-bottom: 2px solid rgb(255, 255, 255); 
     outline: none; 
     background: transparent; 
     padding: 5px 0;
     font-size: 16px;
     width: 100%;
     appearance: none; 
-    color: #918c8c;
+    color: white;
 }
 
 .select-linha:focus {
     border-bottom: 2px solid #2cd0df; 
 }
-
 
 .select-linha::after {
     content: '▼';
@@ -177,22 +141,16 @@ h1 {
     pointer-events: none; 
 }
 
-#enviar {
-    height: 7vh;
-    width: 9vw;
-
-}
-
 .submit {
-    height: 10vh;
-    width: 9vw;
-    border: 2px solid #918c8c;
+    height: 6vh;
+    width: 11vw;
+    border: 2px solid #ffffff;
     background-color: transparent;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, border 0.3s;
-    color: #918c8c;
-  
+    color: #ffffff;
+    font-size: 18px;
 }
 
 .submit:hover {
@@ -209,4 +167,123 @@ h1 {
     color: #0b6a77;
     text-decoration: none;
     font-weight: bolder;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;    
+}
+
+.eye-icon {
+    cursor: pointer;
+    margin-left: -30px;
+    margin-bottom: 6px;
+    font-size: 17px;
+    color: white; 
+}
+
+.eye-icon i {
+    color: white; 
+}
+
+#senha {
+    width: 28vw;
+}
+
+/* --------------------------RESPONSIVO---------------------------- */
+ 
+@media screen and (min-width: 50px) and (max-width: 1013px) {
+    main {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .secao {
+        height: 100%;
+        width: 100%;
+        box-shadow: none;
+        background-color: white;
+        background: linear-gradient(to bottom, #25d6e3c1, #16c5dcb0);
+        position: relative;
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    .imagem_cadastro {
+        height: 30vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+        box-shadow: 0px 0px 8px 1px rgb(132, 132, 132);
+        background-color: white;
+        border-radius: 0vw 0vw 6vw 6vw;
+    }
+
+    .texto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 15vh;
+        width: 53vw; 
+        text-align: center;
+    }
+
+    h1 {
+        height: 100%;
+        font-size: 20px;
+        color: #40A8B6;
+        line-height: 1.4;
+        width: 100%;
+        text-align: center;
+    }
+
+    .imagem_cadastro img {
+        height: 15vh;
+        width: 35vw;
+        margin-bottom: 0vh;
+    }
+
+    .area_cadastro {
+        height: 70vh;
+        width: 100%;
+        border-radius: 0vw;
+        box-shadow: none;
+    }
+
+    .formulario {
+        height: 58vh;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .submit {
+        height: 5vh;
+        width: 33vw;
+    }
+
+    #senha {
+        width: 100%;
+    }
+
+
+    .area_cadastro::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 245, 245, 0.396); 
+        z-index: 1;
+    }
+    
+    .formulario, .imagem_cadastro {
+        position: relative;
+        z-index: 2; 
+    }
+    
 }

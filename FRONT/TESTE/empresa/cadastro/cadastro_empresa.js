@@ -1,8 +1,6 @@
 const NOME_EMPRESA = document.getElementById('nomeEmpresa');
-// const TELEFONE = document.getElementById('telefone');
 const NOME_USUARIO = document.getElementById('nomeUsuario');
 const cnpj = document.getElementById('cnpj');
-// const ENDERECO = document.getElementById('endereco');
 const EMAIL = document.getElementById('email');
 const SENHA = document.getElementById('senha');
 const CONFIRMA_SENHA = document.getElementById('confirmaSenha');
@@ -15,10 +13,8 @@ BOTAO.addEventListener('click', async function(e) {
     if (SENHA.value === CONFIRMA_SENHA.value && SENHA.value !== '') {
         let data = {
             nome_empresa: NOME_EMPRESA.value,
-            // telefone: TELEFONE.value,
             nome_usuario: NOME_USUARIO.value,
             cnpj: cnpj.value,
-            // endereco: ENDERECO.value,
             email: EMAIL.value,
             senha: SENHA.value,
             tipo_cliente: "juridico"
@@ -66,9 +62,6 @@ BOTAO.addEventListener('click', async function(e) {
         });
     }
 });
-
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
     const togglePassword = document.getElementById('togglePassword');

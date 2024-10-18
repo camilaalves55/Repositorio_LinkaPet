@@ -113,8 +113,6 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: row;
-   
-    /* overflow: hidden; */
 }
 
 aside {
@@ -131,7 +129,6 @@ article {
     align-items: start;
     justify-content: space-between;
     flex-direction: row;
-    
 }
 
 .main_secao {
@@ -141,7 +138,6 @@ article {
     align-items: center;
     justify-content: start;
     flex-direction: column;
-    /* background-color: #98f0fa4f; */
     background-color: white;
     position: fixed;
     overflow: hidden;
@@ -150,7 +146,7 @@ article {
 .main_coluna {
     margin-left: 58vw;
     position: fixed;
-    overflow-y: auto; /* Rolagem horizontal automática */
+    overflow-y: auto; 
     overflow-x: hidden;
     height: 100vh;
     width: 30vw;
@@ -161,8 +157,6 @@ article {
     background-color: #ffffff;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     z-index: 1;
-
-
     color: var(--azul);
     font-size: 30px;
     font-weight: bold;
@@ -174,14 +168,12 @@ article {
     margin-top: 1vh;
 }
 
-
 .main_coluna #barra_pet {
     color: #43cee1;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    /* border: 1px solid black; */
     width: 20vw;
     margin-top: 5vh;
 }
@@ -197,9 +189,6 @@ article {
     cursor: pointer;
 }
 
-
-
-
 #barra_pet button:hover{
     color: #40A8B6;
     border: 1px solid #40A8B6;
@@ -213,9 +202,7 @@ article {
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
- 
     z-index: 3;
-   
 }
 
 .modal-content {
@@ -231,7 +218,6 @@ article {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
     margin-top: 30vh;
     margin-left: 27vw;
 }
@@ -279,14 +265,10 @@ article {
     cursor: pointer;
 }
 
-
-
-
 .area_perfil {
     position: relative; 
     height: 30vh;
     width: 58vw;
-    /* border: 1px solid black; */
     overflow: visible;
     display: flex;
     justify-content: center;
@@ -298,8 +280,6 @@ article {
 .area_perfil img {
     height: 100%;
     width: 100%;
-    /* box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.267); */
-    
 }
 
 .info_perfil {
@@ -321,25 +301,20 @@ article {
     border: 8px solid #53eaff;
     overflow: hidden; 
     cursor: pointer;
-   
 }
 
 .info_perfil img {
     height: 100%; 
     width: 100%; 
     object-fit: cover;
-   
 }
-
 
 .info_div {
     height: 10vh;
     width: 58vw;
-  
     border: none; 
     border-bottom: 1px solid #918c8c;
     outline: none;
-
     display: flex;
     align-items: center;
     justify-content: start;
@@ -375,21 +350,15 @@ article {
 }
 
 .texto_div {
-
     width: 45vw;
-    /* border: 1px solid black; */
     margin-right: 5vw;
 }
-
-
-
 
 .pets_lista {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-
    width: 27vw;
    font-size: 15px;
    font-weight: normal;
@@ -408,7 +377,6 @@ article {
     border-radius: 1vw;
     background-color: #98f0fa4f;
     padding: auto;
-
 }
 
 .bloco_card h2{
@@ -429,10 +397,7 @@ article {
     margin-top: 0;
     width: 12vw;
     height: 32vh;
-  
-
 }
-
 
 .bloco_card .info2 {
     display: flex;
@@ -443,53 +408,26 @@ article {
     margin-top: 0;
     width: 12vw;
     height: 32vh;
-   
-   
-   /* Adicione um pouco de padding para evitar que os elementos grudem nas bordas */
 }
 
-
-
 .foto_div {
-    margin: 0; /* Remove margens */
+    margin: 0; 
     width: 5vw;
     height: 10vh;
     overflow: hidden; 
     border: 2px solid #53eaff;
     border-radius: 50%;
- 
-  
-   /* Mantém a posição relativa */
 }
 
 .bloco_card span {
     font-weight: bold;
     color: #43cee1;
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #foto_pet {
-    display: none; /* Mantém o input escondido */
+    display: none; 
 }
 
-
-
-
-
-/* Estilos básicos para o modal */
 #modal_adicionar_pet {
     position: fixed;
     top: 0;
@@ -519,7 +457,3 @@ article {
     cursor: pointer;
   }
   
-
-
-
-

@@ -102,12 +102,8 @@ body {
         margin-left: 220px;
     }
 }
-<<<<<<< HEAD
-=======
-
 
 main{
-    /* margin-top: 15vh; */
     height: 100vh;
     display: flex;
     align-items: center;
@@ -116,24 +112,15 @@ main{
     overflow: hidden;
 }
 
-
-
 aside {
-    /* background-color: #43cee1; */
     background-color: #ffffff;
-    /* background-color: white; */
     height: 100vh;
     width: 12%;
 }
 
-
-
 article {
-  
-
     height: 100vh;
     width: 80%;
-
     display: flex;
     align-items: start;
     justify-content: center;
@@ -144,4 +131,4 @@ img{
     height: 20vh;
     width: 10vw;
 }
->>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
+

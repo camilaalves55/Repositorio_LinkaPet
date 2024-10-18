@@ -2,12 +2,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     const clienteId = localStorage.getItem('id_cliente');
     const urlParams = new URLSearchParams(window.location.search);
     const empresaId = urlParams.get('id_empresa'); 
+
     if (!clienteId || !empresaId) {
         console.error('ID do cliente ou da empresa não encontrado. Por favor, faça login novamente.');
         return;
     }
 
     try {
+        console.log(`Buscando pets do cliente ID: ${clienteId} para a empresa ID: ${empresaId}`);
+
         const response = await fetch(`http://localhost:3005/api/store/get/pets?cliente_id=${clienteId}`, {
             method: 'GET',
             headers: {
@@ -16,12 +19,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
 
         const result = await response.json();
+        console.log("Resposta da API:", result);
 
-        if (result.success) {
-            const petsLista = document.querySelector('.pets_lista');
-            petsLista.innerHTML = ''; 
+        const petsLista = document.querySelector('.pets_lista');
+        petsLista.innerHTML = ''; 
 
+        if (result.success && result.data.length > 0) {
             result.data.forEach(pet => {
+                console.log(`Adicionando pet: ${pet.nome_pet}`);
+
                 const card = document.createElement('div');
                 card.className = 'bloco_card';
 
@@ -60,9 +66,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 p_data.innerHTML = `<span class="titulo">Nascimento:</span> ${formattedDate}`;
 
                 card.addEventListener('click', () => {
+                    console.log(`Clicado no pet ID: ${pet.id}, redirecionando para serviços...`);
                     window.location.href = `servicos.html?id=${pet.id}&empresa_id=${empresaId}`;
                 });
-                
 
                 infoDiv.appendChild(h2);
                 infoDiv.appendChild(p_raca);
@@ -79,9 +85,21 @@ document.addEventListener('DOMContentLoaded', async () => {
                 petsLista.appendChild(card);
             });
         } else {
-            console.log("Erro", result.message);
+            console.warn('Nenhum pet encontrado para o cliente.');
+
+            const mensagemErro = document.createElement('div');
+            mensagemErro.textContent = "Nenhum pet foi encontrado cadastrado em seu perfil.";
+            mensagemErro.classList.add('mensagem_erro');
+            petsLista.appendChild(mensagemErro);
         }
     } catch (error) {
         console.error("Erro ao buscar pets:", error);
+
+        const petsLista = document.querySelector('.pets_lista');
+        const mensagemErro = document.createElement('div');
+        mensagemErro.textContent = "Erro ao buscar os pets. Tente novamente mais tarde."; 
+        mensagemErro.classList.add('mensagem_erro');
+        petsLista.appendChild(mensagemErro);
     }
 });
+

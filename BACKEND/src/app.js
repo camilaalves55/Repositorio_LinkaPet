@@ -1,199 +1,29 @@
-// const express = require('express');
-// const dotenv = require("dotenv").config();
-// const fileupload = require("express-fileupload");
-// const path = require("path");
-// const cors = require('cors');
-
-// const perfilRouter = require('./routes/perfilRouter');
-// const loginRouter = require('./routes/loginRouter');
-// const petsRouter = require('./routes/petsRouter');
-// const servicoRouter = require('./routes/servicoRouter');
-// const feedRouter = require('./routes/feedRouter');
-
-// const app = express();
-// app.set("port", process.env.PORT || 3005);
-
-// // const fileupload = require('express-fileupload');
-// // app.use(fileupload());
-
-
-// app.use(express.json());
-// app.use(cors());
-// app.use(fileupload());
-
-// app.use('/upload', express.static(path.join(__dirname, "uploads")));
-
-
-// // app.use('/uploads', express.static('uploads'));
-
-// app.use('/api', loginRouter);
-// app.use('/api', petsRouter);
-// app.use('/api', feedRouter);
-// app.use('/api', perfilRouter);
-// app.use('/api', servicoRouter);
-
-// module.exports = app;
-
-
-
-
-
-<<<<<<< HEAD
-=======
-
-
-
-
-// const express = require('express');
-// const dotenv = require('dotenv').config();
-// const path = require('path');
-// const cors = require('cors');
-// // const fileUpload = require('express-fileupload'); 
-
-// const perfilRouter = require('./routes/perfilRouter');
-// const loginRouter = require('./routes/loginRouter');
-// const petsRouter = require('./routes/petsRouter');
-// const servicoRouter = require('./routes/servicoRouter');
-// const feedRouter = require('./routes/feedRouter');
-
-// const app = express();
-// app.set('port', process.env.PORT || 3005);
-
-// app.use(express.json());
-// app.use(cors());
-// // app.use(fileUpload()); 
-
-// app.use('/upload', express.static(path.join(__dirname, '..', "uploads")));
-
-// app.use('/api', loginRouter);
-// app.use('/api', petsRouter);
-// app.use('/api', feedRouter);
-// app.use('/api', perfilRouter);
-// app.use('/api', servicoRouter);
-
-// module.exports = app;
-
-
-
-
-
-
-
-
-
-// const express = require('express');
-// const dotenv = require('dotenv').config();
-// const path = require('path');
-// const cors = require('cors');
-
-// const perfilRouter = require('./routes/perfilRouter');
-// const loginRouter = require('./routes/loginRouter');
-// const petsRouter = require('./routes/petsRouter');
-// const servicoRouter = require('./routes/servicoRouter');
-// const feedRouter = require('./routes/feedRouter');
-
-// const app = express();
-// app.set('port', process.env.PORT || 3005);
-
-// app.use(express.json());
-// app.use(cors());
-
-// app.use('/upload', express.static(path.join(__dirname, "uploads")));
-
-// app.use('/api', loginRouter);
-// app.use('/api', petsRouter);
-// app.use('/api', feedRouter);
-// app.use('/api', perfilRouter);
-// app.use('/api', servicoRouter);
-
-// module.exports = app;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const express = require('express');
-// const dotenv = require("dotenv").config();
-// const path = require("path");
-// const cors = require('cors');
-
-// const perfilRouter = require('./routes/perfilRouter');
-// const loginRouter = require('./routes/loginRouter');
-// const petsRouter = require('./routes/petsRouter');
-// const servicoRouter = require('./routes/servicoRouter');
-// const feedRouter = require('./routes/feedRouter');
-
-// const app = express();
-// app.set("port", process.env.PORT || 3005);
-
-// app.use(express.json());
-// app.use(cors());
-
-// app.use('/upload', express.static(path.join(__dirname, "uploads")));
-
-// app.use('/api', loginRouter);
-// app.use('/api', petsRouter);
-// app.use('/api', feedRouter);
-// app.use('/api', perfilRouter);
-// app.use('/api', servicoRouter);
-
-// module.exports = app;
-
-
-
-
-
-
-
-
-
-
->>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
 const express = require('express');
 const dotenv = require("dotenv").config();
 const path = require("path");
 const cors = require('cors');
-const multer = require('multer');
+// const multer = require('multer');
 
-// Configuração do multer para armazenar arquivos
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'uploads/'); // Pasta onde os arquivos serão armazenados
-    },
-    filename: (req, file, cb) => {
-        cb(null, Date.now() + path.extname(file.originalname)); // Nome do arquivo
-    }
-});
+// const storage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         cb(null, 'uploads/'); 
+//     },
+//     filename: (req, file, cb) => {
+//         cb(null, Date.now() + path.extname(file.originalname)); 
+//     }
+// });
 
-const upload = multer({ storage: storage });
+// const upload = multer({ storage: storage });
 
-const perfilRouter = require('./routes/perfilRouter');
+const agendarRouter = require('./routes/agendarRouter');
+const atualizarPerfilRouter = require('./routes/atualizarPerfilRouter');
+const cadastroRouter = require('./routes/cadastroRouter');
+const consultasRouter = require('./routes/consultasRouter');
+const contasEmpresasRouter = require('./routes/contasEmpresasRouter');
 const loginRouter = require('./routes/loginRouter');
-const petsRouter = require('./routes/petsRouter');
-const servicoRouter = require('./routes/servicoRouter');
-<<<<<<< HEAD
-=======
+const perfilRouter = require('./routes/perfilRouter');
+const registrarEmpresaRouter = require('./routes/registrarEmpresaRouter');
 
-const agendamentoRouter = require('./routes/agendamentoRouter');
->>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
 
 const app = express();
 app.set("port", process.env.PORT || 3005);
@@ -201,84 +31,20 @@ app.set("port", process.env.PORT || 3005);
 app.use(express.json());
 app.use(cors());
 
-// Middleware para servir arquivos estáticos
+
 app.use('/upload', express.static(path.join(__dirname, "uploads")));
 app.use('/uploads', express.static('uploads'));
 
-// Rotas da API
-app.use('/api', loginRouter);
-app.use('/api', petsRouter);
-app.use('/api', perfilRouter);
-app.use('/api', servicoRouter);
 
-app.use('/api', agendamentoRouter);
+app.use('/api', agendarRouter);
+app.use('/api', atualizarPerfilRouter);
+app.use('/api', cadastroRouter);
+app.use('/api', consultasRouter);
+app.use('/api', contasEmpresasRouter);
+app.use('/api', loginRouter);
+app.use('/api', perfilRouter);
+app.use('/api', registrarEmpresaRouter);
+
 
 module.exports = app;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
-// const express = require('express');
-// const dotenv = require("dotenv").config();
-// const path = require("path");
-// const cors = require('cors');
-
-<<<<<<< HEAD
-=======
-// // const fileupload = require("express-fileupload");
->>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
-// const perfilRouter = require('./routes/perfilRouter');
-// const loginRouter = require('./routes/loginRouter');
-// const petsRouter = require('./routes/petsRouter');
-// const servicoRouter = require('./routes/servicoRouter');
-<<<<<<< HEAD
-// const feedRouter = require('./routes/feedRouter');
-=======
-
->>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
-
-// const app = express();
-// app.set("port", process.env.PORT || 3005);
-
-// app.use(express.json());
-// app.use(cors());
-
-<<<<<<< HEAD
-// app.use('/upload', express.static(path.join(__dirname, "uploads")));
-
-// app.use('/api', loginRouter);
-// app.use('/api', petsRouter);
-// app.use('/api', feedRouter);
-// app.use('/api', perfilRouter);
-// app.use('/api', servicoRouter);
-
-=======
-// // app.use(fileupload());
-// app.use('/upload', express.static(path.join(__dirname, "uploads")));
-// app.use('/uploads', express.static('uploads'));
-
-
-// app.use('/api', loginRouter);
-// app.use('/api', petsRouter);
-// app.use('/api', perfilRouter);
-// app.use('/api', servicoRouter);
-
-
->>>>>>> 2123e1b (Página de Consultas Agendadas parte 1)
-// module.exports = app;

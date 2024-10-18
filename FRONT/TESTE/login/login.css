@@ -1,8 +1,7 @@
-
 *{
     color: rgb(0, 0, 0);
     margin: 0;
-   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 html, body {
@@ -18,15 +17,14 @@ body {
     background: linear-gradient(to bottom, #c6eef9, #75dae1, #5dc5d2, #00bcd4);
 }
 
-
 /* -------------------------------------MAIN------------------------------------- */
 
 main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh; /* Or adjust as needed */
-    width: 60vw; /* Or adjust as needed */
+    height: 80vh;
+    width: 60vw;
 }
 
 .secao {
@@ -40,15 +38,12 @@ main {
     border-radius: 2vw;
     border: 2px solid white;
     box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.584);
-    /* background-color: rgb(180, 251, 227); */
     background-color: rgba(255, 255, 255, 0.216);
 }
 
 .area_login {
     height: 80vh;
     width: 35vw;
-   
- 
 }
 
 .imagem_login {
@@ -65,19 +60,15 @@ main {
 #imagem {
     height: 60vh;
     width: 27vw;
-
 }
 
 .area_login {
     height: 80vh;
     width: 40vw;
-
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* border: 2px solid rgb(182, 40, 40); */
-
 }
 
 .formulario {
@@ -87,25 +78,12 @@ main {
     align-items: start;
     justify-content: space-evenly;
     flex-direction: column;
-    /* border: 2px solid white; */
 }
 
-/* 
-.formulario input{
-    height: 5vh;
-    width: 24vw;
-    border-radius: 35px;
- 
-    background-color: transparent;
-    color: white;
-    border: none;
-} */
-
-input::placeholder{
+input::placeholder {
     color: white;
     margin-left: 5px;
 }
-
 
 .input-linha {
     border: none; 
@@ -134,7 +112,6 @@ h1 {
     color: #40A8B6;
 }
 
-
 .select-linha {
     border: none; 
     border-bottom: 2px solid #ffffff; 
@@ -151,7 +128,6 @@ h1 {
     border-bottom: 2px solid #2cd0df; 
 }
 
-
 .select-linha::after {
     content: '▼';
     position: absolute;
@@ -160,7 +136,6 @@ h1 {
     transform: translateY(-50%);
     pointer-events: none; 
 }
-
 
 .submit {
     height: 6vh;
@@ -190,14 +165,11 @@ h1 {
     font-weight: bolder;
 }
 
-
-
-
 .password-container {
-   
     display: flex;
     align-items: center;    
 }
+
 .eye-icon {
     cursor: pointer;
     margin-left: -30px;
@@ -209,7 +181,67 @@ h1 {
     color: white; 
 }
 
-
 #senha {
     width: 25vw;
+}
+ 
+/* --------------------------RESPONSIVO---------------------------- */
+ 
+@media screen and (min-width: 50px) and (max-width: 1013px) {
+
+    main {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .secao {
+        flex-direction: column-reverse;
+        height: 100%;
+        width: 100%;
+    }
+
+    .area_login {
+        height: 100vh;
+        width: 80vw;
+    }
+
+    .imagem_login {
+        height: 40vh;
+        width: 100%;
+        box-shadow: 0px 0px 8px 2px rgb(167, 165, 165);
+        border-radius: 0vw 0vw 10vw 10vw;
+    }
+
+    #imagem {
+        height: 40vh;
+        width: 70vw;
+    }
+
+    .formulario {
+        height: 40vh;
+        width: 100%;
+    }
+
+    .submit {
+        height: 5vh;
+        width: 30vw;
+        font-size: 16px;
+    }
+
+    .submit:hover {
+        background-color: aqua;
+        border: none;
+        color: #40A8B6;
+    }
+
+    .password-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    #senha {
+        width: 100%;
+    }
+
 }

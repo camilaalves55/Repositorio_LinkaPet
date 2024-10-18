@@ -13,6 +13,114 @@
 
     <main>
 
+        <article>
+
+            <section class="main_coluna">
+
+
+                <div class="sobre">
+                    <div class="container">
+                        <h3 class="titulo">Sobre a Empresa</h3>
+                        <button id="edit-sobre_empresa" class="edit-btn"><i class="fas fa-user-edit"></i></button>
+                    </div>
+                   
+                    <p id="sobre_empresa">sobre_empresa</p>
+                 
+                </div>
+
+                <div class="servicos">
+                    <div class="container">
+                        <h3 class="titulo">Serviços Realizados</h3>
+                        <button id="edit-tipos_servico" class="edit-btn"><i class="fas fa-user-edit"></i></button>
+                    </div>
+                
+                    <p id="tipos_servico">tipos_servico</p>
+                </div>
+
+                <p class="informacao" style="display: none;">Cadastre aqui os seus pet's para realizar agendamentos</p>
+
+                <div id="barra_pet" style="display: none;">
+                    <p>PET's</p>
+                    <button id="adicionar_pet">Novo +</button>
+
+                    <input type="file" id="foto_pet" accept="image/*" style="display: none;">
+                </div>
+                
+            <div class="pets_lista" ></div>
+    
+                <div class="pets_cadastrados">
+                    <div class="div_cards" ></div>
+                </div>
+
+            </section>
+
+            <section class="main_secao">
+
+                <div class="area_perfil">
+                    <img src="../../imagens/fundo_perfil_empresa.png" alt="">
+            
+
+                    <div class="info_perfil">
+                        <img id="logo_perfil" src="../../imagens/default.png" alt="">
+                    </div>
+                </div>
+
+
+                <div id="perfil">
+                    <button id="foto_perfil"  style="display: none;">
+                        <img id="imagem" src="../../imagens/default.png" alt="Foto de perfil">
+                    </button>
+    
+                    <div id="modal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <span id="close">&times;</span>
+                            <img id="previewImg" src="../../imagens/default.png" alt="Pré-visualização da foto">
+                            <input type="file" id="fileInput" style="display: none;">
+                            <button id="trocarFotoBtn">Trocar Foto</button>
+                            <button id="okBtn" style="display: none;">OK</button>
+                        </div>
+                    </div>
+                  
+                    <div class="informacoes_perfil">
+
+                            <div class="informacoes_perfil">
+                                <div class="container">
+                                    <h2 id="nome_empresa">nome_empresa</h2>
+                                    <button id="edit-nome_empresa" class="edit-btn"><i class="fas fa-user-edit"></i></button>
+                                </div>
+                               
+                                <div class="container">
+                                    <h3 class="titulo">Endereço</h3>
+                                    <button id="edit-endereco" class="edit-btn"><i class="fas fa-user-edit"></i></button>
+                                </div>
+                                <p id="endereco">endereco</p>
+                               
+                                <div class="container">
+                                    <h3 class="titulo">Telefone</h3>
+                                    <button id="edit-telefone" class="edit-btn"><i class="fas fa-user-edit"></i></button>
+                                </div>
+                                
+                                <p id="telefone">telefone</p>
+                             
+                                <div class="container">
+                                    <h3 class="titulo">Horário de Funcionamento</h3>
+                                    <button id="edit-horario_funcionamento" class="edit-btn"><i class="fas fa-user-edit"></i></button>
+                                </div>
+                              
+                                <p id="horario_funcionamento">horario_funcionamento</p>
+                             
+                                
+
+                                
+                            </div>
+                            
+                    </div>
+                </div>
+              
+            </section>
+                
+        </article>
+
         <aside>
 
             <div class="barra_navegacao" >
@@ -30,122 +138,10 @@
             </div>
 
         </aside>
-            
-        <article>
-
-            <section class="main_secao">
-
-                <div class="area_perfil">
-                    <img src="../../imagens/fundo_perfil_empresa.png" alt="">
-             
-                    <div class="info_perfil">
-              
-                        <img id="foto_perfil" src="../../imagens/default.png" alt="">
-                    </div>
-                </div>
-
-                <div id="perfil">
-                    <button id="foto_perfil"  style="display: none;">
-                        <img id="imagem_perfil" src="../../imagens/default.png" alt="Foto de perfil">
-                    </button>
-    
-                    <div id="modal" class="modal" style="display: none;">
-                        <div class="modal-content">
-                            <span id="close">&times;</span>
-                            <img id="previewImg" src="../../imagens/default.png" alt="Pré-visualização da foto">
-                            <input type="file" id="fileInput" style="display: none;">
-                            <button id="trocarFotoBtn">Trocar Foto</button>
-                            <button id="okBtn" style="display: none;">OK</button>
-                        </div>
-                    </div>
-    
-        
-                    <div class="informacoes_perfil">
-                        <!-- <p id="nome"><span class="titulo">Nome:</span></p>
-                        <p id="nome_usuario"><span class="titulo">Nome de Usuário:</span></p>
-                        <p id="email"><span class="titulo">Email:</span></p>
-                        <p id="telefone"><span class="titulo">Telefone:</span></p>
-                        <p id="endereco"><span class="titulo">Endereço:</span></p> -->
-                 
-                            <!-- <div id="logo-empresa">
-                                <img id="imagem" src="http://localhost:3005/uploads/${data.data.logo}">
-                            </div> -->
-                            <h2 id="nome_empresa">nome_empresa</h2>
-
-                            <!-- <h3 class="titulo">Sobre a Empresa</h3>
-                            <p id="sobre_empresa">sobre_empresa</p> -->
-
-                            <h3 class="titulo">Endereço</h3>      
-                            <p id="endereco">endereco</p>
-
-                            <!-- <h3 class="titulo">Tipos de Serviços Realizados</h3>
-                            <p id="tipos_servico">tipos_servico</p> -->
-
-                            <h3 class="titulo">Telefone</h3>
-                            <p id="telefone">telefone</p>
-
-                            <h3 class="titulo">Horário de Funcionamento</h3>   
-                            <p id="horario_funcionamento">horario_funcionamento</p>
-                 
-                    </div>
-                </div>
-              
-
-            </section>
-          
-            <section class="main_coluna">
-
-
-                <div class="sobre">
-
-                    <h3 class="titulo">Sobre a Empresa</h3>
-                    <p id="sobre_empresa">sobre_empresa</p>
-                    
-                </div>
-
-                <div class="servicos">
-
-                    <h3 class="titulo">Tipos de Serviços Realizados</h3>
-                    <p id="tipos_servico">tipos_servico</p>
-
-                </div>
-
-
-                <p class="informacao" style="display: none;">Cadastre aqui os seus pet's para realizar agendamentos</p>
-
-                <div id="barra_pet" style="display: none;">
-                    <p>PET's</p>
-                    <button id="adicionar_pet">Novo +</button>
-
-                    <input type="file" id="foto_pet" accept="image/*" style="display: none;">
-
-
-                </div>
-    
-                
-            <div class="pets_lista" ></div>
-    
-                <div class="pets_cadastrados">
-                    <div class="div_cards" ></div>
-                </div>
-
-               
-
-                
-                
-    
-            </section>
-                
-        </article>
 
     </main>
 
     <script src="perfil_empresa.js"></script>
 
-    <!-- <script src="funcional.js"></script> -->
-    <!-- <script src="final.js"></script> -->
-    <!-- <script src="perfil_cliente.js"></script> -->
-     <!-- <script src="socorro.js"></script> -->
-      <!-- <script src="teste.js"></script> -->
 </body>
 </html>
