@@ -61,7 +61,7 @@ async function getEmpresa(request, response) {
         });
     }
 
-    const query = "SELECT * FROM perfil_empresa WHERE id = ?";
+    const query = "SELECT * FROM perfil_empresa WHERE empresa_id = ?";
     connection.query(query, [empresaId], (err, results) => {
         if (err) {
             return response.status(400).json({
