@@ -125,7 +125,7 @@ async function updateEmpresa(req, res) {
             });
         }
 
-        const query = `UPDATE perfil_empresa SET ${field} = ? WHERE id = ?`;
+        const query = `UPDATE perfil_empresa SET ${field} = ? WHERE empresa_id = ?`;
         connection.query(query, [value, empresa_id], (err, results) => {
             if (err) {
                 console.error('Erro ao atualizar perfil:', err);

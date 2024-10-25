@@ -10,6 +10,7 @@ if (!fs.existsSync(uploadPath)) {
 
 // funcao para registrar a empresa como um estabelecimento de servicos
 
+
 async function storePerfil(request, response) {
 
     const logo = request.file; 

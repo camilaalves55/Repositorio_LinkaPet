@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const petNome = urlParams.get('nome_pet'); // Capturando corretamente
     const nomeServico = urlParams.get('nome_servico'); // Capturando corretamente
 
-    console.log('empresa_nome:', empresaNome, 'pet_nome:', petNome);
+    console.log('empresa_nome:', empresaNome, 'pet_nome:', petNome, 'servico_nome:', nomeServico);
     console.log('empresa_id:', empresaId, 'pet_id:', petId, 'servico_id:', servicoId);
 
     if (!empresaId || !petId || !servicoId) {

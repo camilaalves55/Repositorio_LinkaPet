@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="perfil_empresa.css">
+    <link rel="stylesheet" href="registrar_empresa.css">
     <link rel="icon" type="image/x-icon" href="../../icones/logo_site.png">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Linka Pet</title>
@@ -16,110 +15,11 @@
 
         <article>
 
-            <section class="main_coluna">
-
-
-                <div class="sobre">
-                    <div class="container">
-                        <h3 class="titulo">Sobre a Empresa</h3>
-                        <button id="edit-sobre_empresa" class="edit-btn"><i class="fas fa-user-edit"></i></button>
-                    </div>
-                   
-                    <p id="sobre_empresa">sobre_empresa</p>
-                 
-                </div>
-
-                <div class="servicos">
-                    <div class="container">
-                        <h3 class="titulo">Serviços Realizados</h3>
-                        <button id="edit-tipos_servico" class="edit-btn"><i class="fas fa-user-edit"></i></button>
-                    </div>
-                
-                    <p id="tipos_servico">tipos_servico</p>
-                </div>
-
-                <p class="informacao" style="display: none;">Cadastre aqui os seus pet's para realizar agendamentos</p>
-
-                <div id="barra_pet" style="display: none;">
-                    <p>PET's</p>
-                    <button id="adicionar_pet">Novo +</button>
-
-                    <input type="file" id="foto_pet" accept="image/*" style="display: none;">
-                </div>
-                
-            <div class="pets_lista" ></div>
-    
-                <div class="pets_cadastrados">
-                    <div class="div_cards" ></div>
-                </div>
-
-            </section>
+            <section class="main_coluna"></section>
 
             <section class="main_secao">
 
-                <div class="area_perfil">
-                    <img src="../../imagens/fundo_perfil_empresa.png" alt="">
-            
-
-                    <div class="info_perfil">
-                        <img id="logo_perfil" src="../../imagens/default.png" alt="">
-                    </div>
-                </div>
-
-
-                <div id="perfil">
-                    <button id="foto_perfil"  style="display: none;">
-                        <img id="imagem" src="../../imagens/default.png" alt="Foto de perfil">
-                    </button>
-    
-                    <div id="modal" class="modal" style="display: none;">
-                        <div class="modal-content">
-                            <span id="close">&times;</span>
-                            <img id="previewImg" src="../../imagens/default.png" alt="Pré-visualização da foto">
-                            <input type="file" id="fileInput" style="display: none;">
-                            <button id="trocarFotoBtn">Trocar Foto</button>
-                            <button id="okBtn" style="display: none;">OK</button>
-                        </div>
-                    </div>
-                  
-                    <div class="informacoes_perfil">
-
-                            <div class="informacoes_perfil">
-                                <div class="container">
-                                    <h2 id="nome_empresa">nome_empresa</h2>
-                                    <button id="edit-nome_empresa" class="edit-btn"><i class="fas fa-user-edit"></i></button>
-                                </div>
-                               
-                                <div class="container">
-                                    <h3 class="titulo">Endereço</h3>
-                                    <button id="edit-endereco" class="edit-btn"><i class="fas fa-user-edit"></i></button>
-                                </div>
-                                <p id="endereco">endereco</p>
-                               
-                                <div class="container">
-                                    <h3 class="titulo">Telefone</h3>
-                                    <button id="edit-telefone" class="edit-btn"><i class="fas fa-user-edit"></i></button>
-                                </div>
-                                
-                                <p id="telefone">telefone</p>
-                             
-                                <div class="container">
-                                    <h3 class="titulo">Horário de Funcionamento</h3>
-                                    <button id="edit-horario_funcionamento" class="edit-btn"><i class="fas fa-user-edit"></i></button>
-                                </div>
-                              
-                                <p id="horario_funcionamento">horario_funcionamento</p>
-                             
-                                
-
-                                
-                            </div>
-                            
-                    </div>
-                </div>
-
-                <!-- AQUIIIIII: -->
-
+                
                 <div class="container">
                     <h1 class="my-4">Cadastro de Pet Shop</h1>
                     <button id="botao" class="btn btn-primary mb-3">Adicionar Empresa</button>
@@ -166,17 +66,14 @@
                                 <label for="horarios_disponiveis">Horários Disponíveis</label>
                                 <input type="text" class="form-control" id="horarios_disponiveis" placeholder="Horários Disponíveis" required>
                             </div>
-                
+
                             <button type="submit" class="btn btn-success">Salvar</button>
                         </form>
                     </div>
                 </div>
-                
-                
 
-              
             </section>
-                
+            
         </article>
 
         <aside>
@@ -198,8 +95,7 @@
         </aside>
 
     </main>
-
-    <script src="perfil.js"></script>
-
+    
+    <script src="registrar_empresa.js" defer></script>
 </body>
 </html>

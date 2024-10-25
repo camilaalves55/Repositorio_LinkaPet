@@ -98,12 +98,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const precoServico = document.createElement('p');
                 precoServico.innerHTML = `<span class="titulo">Preço:</span> ${servico.preco}`;
 
-                const descricaoServico = document.createElement('p');
-                descricaoServico.innerHTML = `<span class="titulo">Descrição:</span> ${servico.descricao || 'Sem descrição disponível'}`;
+                // const descricaoServico = document.createElement('p');
+                // descricaoServico.innerHTML = `<span class="titulo">Descrição:</span> ${servico.descricao || 'Sem descrição disponível'}`;
 
                 servico1Div.appendChild(nomeServico);
                 servico1Div.appendChild(precoServico);
-                servicoDiv.appendChild(descricaoServico);
+                // servicoDiv.appendChild(descricaoServico);
 
                 cardDiv.appendChild(servico1Div);
                 cardDiv.appendChild(servicoDiv);
