@@ -64,9 +64,13 @@ CREATE TABLE empresas_servicos (
 CREATE TABLE agendamentos (
     id INT PRIMARY KEY AUTO_INCREMENT,
     cliente_id INT NOT NULL,
+    nome_cliente VARCHAR(120),
     empresa_id INT NOT NULL,
+    nome_empresa VARCHAR(120),
     servico_id INT NOT NULL,
+    nome_servico VARCHAR(120),
     pet_id INT NOT NULL,
+    nome_pet VARCHAR(120),
     horario varchar(100) NOT NULL,
     data_agendada DATE NOT NULL,
     status ENUM('PENDENTE', 'CONFIRMADO', 'CONCLUIDO', 'CANCELADO') DEFAULT 'PENDENTE',
@@ -86,18 +90,6 @@ CREATE TABLE perfil_empresa (
 	telefone VARCHAR(14) NOT NULL,
     endereco VARCHAR(255) NOT NULL,
     FOREIGN KEY (empresa_id) REFERENCES cadastro_empresa(id) ON DELETE CASCADE
-);
-
-create table linka_pet.posts(
-	id int not null auto_increment primary key,
-    imagem text,
-    description varchar(255),
-    title varchar(255),
-    status enum('Ativo', 'Inativo') default('Ativo'),
-    id_usuario int not null,
-    created_at timestamp default current_timestamp,
-    updated timestamp default current_timestamp,
-    foreign key(id_usuario) references cadastro_cliente(id)
 );
 
 INSERT INTO servicos (nome_servico, descricao_servico, duracao)
@@ -136,5 +128,3 @@ select * from linka_pet.perfil_empresa;
 select * from linka_pet.pets_cadastrados;
 select * from linka_pet.servicos;
 select * from linka_pet.agendamentos;
-
-drop database linka_pet;

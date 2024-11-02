@@ -115,7 +115,8 @@ async function storePet(req, res) {
     const params = [
         req.body.nome_pet,
         req.body.raca,
-        req.body.idade,
+        // req.body.idade,
+        req.body.sexo,
         imagemNome,
         req.body.descricao,
         req.body.especie,
@@ -123,7 +124,7 @@ async function storePet(req, res) {
         clienteId
     ];
 
-    const query = "INSERT INTO pets_cadastrados(nome_pet, raca, idade, imagem, descricao, especie, data_nascimento, cliente_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    const query = "INSERT INTO pets_cadastrados(nome_pet, raca, sexo, imagem, descricao, especie, data_nascimento, cliente_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
 
     connection.query(query, params, (err, results) => {

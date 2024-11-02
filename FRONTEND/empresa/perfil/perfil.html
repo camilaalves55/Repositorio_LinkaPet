@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="perfil_empresa.css">
+    <link rel="icon" type="image/x-icon" href="../../imagens/logo_site.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Linka Pet</title>
+</head>
+<body>
+
+    <main>
+
+        <article>
+
+            <section class="main_coluna">
+
+
+                <div class="sobre">
+                    <div class="container">
+                        <h3 class="titulo">Sobre a Empresa</h3>
+                        <button id="edit-sobre_empresa" class="edit-btn"><i class="fas fa-user-edit"></i></button>
+                    </div>
+                   
+                    <p id="sobre_empresa">sobre_empresa</p>
+                 
+                </div>
+
+                <div class="servicos">
+                    <div class="container">
+                        <h3 class="titulo">Serviços Realizados</h3>
+                        <button id="edit-tipos_servico" class="edit-btn"><i class="fas fa-user-edit"></i></button>
+                    </div>
+                
+                    <p id="tipos_servico">tipos_servico</p>
+                </div>
+
+                <p class="informacao" style="display: none;">Cadastre aqui os seus pet's para realizar agendamentos</p>
+
+                <div id="barra_pet" style="display: none;">
+                    <p>PET's</p>
+                    <button id="adicionar_pet">Novo +</button>
+
+                    <input type="file" id="foto_pet" accept="image/*" style="display: none;">
+                </div>
+                
+            <div class="pets_lista" ></div>
+    
+                <div class="pets_cadastrados">
+                    <div class="div_cards" ></div>
+                </div>
+
+            </section>
+
+            <section class="main_secao">
+
+                <div class="area_perfil">
+                    <img src="../../imagens/fundo_perfil_empresa.png" alt="">
+            
+
+                    <div class="info_perfil">
+                        <img id="logo_perfil" src="../../imagens/default.png" alt="">
+                    </div>
+                </div>
+
+
+                <div id="perfil">
+                    <button id="foto_perfil"  style="display: none;">
+                        <img id="imagem" src="../../imagens/default.png" alt="Foto de perfil">
+                    </button>
+    
+                    <div id="modal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <span id="close">&times;</span>
+                            <img id="previewImg" src="../../imagens/default.png" alt="Pré-visualização da foto">
+                            <input type="file" id="fileInput" style="display: none;">
+                            <button id="trocarFotoBtn">Trocar Foto</button>
+                            <button id="okBtn" style="display: none;">OK</button>
+                        </div>
+                    </div>
+                  
+                    <div class="informacoes_perfil">
+
+                            <div class="informacoes_perfil">
+                                <div class="container">
+                                    <h2 id="nome_empresa">nome_empresa</h2>
+                                    <button id="edit-nome_empresa" class="edit-btn"><i class="fas fa-user-edit"></i></button>
+                                </div>
+                               
+                                <div class="container">
+                                    <h3 class="titulo">Endereço</h3>
+                                    <button id="edit-endereco" class="edit-btn"><i class="fas fa-user-edit"></i></button>
+                                </div>
+                                <p id="endereco">endereco</p>
+                               
+                                <div class="container">
+                                    <h3 class="titulo">Telefone</h3>
+                                    <button id="edit-telefone" class="edit-btn"><i class="fas fa-user-edit"></i></button>
+                                </div>
+                                
+                                <p id="telefone">telefone</p>
+                             
+                                <div class="container">
+                                    <h3 class="titulo">Horário de Funcionamento</h3>
+                                    <button id="edit-horario_funcionamento" class="edit-btn"><i class="fas fa-user-edit"></i></button>
+                                </div>
+                              
+                                <p id="horario_funcionamento">horario_funcionamento</p>
+                             
+                                
+
+                                
+                            </div>
+                            
+                    </div>
+                </div>
+
+                <!-- AQUIIIIII: -->
+
+                <div class="container">
+                    <h1 class="my-4">Cadastro de Pet Shop</h1>
+                    <button id="botao" class="btn btn-primary mb-3">Adicionar Empresa</button>
+                    <div id="formContainer" style="display: none;">
+                        <form id="serviceForm">
+                            <div class="form-group">
+                                <label for="logo">Logo da Empresa</label>
+                                <input id="logo" type="file" class="form-control" required>
+                                <div id="fileName" class="file-name">Nenhum arquivo selecionado</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="nome_empresa">Nome da Empresa</label>
+                                <input type="text" class="form-control" id="nome_empresa" placeholder="Nome da Empresa" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="sobre_empresa">Sobre a Empresa</label>
+                                <input type="text" class="form-control" id="sobre_empresa" placeholder="Sobre a Empresa" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone da Empresa</label>
+                                <input type="text" class="form-control" id="telefone" placeholder="Telefone da Empresa" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="endereco">Endereço da Empresa</label>
+                                <input type="text" class="form-control" id="endereco" placeholder="Endereço da Empresa" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="horario_funcionamento">Horário de Funcionamento</label>
+                                <input type="text" class="form-control" id="horario_funcionamento" placeholder="Horário de Funcionamento" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tipos_servico">Tipos de Serviço Realizados</label>
+                                <input type="text" class="form-control" id="tipos_servico" placeholder="Tipos de Serviço" name="tipos_servico[]" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="servico">Serviço</label>
+                                <input type="text" class="form-control" id="servico" placeholder="Nome do Serviço" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="preco">Preço</label>
+                                <input type="text" class="form-control" id="preco" placeholder="Preço do Serviço" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="horarios_disponiveis">Horários Disponíveis</label>
+                                <input type="text" class="form-control" id="horarios_disponiveis" placeholder="Horários Disponíveis" required>
+                            </div>
+                
+                            <button type="submit" class="btn btn-success">Salvar</button>
+                        </form>
+                    </div>
+                </div>
+                
+                
+
+              
+            </section>
+                
+        </article>
+
+        <aside>
+
+            <div class="barra_navegacao" >
+                <div class="logo"  onclick="window.location.href='../inicio/tela_principal.html'">
+                    <img src="../../imagens/logo_geral.png" alt="">
+                </div>
+                <ul class="links_navegacao">
+                    <li><a href="../inicio/tela_principal.html"><i class="fas fa-home"></i>Inicio</a></li>
+                    <li><a href="../perfil/perfil_empresa.html" class="ativo"><i class="fas fa-user"></i>Perfil</a></li>
+                    <li><a href="../agendamentos/agendamentos.html"><i class="fas fa-calendar-alt"></i>Agendamentos</a></li>
+                    <li><a href="../pets/pet_shops.html"><i class="fas fa-store"></i>Pet Shops</a></li>
+                    <li><a href="../suporte/suporte.html"><i class="fas fa-headset"></i>Suporte</a></li> 
+                    <li><a href="../contato/contato.html"><i class="fas fa-envelope"></i>Contato</a></li>
+                </ul>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <script src="perfil.js"></script>
+
+</body>
+</html>

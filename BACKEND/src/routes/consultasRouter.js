@@ -63,6 +63,6 @@ router.post('/agendamento/empresa',agendamentosEmpresa);
  *                type: object
  */
 
-router.post('/agendamento/atualizar', updateStatus);
+router.put('/agendamento/atualizar', updateStatus);
 
 module.exports = router;

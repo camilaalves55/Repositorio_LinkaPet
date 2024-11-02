@@ -24,7 +24,7 @@ const { updateFotoPerfil, updateProfile, updateEmpresa, updateLogoPerfil } = req
  *                type: object
  */
 
-router.post('/store/update/foto', upload.single('foto_perfil'), updateFotoPerfil);
+router.put('/store/update/foto', upload.single('foto_perfil'), updateFotoPerfil);
 
 // funcao para atualizar os dados de perfil do cliente
 
@@ -44,7 +44,7 @@ router.post('/store/update/foto', upload.single('foto_perfil'), updateFotoPerfil
  *                type: object
  */
 
-router.post('/update/perfil', updateProfile);
+router.put('/update/perfil', updateProfile);
 
 // funcao para atualizar os dados de perfil da empresa
 
@@ -64,7 +64,7 @@ router.post('/update/perfil', updateProfile);
  *                type: object
  */
 
-router.post('/update/perfil/empresa', updateEmpresa);  
+router.put('/update/perfil/empresa', updateEmpresa);  
 
 // funcao para atualizar a logo do perfil da empresa
 
@@ -84,6 +84,6 @@ router.post('/update/perfil/empresa', updateEmpresa);
  *                type: object
  */
 
-router.post('/store/update/logo', upload.single('logo_perfil'), updateLogoPerfil);
+router.put('/store/update/logo', upload.single('logo_perfil'), updateLogoPerfil);
 
 module.exports = router;

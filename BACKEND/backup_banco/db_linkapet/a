@@ -1,5 +1,5 @@
 CREATE DATABASE linka_pet;
-drop database linka_pet;
+
 USE linka_pet;
 
 CREATE TABLE cadastro_cliente (
@@ -33,7 +33,7 @@ CREATE TABLE pets_cadastrados (
     id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     nome_pet VARCHAR(255) NOT NULL,
     raca VARCHAR(255) NOT NULL,
-    idade INT NOT NULL,
+	sexo VARCHAR(150) NOT NULL,
     imagem TEXT,
     descricao TEXT,
     especie VARCHAR(255) NOT NULL,
@@ -41,6 +41,7 @@ CREATE TABLE pets_cadastrados (
     cliente_id INT NOT NULL,
     FOREIGN KEY (cliente_id) REFERENCES cadastro_cliente(id) ON DELETE CASCADE
 );
+
 
 CREATE TABLE servicos (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -64,13 +65,13 @@ CREATE TABLE empresas_servicos (
 CREATE TABLE agendamentos (
     id INT PRIMARY KEY AUTO_INCREMENT,
     cliente_id INT NOT NULL,
-	nome_cliente VARCHAR(255) NOT NULL,
+    nome_cliente VARCHAR(120),
     empresa_id INT NOT NULL,
-    nome_empresa VARCHAR(255) NOT NULL,
+    nome_empresa VARCHAR(120),
     servico_id INT NOT NULL,
-    nome_servico VARCHAR(255) NOT NULL,
+    nome_servico VARCHAR(120),
     pet_id INT NOT NULL,
-    nome_pet VARCHAR(255) NOT NULL,
+    nome_pet VARCHAR(120),
     horario varchar(100) NOT NULL,
     data_agendada DATE NOT NULL,
     status ENUM('PENDENTE', 'CONFIRMADO', 'CONCLUIDO', 'CANCELADO') DEFAULT 'PENDENTE',
@@ -79,7 +80,7 @@ CREATE TABLE agendamentos (
     FOREIGN KEY (servico_id) REFERENCES empresas_servicos(servico_id) ON DELETE CASCADE
 );
 
-CREATE TABLE linka_pet.perfil_empresa (
+CREATE TABLE perfil_empresa (
     id INT PRIMARY KEY AUTO_INCREMENT,
     empresa_id INT NOT NULL,
     logo text,
@@ -90,25 +91,6 @@ CREATE TABLE linka_pet.perfil_empresa (
 	telefone VARCHAR(14) NOT NULL,
     endereco VARCHAR(255) NOT NULL,
     FOREIGN KEY (empresa_id) REFERENCES cadastro_empresa(id) ON DELETE CASCADE
-);
-
-DELETE FROM linka_pet.perfil_empresa
-WHERE id = 3;
-
-DELETE FROM linka_pet.perfil_empresa
-WHERE id BETWEEN 3 AND 25;
-
-
-create table linka_pet.posts(
-	id int not null auto_increment primary key,
-    imagem text,
-    description varchar(255),
-    title varchar(255),
-    status enum('Ativo', 'Inativo') default('Ativo'),
-    id_usuario int not null,
-    created_at timestamp default current_timestamp,
-    updated timestamp default current_timestamp,
-    foreign key(id_usuario) references cadastro_cliente(id)
 );
 
 INSERT INTO servicos (nome_servico, descricao_servico, duracao)
@@ -148,6 +130,21 @@ select * from linka_pet.pets_cadastrados;
 select * from linka_pet.servicos;
 select * from linka_pet.agendamentos;
 
-drop table linka_pet.perfil_empresa;
 
-drop database linka_pet;
+
+INSERT INTO perfil_empresa (empresa_id, logo, nome_empresa, sobre_empresa, tipos_servico, horario_funcionamento, telefone, endereco)
+VALUES 
+(1, 'logotipo1.png', 'Empresa A', 'Empresa especializada em serviços de tecnologia', 'Desenvolvimento de Software, Consultoria', 'Seg-Sex: 9h-18h', '(11) 1234-5678', 'Rua Exemplo, 123, São Paulo - SP'),
+(1, 'logotipo2.png', 'Empresa B', 'Empresa voltada para marketing digital', 'Marketing de Conteúdo, SEO, Redes Sociais', 'Seg-Sex: 10h-19h', '(11) 8765-4321', 'Avenida Digital, 456, São Paulo - SP'),
+(1, 'logotipo3.png', 'Empresa C', 'Consultoria em recursos humanos', 'Recrutamento, Seleção, Treinamento', 'Seg-Sex: 8h-17h', '(11) 1122-3344', 'Rua RH, 789, São Paulo - SP'),
+(1, 'logotipo4.png', 'Empresa D', 'Serviços contábeis e financeiros', 'Contabilidade, Planejamento Financeiro', 'Seg-Sex: 9h-18h', '(11) 5566-7788', 'Alameda Contábil, 101, São Paulo - SP'),
+(1, 'logotipo5.png', 'Empresa E', 'Soluções em tecnologia para empresas', 'Infraestrutura de TI, Segurança de Dados', 'Seg-Sex: 9h-18h', '(11) 9988-7766', 'Praça Tecnologia, 202, São Paulo - SP');
+
+
+
+
+ALTER TABLE pets_cadastrados
+DROP COLUMN idade;
+
+ALTER TABLE pets_cadastrados
+ADD COLUMN sexo VARCHAR(150) NOT NULL;
