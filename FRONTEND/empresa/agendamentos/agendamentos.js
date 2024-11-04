@@ -74,6 +74,15 @@ function criarCardAgendamento(agendamento) {
     const nome_pet = document.createElement('p');
     nome_pet.innerHTML = `<span class="titulo">Pet:</span> ${agendamento.nome_pet}`;
 
+    const raca_pet = document.createElement('p');
+    raca_pet.innerHTML = `<span class="titulo">Raça:</span> ${agendamento.raca}`;
+
+    const sexo_pet = document.createElement('p');
+    sexo_pet.innerHTML = `<span class="titulo">Sexo do Pet:</span> ${agendamento.sexo}`;
+
+    const descricao_pet = document.createElement('p');
+    descricao_pet.innerHTML = `<span class="titulo">Descrição do Pet:</span> ${agendamento.descricao}`;
+
     const data_agendada = new Date(agendamento.data_agendada);
     const dia = String(data_agendada.getDate()).padStart(2, '0');
     const mes = String(data_agendada.getMonth() + 1).padStart(2, '0');
@@ -105,6 +114,9 @@ function criarCardAgendamento(agendamento) {
     div_info_agendamento.appendChild(nome_servico);
     div_info_agendamento.appendChild(nome_cliente);
     div_info_agendamento.appendChild(nome_pet);
+    div_info_agendamento.appendChild(raca_pet);
+    div_info_agendamento.appendChild(sexo_pet);
+    div_info_agendamento.appendChild(descricao_pet);
     div_info_agendamento.appendChild(elemento_data_agendada);
     div_info_agendamento.appendChild(horario);
     div_info_agendamento.appendChild(div_status);

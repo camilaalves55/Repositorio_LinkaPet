@@ -33,7 +33,7 @@ CREATE TABLE pets_cadastrados (
     id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     nome_pet VARCHAR(255) NOT NULL,
     raca VARCHAR(255) NOT NULL,
-    idade INT NOT NULL,
+	sexo VARCHAR(150) NOT NULL,
     imagem TEXT,
     descricao TEXT,
     especie VARCHAR(255) NOT NULL,
@@ -41,6 +41,7 @@ CREATE TABLE pets_cadastrados (
     cliente_id INT NOT NULL,
     FOREIGN KEY (cliente_id) REFERENCES cadastro_cliente(id) ON DELETE CASCADE
 );
+
 
 CREATE TABLE servicos (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -71,6 +72,9 @@ CREATE TABLE agendamentos (
     nome_servico VARCHAR(120),
     pet_id INT NOT NULL,
     nome_pet VARCHAR(120),
+	raca VARCHAR(255) NOT NULL,
+	sexo VARCHAR(150) NOT NULL,
+    descricao TEXT,    
     horario varchar(100) NOT NULL,
     data_agendada DATE NOT NULL,
     status ENUM('PENDENTE', 'CONFIRMADO', 'CONCLUIDO', 'CANCELADO') DEFAULT 'PENDENTE',
@@ -128,3 +132,4 @@ select * from linka_pet.perfil_empresa;
 select * from linka_pet.pets_cadastrados;
 select * from linka_pet.servicos;
 select * from linka_pet.agendamentos;
+

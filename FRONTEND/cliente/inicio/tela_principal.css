@@ -21,60 +21,6 @@ body {
     --marrom: #534E4E;
 }
 
-#links_pagina{
-    width: 27vw;
-    font-size: 19px;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 2vw;
-}
-
-a{
-    text-decoration: none;
-}
-
-a:hover{
-    color: var(--verde_agua);
-}
-
-#link{
-    color: var(--azul);
-}
-
-#logo {
-    height: 11vh;
-    width: 15vw;
-}
-
-#buscar{
-    background-color:#e8e8e8;
-    border:none;
-    border-radius:2vw;
-    width:20vw;
-    display: flex;
-    align-items: center;
-    margin-left: 10vw;
-}
-  
-#input_busca{
-    float:left;
-    background-color:transparent;
-    padding-left:5px;
-    font-style:italic;
-    font-size:17px;
-    border:none;
-    height:32px;
-    width:260px;
-    border-radius:2vw 0vw 0vw 2vw;
-}
-
-#botao_busca {
-    height: 3vh;
-    width: 2vw;
-    background: transparent;
-}
-
-
 /* --------------------------------MAIN-------------------------------- */
 
 main{
@@ -453,6 +399,11 @@ h3 {
 }
 
 .links_navegacao {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     list-style: none;
     padding: 0;
     text-align: center; 
@@ -483,12 +434,14 @@ h3 {
     background-color: rgba(48, 189, 209, 0.1); 
     transform: translateX(5px);
     border-radius: 5px;
+    width: 9vw;
 }
 
 .links_navegacao a.ativo {
     border-radius: 5px;
     background-color: #30bdd1; 
     color: white; 
+    width: 9vw;
 }
 
 .links_navegacao a.ativo i {

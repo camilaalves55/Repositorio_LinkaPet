@@ -110,53 +110,36 @@ async function getServicoById(request, response) {
     });
 }
 
-
 // funcao para agendar consultas
 
-// async function createAgendamento(request, response) {
-//     const { cliente_id, empresa_id, pet_id, servico_id, data_agendada, horario } = request.body;
-
-//     if (!cliente_id || !empresa_id || !pet_id || !servico_id || !data_agendada || !horario) {
-//         return response.status(400).json({
-//             success: false,
-//             message: 'Todos os campos são obrigatórios.'
-//         });
-//     }
-
-//     const query = "INSERT INTO agendamentos (cliente_id, empresa_id, nome_empresa, pet_id, nome_pet, servico_id, nome_servico, data_agendada, horario) VALUES (?, ?, ?, ?, ?, ?)";
-//     connection.query(query, [cliente_id, empresa_id, pet_id, servico_id, data_agendada, horario], (err, results) => {
-//         if (err) {
-//             console.error('Erro ao criar o agendamento:', err);
-//             return response.status(500).json({
-//                 success: false,
-//                 message: "Erro ao criar o agendamento.",
-//                 error: err
-//             });
-//         }
-
-//         response.status(201).json({
-//             success: true,
-//             message: "Agendamento criado com sucesso.",
-//             data: results.insertId
-//         });
-//     });
-
-// }
-
 async function createAgendamento(request, response) {
-    const { cliente_id, nome_cliente, empresa_id, nome_empresa, pet_id, nome_pet, servico_id, nome_servico, data_agendada, horario } = request.body;
+    const { 
+        cliente_id, 
+        nome_cliente, 
+        empresa_id, 
+        nome_empresa, 
+        pet_id, 
+        nome_pet, 
+        raca,          // Adicionado
+        sexo,          // Adicionado
+        descricao,     // Adicionado
+        servico_id, 
+        nome_servico, 
+        data_agendada, 
+        horario 
+    } = request.body;
 
-    if (!cliente_id || !nome_cliente || !empresa_id || !nome_empresa || !pet_id || !nome_pet || !servico_id || !nome_servico || !data_agendada || !horario) {
+    if (!cliente_id || !nome_cliente || !empresa_id || !nome_empresa || !pet_id || !nome_pet || !raca || !sexo || !descricao || !servico_id || !nome_servico || !data_agendada || !horario) {
         return response.status(400).json({
             success: false,
             message: 'Todos os campos são obrigatórios.'
         });
     }
 
-    const query = `INSERT INTO agendamentos (cliente_id, nome_cliente, empresa_id, nome_empresa, pet_id, nome_pet, servico_id, nome_servico, data_agendada, horario) 
-                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+    const query = `INSERT INTO agendamentos (cliente_id, nome_cliente, empresa_id, nome_empresa, pet_id, nome_pet, raca, sexo, descricao, servico_id, nome_servico, data_agendada, horario) 
+                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
     
-    connection.query(query, [cliente_id, nome_cliente, empresa_id, nome_empresa, pet_id, nome_pet, servico_id, nome_servico, data_agendada, horario], (err, results) => {
+    connection.query(query, [cliente_id, nome_cliente, empresa_id, nome_empresa, pet_id, nome_pet, raca, sexo, descricao, servico_id, nome_servico, data_agendada, horario], (err, results) => {
         if (err) {
             console.error('Erro ao criar o agendamento:', err);
             return response.status(500).json({
@@ -172,12 +155,7 @@ async function createAgendamento(request, response) {
             data: results.insertId
         });
     });
-}
-
-
-
-
-
+} 
 
 module.exports = {
     getServicos,

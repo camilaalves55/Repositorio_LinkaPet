@@ -20,93 +20,6 @@ body {
     --marrom: #534E4E;
 }
 
-/* ---------------------HEADER------------------------ */
-
-
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.logo img {
-    height: 22vh;
-    width: 17vw;
-}
-
-.barra_navegacao {
-    position: fixed;
-    overflow: hidden;
-    width: 9vw; 
-    height: 100%;
-    background-color: #ffffff;
-    color: #30bdd1;
-    padding: 20px 25px; 
-    /* box-shadow: -5px 0 6px rgba(0, 0, 0, 0.134); */
-
-
-    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
-}
-
-.links_navegacao {
-    list-style: none;
-    padding: 0;
-    text-align: center; 
-}
-
-.links_navegacao li {
-    margin: 20px 0;
-    position: relative;
-}
-
-.links_navegacao a {
-    text-decoration: none;
-    color: #30bdd1;
-    font-size: 16px;
-    padding: 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.links_navegacao a i {
-    margin-bottom: 5px; 
-    transition: transform 0.3s ease;
-}
-
-.links_navegacao a:hover {
-    background-color: rgba(48, 189, 209, 0.1); 
-    transform: translateX(5px);
-    border-radius: 5px;
-}
-
-.links_navegacao a.ativo {
-    border-radius: 5px;
-    background-color: #30bdd1; 
-    color: white; 
-}
-
-.links_navegacao a.ativo i {
-    transform: rotate(20deg); 
-}
-
-.conteudo {
-    margin-left: 10.5vw;
-    padding: 20px;
-}
-
-@media (max-width: 768px) {
-    .barra_navegacao {
-        width: 200px;
-    }
-
-    .conteudo {
-        margin-left: 220px;
-    }
-}
-
 main{
     height: 100vh;
     width: 100vw;
@@ -114,563 +27,313 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: row;
-   
-    /* overflow: hidden; */
-}
-
-aside {
-    background-color: #ffffff;
-    height: 100vh;
-    width: 15vw;
-
-    box-shadow: -5px 0 6px rgba(0, 0, 0, 0.134);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2; 
 }
 
 article {
     height: 100vh;
-    width: 85vw;
+    width: 100vw;
     background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-
-   
-    
 }
 
 .main_secao {
     height: 100vh;
-    width: 55vw;
+    width: 65vw;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     flex-direction: column;
-    /* background-color: #98f0fa4f; */
     background-color: white;
-    /* position: fixed;
-    overflow: hidden; */
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.main_secao::-webkit-scrollbar {
+    display: none;
 }
 
 .main_coluna {
-    /* margin-right: 58vw; */
-   
     height: 100vh;
-    width: 30vw;
+    width: 35vw;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: #cdf5f9;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
     z-index: 1;
-
-
     color: var(--azul);
     font-size: 30px;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url(../../imagens/fundo.png);
 }
 
-.main_coluna .informacao {
-    margin-left: 2vw;
-    margin-top: 1vh;
+h1 {
+    color: #40A8B6;
+    font-size: 45px;
+    margin-bottom: 2vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
-.main_coluna #barra_pet {
-    color: #43cee1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    /* border: 1px solid black; */
-    width: 20vw;
-    margin-top: 5vh;
-}
-
-#barra_pet button {
-    width: 8vw;
+button {
     height: 6vh;
-    color: #30bdd1;
-    border-radius: 5px;
-    border: 1px solid #30bdd1;
+    width: 11vw;
+    border: 2px solid #40A8B6;
     background-color: transparent;
-    font-size: 17px;
-    cursor: pointer;
-}
-
-
-
-
-#barra_pet button:hover{
-    color: #40A8B6;
-    border: 1px solid #40A8B6;
-    background-color: #53EAFF;
-}
-
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
- 
-    z-index: 3;
-   
-}
-
-.modal-content {
-    background: #fff;
-    padding: 20px;
-    height: 35vh;
-    width: 25vw;
-    border-radius: 8px;
-    position: relative;
-    text-align: center;
-    border: 2px solid aqua;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    margin-top: 30vh;
-    margin-left: 37vw;
-}
-
-#previewImg {
-    width: 10vw;
-    height: 19vh;
-    margin-bottom: 10px;
-}
-
-#trocarFotoBtn{
-    background-color: var(--verde_agua);
-    color: var(--cor_fundo);
-    border: none;
-    padding: 8px 18px;
-    cursor: pointer;
-}
-
-#trocarFotoBtn:hover{
-    background-color: var(--azul);
-    color: white;
-}
-
-#okBtn {
-    color: var(--cor_fundo);
-    margin-top: 1vh;
-    background-color: var(--verde_agua);
-    color: var(--cor_fundo);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    display: none; 
-    margin-bottom: 1vh;
-}
-
-#okBtn:hover {
-    background-color: var(--azul);
-    color: white;
-}
-
-#close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-
-
-
-
-.area_perfil {
-    position: relative; 
-  
-    /* border: 1px solid black; */
-    overflow: visible;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  
-
-    /* background-color: #30bdd1;
-    border: 1px solid black;
-    background: linear-gradient(to bottom, #c6eef9, #75dae1, #5dc5d2, #00bcd4); */
-
-    height: 30vh;
-    width: 58vw;
-}
-
-.area_perfil img {
-    height: 100%;
-    width: 100%;
-    /* box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.267); */
-    
-}
-
-
-@keyframes brilho {
-    0% {
-        border-color: #53eaff;
-        box-shadow: 0 0 2px #53eaff, 0 0 3px #53eaff, 0 0 4px #53eaff;
-    }
-    50% {
-        border-color: #16bacc;
-        box-shadow: 0 0 1px #63d3db, 0 0 3px #48a9c1, 0 0 4px #00ddff;
-    }
-    100% {
-        border-color: #53eaff;
-        box-shadow: 0 0 1px #53eaff, 0 0 2px #53eaff, 0 0 3px #53eaff;
-    }
-}
-
-.info_perfil {
-    position: absolute;
-    top: 10vh;
-    left: 60%;
-    right: 0;
-    background-color: rgb(255, 255, 255);
-    color: black;
-    z-index: 1;
-    height: 30vh;
-    width: 15vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 50%;
-    border: 8px solid #53eaff;
-    overflow: hidden;
-    cursor: pointer;
-    animation: brilho 3s infinite alternate; /* Adiciona a animação de brilho */
-}
-
-
-/* 
-.info_perfil {
-    position: absolute;
-    top: 10vh;
-    left: 60%;
-    right: 0; 
-    background-color: rgb(255, 255, 255); 
-    color: black;
-    z-index: 1;
-    height: 30vh; 
-    width: 15vw;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    text-align: center; 
-    border-radius: 50%;
-    border: 8px solid #53eaff;
-    overflow: hidden; 
-    cursor: pointer;
-} */
-
-.info_perfil img {
-    height: 100%; 
-    width: 100%; 
-    object-fit: cover;
-   
-}
-
-.informacoes_perfil {
-    height: 60vh; 
-    width: 52vw;
-    /* border: 1px solid #0e1c1e; */
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-
- 
-}
-
-.informacoes_perfil h2{
-    color: #30bdd1;
-    font-size: 40px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.informacoes_perfil h3 {
-    color: #2aa2b1;
-    font-size: 25px;
-    border-bottom: 1px solid rgb(215, 215, 215);
-    width: 50vw;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.informacoes_perfil p {
-    color: rgb(88, 88, 88);
-    font-size: 18px;
-    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
-}
-
-
-
-.info_div {
-    height: 10vh;
-    width: 58vw;
-  
-    border: none; 
-    border-bottom: 1px solid #918c8c;
-    outline: none;
-
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-direction: row;
-    font-size: 20px;
-    color: #635f5f;
-}
-
-.info_div .titulos {
-    margin-left: 5vw;
-}
-
-.info_div button{
-    height: 5vh;
-    width: 7vw;
-    color: #30bdd1;
-    border: 1px solid #30bdd1;
     border-radius: 5px;
-    background-color: transparent;
-    font-size: 17px;
     cursor: pointer;
-}
-
-.info_div button:hover{
+    transition: background-color 0.3s, border 0.3s;
     color: #40A8B6;
-    border: 1px solid #40A8B6;
-    background-color: #53EAFF;
+    margin-bottom: 20px;
+    font-size: 16px;
 }
 
-.titulos {
-    color: #30bdd1;
-    font-weight: bold;
+button:hover {
+    background-color: #bafdffed;
+    border: none;
+    color: #40A8B6;
 }
 
-.texto_div {
-
+.formulario_empresa {
     width: 45vw;
-    /* border: 1px solid black; */
-    margin-right: 5vw;
-}
-
-
-.bloco_card {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-    width: 25vw;
-    height: 33vh;
+}
+
+.form-group {
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    flex-direction: column;
     margin-bottom: 5vh;
-    color: #635f5f;
-    border-radius: 1vw;
-    background-color: #98f0fa4f;
-    padding: auto;
-
 }
 
-.bloco_card h2{
-    color: #40A8B6;
+input::placeholder{
+    color:  rgb(122, 122, 122);
+    margin-left: 5px;
 }
 
-.bloco_card img { 
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.input-linha {
+    border: none; 
+    border-bottom: 2px solid  rgb(152, 151, 151);
+    outline: none;
+    padding: 5px 0; 
+    width: 100%; 
+    font-size: 16px; 
+    background-color: transparent;
+    color:  rgb(122, 122, 122);
 }
 
-.bloco_card .info {
-    display: flex;
-    align-items: start;
-    justify-content: space-evenly;
-    flex-direction: column;
-    margin-top: 0;
-    width: 12vw;
-    height: 32vh;
-  
-
+.input-linha:focus {
+    border-bottom: 3px solid #2cd0df; 
 }
 
-
-.bloco_card .info2 {
-    display: flex;
-    align-items: start;
-    justify-content: space-evenly;
-    flex-direction: column;
-    margin-bottom: 0px;
-    margin-top: 0;
-    width: 12vw;
-    height: 32vh;
-   
-   
-   /* Adicione um pouco de padding para evitar que os elementos grudem nas bordas */
-}
-
-
-
-.foto_div {
-    margin: 0; /* Remove margens */
-    width: 5vw;
-    height: 10vh;
-    overflow: hidden; 
-    border: 2px solid #53eaff;
-    border-radius: 50%;
- 
-  
-   /* Mantém a posição relativa */
-}
-
-.bloco_card span {
-    font-weight: bold;
+label {
     color: #43cee1;
-
+    font-weight: bold;
+    font-size: 23px;
+    font-family: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif';
 }
 
+.select-linha {
+    border: none; 
+    border-bottom: 2px solid rgb(152, 151, 151); 
+    outline: none; 
+    background: transparent; 
+    padding: 5px 0;
+    font-size: 16px;
+    width: 100%;
+    appearance: none; 
+    color: rgb(122, 122, 122);
+}
 
+.select-linha:focus {
+    border-bottom: 2px solid #2cd0df; 
+}
 
+.select-linha::after {
+    content: '▼';
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; 
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.form-actions button {
+    width: 8vw;
+}
 
 .container {
-    height: 5vh;
-  
+    height: 90vh;
+    width: 50vw;
     display: flex;
     align-items:center;
-    justify-content: space-around;
-    flex-direction: row;
-
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
-
-.edit-btn {
-    background-color: transparent;
-    font-size: 19px;
-    color: #077482;
+#logo {
     border: none;
-    cursor: pointer;
 }
 
-
-
-
-
-
-
-#foto_pet {
-    display: none; 
-}
-
-
-
-
-
-
-#modal_adicionar_pet {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal-content {
-    background-color: #fefefe;
-    padding: 20px;
-    border-radius: 5px;
-    width: 400px;
-    position: relative;
-  }
-  
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-
-
-.sobre {
-    /* border: 1px solid black; */
-
-    height: 35vh;
-    width: 25vw;
-    font-weight: lighter;
+.custom-file-upload {
+    border: none;
+    height: 4vh;
+    width: 2vw;
     font-size: 18px;
-    color: rgb(255, 255, 255);
-    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
 
-    border-radius: 1vw;
+.custom-file-upload:hover { 
+    color: #2cd0df;
+    background-color: transparent;
+}
+
+.escolher_logo {
+    height: 4vh;
     display: flex;
-    align-items: center;
+    align-items:start;
     justify-content: space-evenly;
-    flex-direction: column;
-    /* background-color: #53ebffd1; */
-    background-color: #5ceafdc1;
+    flex-direction: row;
+    width: 45vw;
+    border-bottom: 2px solid rgb(152, 151, 151); 
 }
 
-.sobre h3{
-    color: #2aa2b1;
-    font-size: 35px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+#logo::file-selector-button {
+    display: none;
 }
 
-.servicos {
-    /* border: 1px solid black;
-
-    height: 35vh;
-    width: 25vw;
-    font-weight: lighter;
-    font-size: 18px;
-    color: rgb(88, 88, 88);
-    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif; */
-
-    height: 35vh;
-    width: 25vw;
-    font-weight: lighter;
-    font-size: 18px;
-    color: rgb(255, 255, 255);
-    /* color: #2aa2b1; */
-    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
-
-    border-radius: 1vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    background-color: #5ceafdc1;
-
-   
+.cabecalho_logo {
+    display: none;
 }
 
-.servicos h3{ 
-    color: #2aa2b1;
-    /* color: rgba(255, 255, 255, 0.738); */
-    font-size: 35px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
+/* ----------------------------- RESPONSIVE LAYOUT ----------------------------- */
 
+@media screen and (max-width: 1013px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
 
+    article {
+        height: 100%;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
 
+    .main_secao {
+        height: auto;
+        margin-top: 15vh; 
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: space-evenly;
+        flex-direction: row;
+        overflow-y: scroll; 
+        overflow-x: hidden;
+        scrollbar-width: thin;
+    }
 
-.container{
-    margin-top: 20vh;
+    .cabecalho_logo {
+        display: block;
+        width: 100%;
+        height: 13vh;
+        background-color: rgba(255, 255, 255, 0.975);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0px 0px 4px 1px rgba(167, 165, 165, 0.5);
+    }
+
+    .cabecalho_logo img {
+        height: 12vh;
+        width: 50vw;
+    }
+
+    .main_coluna {
+        display: none;
+    }
+
+    .container {
+        height: 90vh;
+        width: 90vw;
+        display: flex;
+        align-items:center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+  
+    .formulario_empresa {
+        width: 80vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .escolher_logo {
+        height: 4vh;
+        display: flex;
+        align-items:start;
+        justify-content: space-evenly;
+        flex-direction: row;
+        width: 80vw;
+        border-bottom: 2px solid rgb(152, 151, 151); 
+    }
+
+    button {
+        height: 6vh;
+        width: 45vw;
+        border: 2px solid #40A8B6;
+        background-color: transparent;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, border 0.3s;
+        color: #40A8B6;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .form-actions button {
+        width: 40vw;
+    }
+    
+    .escolher_logo {
+        height: 3vh;
+        display: flex;
+        align-items:start;
+        justify-content: space-evenly;
+        flex-direction: row;
+        width: 80vw;
+        border-bottom: 2px solid rgb(152, 151, 151); 
+    }
+
+    .custom-file-upload {
+        border: none;
+        height: 3vh;
+        width: 10vw;
+        font-size: 20px;
+    }
+
+    #form-group-file {
+        height: 6vh;
+    }
+    
 }

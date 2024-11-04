@@ -49,6 +49,14 @@ body {
 }
 
 .links_navegacao {
+    height: 70vh;
+ 
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
     list-style: none;
     padding: 0;
     text-align: center; 
@@ -79,12 +87,14 @@ body {
     background-color: rgba(48, 189, 209, 0.1); 
     transform: translateX(5px);
     border-radius: 5px;
+    width: 9vw;
 }
 
 .links_navegacao a.ativo {
     border-radius: 5px;
     background-color: #30bdd1; 
     color: white; 
+    width: 9vw;
 }
 
 .links_navegacao a.ativo i {
@@ -96,15 +106,7 @@ body {
     padding: 20px;
 }
 
-@media (max-width: 768px) {
-    .barra_navegacao {
-        width: 200px;
-    }
 
-    .conteudo {
-        margin-left: 220px;
-    }
-}
 
 main{
     height: 100vh;
@@ -324,18 +326,20 @@ article {
 }
 
 .info_div .titulos {
-    margin-left: 5vw;
+    margin-left: 4vw;
 }
 
 .info_div button{
     height: 5vh;
-    width: 7vw;
+    width: 10vw;
     color: #30bdd1;
     border: 1px solid #30bdd1;
     border-radius: 5px;
     background-color: transparent;
     font-size: 17px;
     cursor: pointer;
+
+    margin-right: 3vw;
 }
 
 .info_div button:hover{

@@ -125,12 +125,6 @@ aside {
     right: 10px;
 }
 
-@media (max-width: 600px) {
-    button {
-        display: none;
-    }
-}
-
 .logo {
     display: flex;
     align-items: center;
@@ -206,9 +200,14 @@ aside {
 }
 
 .links_navegacao {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     list-style: none;
     padding: 0;
-    text-align: center;
+    text-align: center; 
 }
 
 .links_navegacao li {
@@ -236,12 +235,14 @@ aside {
     background-color: rgba(48, 189, 209, 0.1); 
     transform: translateX(5px);
     border-radius: 5px;
+    width: 9vw;
 }
 
 .links_navegacao a.ativo {
     border-radius: 5px;
     background-color: #30bdd1; 
     color: white;
+    width: 9vw;
 }
 
 .links_navegacao a.ativo i {
@@ -251,16 +252,6 @@ aside {
 .conteudo {
     margin-left: 10.5vw;
     padding: 20px;
-}
-
-@media (max-width: 768px) {
-    .barra_navegacao {
-        width: 200px;
-    }
-
-    .conteudo {
-        margin-left: 220px;
-    }
 }
 
 .secao3 {
@@ -282,7 +273,6 @@ aside {
 }
 
 #sair {
-    
     background-color: #fdb3b3;
     border: 1px solid red;
     color: red;
@@ -292,7 +282,6 @@ aside {
     justify-content: space-between;
     flex-direction: row;
     border-radius: 0.5vw;
-
     height: 5vh;
     width: 5vw;
 }
@@ -500,4 +489,464 @@ label {
     background-color: #bafdffed;
     border: none;
     color: #40A8B6;
+}
+
+.cabecalho_logo {
+    display: none;
+}
+
+/* --------------------------RESPONSIVO---------------------------- */
+ 
+@media screen and (min-width: 50px) and (max-width: 1013px) {
+
+    main {
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content:start;
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    .cabecalho_logo {
+        width: 100%;
+        height: 13%;
+        background-color: rgba(255, 255, 255, 0.873);
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        position: fixed; 
+        z-index: 100;
+        box-shadow: 0px 0px 4px 1px rgba(167, 165, 165, 0.5);
+    }
+
+    .cabecalho_logo img {
+        height: 12vh;
+        width: 50vw;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .barra_navegacao {
+        width: 90vw;
+        height: 8vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        background-color: #ffffff;
+        box-shadow:none;
+        border-top: 1px solid #c5c3c3;
+        z-index: 1000;
+    }
+
+    .links_navegacao {
+        height: auto;
+        flex-direction: row;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .links_navegacao li {
+        margin: 0;
+    }
+
+    .links_navegacao li a i {
+        font-size: 2em; 
+        margin-right: 0; 
+    }
+
+    .links_navegacao li a span {
+        display: none;
+    }
+
+    .links_navegacao a.ativo {
+        height: 4vh;
+        width: 14vw;
+    }
+        
+    article {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top: 13vh;
+        width: 100vw;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .informacoes {
+        margin-left: 0;
+        margin-right: 0;
+        height: 120vh;
+        width: 100%;
+        background-color: #98f0fa;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column-reverse;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    .main_coluna {
+        margin-bottom: 5vh;
+        height: 70vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    
+    .main_secao {
+        margin-top: 5vh;
+        height: 40vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    
+    .carrossel {
+        position: relative;
+        overflow: hidden;
+        height: 29vh;
+        width: 90vw;
+    }
+    
+    .carrossel-inner {
+        display: flex;
+        transition: transform 1.5s ease-in-out;
+        height: 100%;
+    }
+    
+    .carrossel-item {
+        flex: 1 0 100%;
+    }
+    
+    .carrossel img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    
+    .carrossel button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 50px;
+        z-index: 10;
+        font-weight: bold;
+    }
+    
+    .carrossel button:hover {
+        color: rgba(48, 190, 209, 0.753);
+    }
+    
+    .prev {
+        left: 10px;
+    }
+    
+    .next {
+        right: 10px;
+    }
+    
+    .servicos {
+        background-color: rgb(255, 255, 255);
+        height: 50vh;
+        width: 90vw;
+        border-radius: 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+    }
+    
+    .cabecalho_servico {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin-bottom: 2vh;
+    }
+    
+    .servicos h1{
+        border-bottom: 1px solid rgba(133, 133, 133, 0.814);
+        margin: 1vw;
+        color: var(--azul);
+        font-size: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    .secao1 {
+        background-color: #ffffff;
+        height: 21vh;
+        width: 90vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row-reverse;
+        border-radius: 0;
+    }
+    
+    .secao1 img {
+        height: 20vh;
+        width: 45vw;
+    }
+    
+    .boas_vindas {
+        color: rgb(111, 111, 111);
+        height: 20vh;
+        width: 43vw;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        margin-left: 1.5vw;
+    }
+    
+    .conteudo {
+        margin-left: 10.5vw;
+        padding: 20px;
+    }
+    
+    .secao3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        cursor: pointer;
+        margin-left: 0;
+        width: 93%;
+        height: 12vh;
+    }
+    
+    .empresa {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: row;
+        cursor: pointer;
+    }
+    
+    #sair {
+        background-color: #fdb3b3;
+        border: 1px solid red;
+        color: red;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        border-radius: 1vw;
+        height: 5vh;
+        width: 16vw;
+    }
+    
+    #sair:hover {
+        background-color: red;
+        border: 1px solid #fdb3b3;
+        color: #fdb3b3;
+    }
+    
+    .logo_perfil {
+        height: 8vh;
+        width: 18vw;
+        border: 3px solid #979393;
+        border-radius: 50%; 
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo_perfil img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .bem_vindo h1{
+        color: var(--azul);
+        font-size: 30px;
+        margin-left: 5px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    .bem_vindo #nome_empresa {
+        color: #43cee1;
+    }
+    
+    #servico_registrado {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 57vh;
+        flex-wrap: nowrap;
+        overflow-y: auto;
+        scrollbar-width: none;
+    }
+    
+    #servico_registrado::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .card_servico {
+        height: 12vh;
+        width: 80vw;
+        border-radius: 3vw;
+        margin-bottom: 2vh;
+        background-color: #cafcfed4;
+        color: rgb(90, 90, 90);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    
+    .servico_item {
+        display: none;
+    }
+    
+    .servico_info {
+        height: 12vh;
+        width: 70vw;
+        display: flex;
+        align-items: start;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    
+    .adicionar_servico {
+        height: 3vh;
+        width: 7vw;
+        border: none;
+        border-radius: 50%;
+        color: var(--azul);
+        background-color: #bffdffed;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+    
+    .adicionar_servico:hover {
+        color: white;
+        background-color: var(--azul);
+    }
+    
+    .mensagem_erro {
+        font-size: 22px;
+        margin-top: 5vh; 
+        color: red;
+        padding: 10px;   
+        background-color: #ffe6e6; 
+        border: 1px solid red;     
+        border-radius: 5px;        
+        height: 10vh;
+        width: 22vw;
+    }
+    
+    #formulario_servico {
+        height: 40vh;
+        width: 80vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .form-group {
+        display: flex;
+        align-items: start;
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin-bottom: 5vh;
+    }
+    
+    input::placeholder{
+        color:  rgb(122, 122, 122);
+        margin-left: 5px;
+    }
+    
+    .input-linha {
+        border: none; 
+        border-bottom: 2px solid  rgb(152, 151, 151);
+        outline: none;
+        padding: 5px 0; 
+        width: 100%; 
+        font-size: 16px; 
+        background-color: transparent;
+        color:  rgb(122, 122, 122);
+    }
+    
+    .input-linha:focus {
+        border-bottom: 3px solid #2cd0df; 
+    }
+    
+    label {
+        color: #43cee1;
+        font-weight: bold;
+        font-size: 23px;
+        font-family: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif';
+    }
+    
+    .select-linha {
+        border: none; 
+        border-bottom: 2px solid rgb(152, 151, 151); 
+        outline: none; 
+        background: transparent; 
+        padding: 5px 0;
+        font-size: 16px;
+        width: 100%;
+        appearance: none; 
+        color: rgb(122, 122, 122);
+    }
+    
+    .select-linha:focus {
+        border-bottom: 2px solid #2cd0df; 
+    }
+    
+    .select-linha::after {
+        content: '▼';
+        position: absolute;
+        right: 10px; 
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none; 
+    }
+    
+    .submit {
+        height: 5vh;
+        width: 18vw;
+        border: 2px solid #40A8B6;
+        background-color: transparent;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, border 0.3s;
+        color: #40A8B6;
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+    
+    .submit:hover {
+        background-color: #bafdffed;
+        border: none;
+        color: #40A8B6;
+    }
+
 }

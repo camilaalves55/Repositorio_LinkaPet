@@ -240,38 +240,6 @@ async function updateProfileData(field, newValue) {
     }
 }
 
-// async function carregarInformacoesPets(clienteId) {
-//     try {
-//         const petsResponse = await fetch(`http://localhost:3005/api/store/get/pets?cliente_id=${clienteId}`, {
-//             method: 'GET',
-//             headers: { 'Content-Type': 'application/json' }
-//         });
-
-//         const petsResult = await petsResponse.json();
-
-//         if (petsResult.success) {
-//             const petsLista = document.querySelector('.pets_lista');
-//             petsLista.innerHTML = '';
-
-//             petsResult.data.forEach(pet => {
-//                 const card = document.createElement('div');
-//                 card.className = 'bloco_card_pet';
-//                 card.innerHTML = `
-//                     <div class="pet_nome">${pet.nome}</div>
-//                     <div class="pet_info">Espécie: ${pet.especie}</div>
-//                     <div class="pet_info">Raça: ${pet.raca}</div>
-//                     <div class="pet_info">Sexo: ${pet.sexo}</div>
-//                 `;
-//                 petsLista.appendChild(card);
-//             });
-//         } else {
-//             console.error(petsResult.message);
-//         }
-//     } catch (error) {
-//         console.error('Erro ao carregar informações dos pets:', error);
-//     }
-// }
-
 carregarInformacoesCliente();
 
 async function carregarInformacoesPets(clienteId) {
@@ -471,17 +439,14 @@ botaoAdicionar.onclick = async function () {
 
                                     const result = await response.json();
 
-                                    // Exibir o SweetAlert após o cadastro
                                     if (result.success) {
                                         console.log(result.data);
                                         Swal.fire({
                                             title: 'Sucesso!',
                                             text: result.message,
                                             icon: 'success'
-                                        }).then(() => {
-                                            // Aqui você pode adicionar lógica adicional, se necessário
-                                            // Ex: Atualizar a lista de pets cadastrados
                                         });
+                                        
                                     } else {
                                         Swal.fire({
                                             title: "Erro",

@@ -47,6 +47,11 @@ body {
 }
 
 .links_navegacao {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     list-style: none;
     padding: 0;
     text-align: center; 
@@ -77,12 +82,14 @@ body {
     background-color: rgba(48, 189, 209, 0.1); 
     transform: translateX(5px);
     border-radius: 5px;
+    width: 9vw;
 }
 
 .links_navegacao a.ativo {
     border-radius: 5px;
     background-color: #30bdd1; 
     color: white; 
+    width: 9vw;
 }
 
 .links_navegacao a.ativo i {
@@ -93,8 +100,6 @@ body {
     margin-left: 10.5vw;
     padding: 20px;
 }
-
-
 
 main{
     height: 100vh;
@@ -120,7 +125,6 @@ article {
     flex-direction: column;
 }
 
-
 .main_secao {
     height: 100vh;
     width: 58vw;
@@ -128,26 +132,15 @@ article {
     align-items: center;
     justify-content: start;
     flex-direction: column;
-    /* background-color: white; */
     background-color: #98f0fab3;
-    /* background-color: #44e3eebe; */
-
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: none; 
-
-
-    /* border: 1px solid black; */
-    /* position: fixed;
-    overflow: hidden; */
 }
-
-
 
 .main_secao::-webkit-scrollbar {
     display: none; 
 }
-
 
 .main_coluna {
     margin-left: 58vw;
@@ -167,10 +160,8 @@ article {
     font-size: 30px;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
     background-image: url(../../imagens/fundo.png);
 }
-
 
 img{
     height: 20vh;
@@ -184,7 +175,6 @@ img{
     flex-direction: column;
     height: 60vh;
     width: 30vw;
-    /* border: 1px solid black; */
 }
 
 .item_agendamento {
@@ -193,8 +183,7 @@ img{
     height: 24vh;
     width: 18vw;
     border-radius: 1vw;
-    margin-bottom: 1.5vh;
-    
+    margin-bottom: 1.5vh; 
 }
 
 #agendamentos_pendentes .item_agendamento{
@@ -211,7 +200,6 @@ img{
     border: 2px solid rgb(255, 173, 173);
 }
 
-
 #agendamentos_confirmados {
     display: flex;
     align-items: center;
@@ -220,11 +208,7 @@ img{
     height: 100%;
     width: 27vw;
     border-left: 1px solid #43cee1;
-    /* border: 2px solid #000000; */
-
-
 }
-
 
 .agendamentos_indefinidos {
     display: flex;
@@ -232,8 +216,6 @@ img{
     justify-content: start;
     flex-direction: column;
     width: 27vw;
-
-  
 }
 
 .info_agendamento {
@@ -241,11 +223,9 @@ img{
     align-items: start;
     justify-content: space-evenly;
     flex-direction: column;
-
     height: 24vh;
     width: 18vw;
     color: #777777;
-    /* border: 1px solid black; */
 }
 
 .info_cliente {
@@ -253,15 +233,12 @@ img{
     align-items: center;
     justify-content: start;
     flex-direction: row;
-    
     width: 54vw;
-    /* border: 1px solid black; */
 }
 
 .info_perfil {
     height: 18vh;
     margin-left: 6px;
-
     display: flex;
     align-items:start;
     justify-content: center;
@@ -282,7 +259,6 @@ img{
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
 
-
 .foto_perfil {
     height: 12vh;
     width: 6vw;
@@ -302,16 +278,12 @@ img{
 }
 
 .meus_agendamentos {
-    /* background-color: #7cf2ff; */
-    /* height: 82; */
     width: 58vw;
     display: flex; 
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     border-top: 1px solid #43cee1;
-    /* border: 1px solid black; */
 }
 
 .meus_agendamentos h2{
@@ -323,8 +295,6 @@ img{
 }
 
 .container {
-    /* border: 1px solid black; */
-
     width: 58vw;
     display: flex; 
     justify-content: center;
@@ -347,47 +317,26 @@ img{
     width: 30vw;
 }
 
-
-
-
 #agendamentos_concluidos {
     display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .cabecalho_logo {
     display: none;
 }
-
 
 /* --------------------------RESPONSIVO---------------------------- */
  
 @media screen and (min-width: 50px) and (max-width: 1013px) {
 
     main {
-       
         width: 100%;
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
-    
     }
 
-
-    
     .cabecalho_logo {
         width: 100%;
         height: 13%;
@@ -469,22 +418,13 @@ img{
         align-items: center;
         justify-content: start;
         flex-direction: column;
-        
         position: relative;
     }
     
     .main_coluna {
-       
-
         display: none;
     }
     
-   
-
-
-
-
-        
     article {
         height: 100%;
         width: 100%;
@@ -492,10 +432,7 @@ img{
         align-items: start;
         justify-content: center;
         flex-direction: column;
-
-    
     }
-
 
     #agendamentos {
         display: flex;
@@ -504,7 +441,6 @@ img{
         flex-direction: column;
         height: 60vh;
         width: 30vw;
-    
     }
 
     .item_agendamento {
@@ -518,7 +454,6 @@ img{
         width: 60vw;
         border-radius: 3vw;
         margin-bottom: 1.5vh;
-        
     }
 
     #agendamentos_pendentes .item_agendamento{
@@ -535,7 +470,6 @@ img{
         border: 2px solid rgb(255, 173, 173);
     }
 
-
     #agendamentos_confirmados {
         display: flex;
         align-items: center;
@@ -545,12 +479,7 @@ img{
         width: 80vw;
         border-left: none;
         border-bottom: 1px solid #37b2c2;
-    
-        /* border: 2px solid #000000; */
-
-
     }
-
 
     .agendamentos_indefinidos {
         display: flex;
@@ -559,8 +488,6 @@ img{
         flex-direction: column;
         margin-top: 2vh;
         width: 80vw;
-
-    
     }
 
     .info_agendamento {
@@ -568,11 +495,9 @@ img{
         align-items: start;
         justify-content: space-evenly;
         flex-direction: column;
-
         height: 60vh;
         width: 60vw;
         color: #777777;
-        /* border: 1px solid black; */
     }
 
     .info_cliente {
@@ -580,15 +505,12 @@ img{
         align-items: center;
         justify-content: start;
         flex-direction: row;
-        
         width: 90vw;
-        /* border: 1px solid black; */
     }
 
     .info_perfil {
         height: 18vh;
         margin-left: 6px;
-
         display: flex;
         align-items:start;
         justify-content: center;
@@ -609,7 +531,6 @@ img{
         font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     }
 
-
     .foto_perfil {
         height: 12vh;
         width: 25vw;
@@ -629,17 +550,13 @@ img{
     }
 
     .meus_agendamentos {
-        /* background-color: #7cf2ff; */
-        /* height: 82; */
         width: 100vw;
         display: flex; 
         justify-content: center;
         align-items: center;
         flex-direction: column;
         margin-bottom: 10vh;
-
         border-top: 1px solid #43cee1;
-        /* border: 1px solid black; */
     }
 
     .meus_agendamentos h2{
@@ -651,8 +568,6 @@ img{
     }
 
     .container {
-        /* border: 1px solid black; */
-
         width: 100vw;
         display: flex; 
         justify-content: center;
@@ -663,8 +578,5 @@ img{
     .titulo {
         color: #45b1bf;
     }
-
-
-
 
 }

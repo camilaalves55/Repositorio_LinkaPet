@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (!empresaResponse.ok) {
             throw new Error('Erro ao buscar informações da empresa.');
-
         }
 
         const empresaData = await empresaResponse.json();
@@ -299,19 +298,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const botao = document.getElementById('botao');
     if (botao) {
@@ -328,7 +314,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const formData = new FormData();
             const logoInput = document.getElementById('logo');
 
-            // Apenas se o logo estiver selecionado
             if (logoInput.files.length > 0) {
                 formData.append('logo', logoInput.files[0]);
             } else {
@@ -396,14 +381,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
-
-
-
-
-
-
-
-
-
-

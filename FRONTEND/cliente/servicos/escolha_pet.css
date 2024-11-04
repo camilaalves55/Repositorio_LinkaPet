@@ -42,6 +42,11 @@ body {
 }
 
 .links_navegacao {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     list-style: none;
     padding: 0;
     text-align: center; 
@@ -72,12 +77,14 @@ body {
     background-color: rgba(48, 189, 209, 0.1); 
     transform: translateX(5px);
     border-radius: 5px;
+    width: 9vw;
 }
 
 .links_navegacao a.ativo {
     border-radius: 5px;
     background-color: #30bdd1; 
     color: white; 
+    width: 9vw;
 }
 
 .links_navegacao a.ativo i {
@@ -87,16 +94,6 @@ body {
 .conteudo {
     margin-left: 10.5vw;
     padding: 20px;
-}
-
-@media (max-width: 768px) {
-    .barra_navegacao {
-        width: 200px;
-    }
-
-    .conteudo {
-        margin-left: 220px;
-    }
 }
 
 main{
@@ -241,20 +238,9 @@ h1 {
     width: 30vw;
 }
 
-
-
-
-
-
 .cabecalho_logo {
     display: none;
 }
-
-
-
-
-
-
 
 /* --------------------------RESPONSIVO---------------------------- */
  
@@ -267,9 +253,7 @@ h1 {
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
-       
-        overflow: scroll;
-       
+        overflow: scroll; 
     }
     
     .cabecalho_logo {
@@ -344,13 +328,11 @@ h1 {
         align-items: center;
         justify-content: space-between;
         flex-direction: column;
-
     }
 
     .main_secao {
         overflow-x: hidden;
         overflow-y: scroll;
-       
         height: 100%;
         width: 100%;
         display: flex;
@@ -364,22 +346,11 @@ h1 {
        display: none;
     } 
 
-    
-
-
-
-
-
-
-
-
-        
     .pets_lista {
         display: flex;
         flex-wrap: wrap;
         gap: 2vw; 
         width: 90vw;
-      
         align-items: center;
         justify-content: center;
         flex-direction: row; 
@@ -447,6 +418,5 @@ h1 {
         font-weight: bold;
         color: #43cee1;
     }
-
 
 }

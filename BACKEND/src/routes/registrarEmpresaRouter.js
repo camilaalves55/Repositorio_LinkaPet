@@ -6,6 +6,8 @@ const router = Router();
 
 const {  storePerfil, storeServico } = require('../controller/registrarEmpresaController');
 
+// funcao para registrar a empresa como um estabelecimento de servicos
+
 /**
  * @swagger
  * /store/perfil:

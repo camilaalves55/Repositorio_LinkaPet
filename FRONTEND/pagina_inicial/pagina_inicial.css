@@ -43,54 +43,8 @@ header {
     height: 11vh;
     width: 15vw;
 }
-/* 
-#buscar{
-    background-color:#e8e8e8;
-    border: 2px solid transparent;
-    border-radius:2vw;
-    width:25vw;
-    display: flex;
-    align-items: center;
-    margin-left: 10vw;
-    transition: border-color 0.3s;
-}
-
-#input_busca{
-    float:left;
-    background-color:transparent;
-    padding-left:5px;
-    font-style:italic;
-    font-size:17px;
-    border:none;
-    height:32px;
-    width:330px;
-    border-radius:2vw 0vw 0vw 2vw;
-    appearance: none; 
-    outline: none;
-}
-
-#botao_busca {
-    height: 3vh;
-    width: 2vw;
-    background: transparent;
-}
-
-#buscar:focus-within {
-    border-color: #8d8d8d;
-}
-
-.select-linha::after {
-    content: '▼';
-    position: absolute;
-    right: 10px; 
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none; 
-} */
 
 /* --------------------------------MAIN-------------------------------- */
-
-
 
 .secao1 {
     background-color: #fffdfd;
@@ -357,9 +311,6 @@ footer{
     width: 100%;
     background-color: var(--verde_agua);
 }
-
-
-
  
 /* --------------------------RESPONSIVO---------------------------- */
  
@@ -383,26 +334,6 @@ footer{
         height: 5vh;
         width: 36vw;
     }
- 
-    /* #buscar {
-        width:40vw;
-        border-radius: 5vw;
-        height: 3vh;
-        margin-left: 5vw;
-    }
-
-    #input_busca{
-        font-size:12px;
-        height:3vh;
-        width:30vw;
-        border-radius:5vw 0vw 0vw 5vw;
-    }
-
-    #botao_busca {
-        height: 2vh;
-        width: 5vw;
-    }
-     */
    
     .logo {
         height: 27vh;
@@ -445,7 +376,6 @@ footer{
  
     .imagem_login img {
         max-width: 80%;
-   
     }
  
     .texto_login {
@@ -462,11 +392,9 @@ footer{
  
     .texto_login h1 {
         font-size: 35px;
- 
     }
  
     .secao3 {
- 
         height: 25vh;
         display: flex;
         align-items: center;

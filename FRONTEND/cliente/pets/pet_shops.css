@@ -19,8 +19,6 @@ body {
     --marrom: #534E4E;
 }
 
-/* ---------------------HEADER------------------------ */
-
 .logo {
     display: flex;
     align-items: center;
@@ -44,11 +42,18 @@ body {
 }
 
 .links_navegacao {
+    height: 70vh;
+ 
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
     list-style: none;
     padding: 0;
     text-align: center; 
 }
-
 .links_navegacao li {
     margin: 20px 0;
     position: relative;
@@ -74,12 +79,14 @@ body {
     background-color: rgba(48, 189, 209, 0.1); 
     transform: translateX(5px);
     border-radius: 5px;
+    width: 9vw;
 }
 
 .links_navegacao a.ativo {
     border-radius: 5px;
     background-color: #30bdd1; 
     color: white; 
+    width: 9vw;
 }
 
 .links_navegacao a.ativo i {
@@ -89,16 +96,6 @@ body {
 .conteudo {
     margin-left: 10.5vw;
     padding: 20px;
-}
-
-@media (max-width: 768px) {
-    .barra_navegacao {
-        width: 200px;
-    }
-
-    .conteudo {
-        margin-left: 220px;
-    }
 }
 
 main{
@@ -170,7 +167,6 @@ h1 {
     height: 15vh;
     width: 40vw;
     margin-left: 5%;
-   
 }
 
 .perfis_lista {
@@ -266,14 +262,9 @@ h1 {
     width: 30vw;
 }
 
-
-
 .cabecalho_logo {
     display: none;
 }
-
-
-
 
 /* --------------------------RESPONSIVO---------------------------- */
  
@@ -285,7 +276,6 @@ h1 {
         align-items: flex-start; 
         justify-content: flex-start; 
         flex-direction: column; 
-       
     }
 
     article {
@@ -319,26 +309,19 @@ h1 {
         border-radius: 4px;
     }
 
-
     .main_coluna {
-        
-
         display: none;
     }
 
-
     h1 {
-
         font-size: 45px;
     }
 
     .texto_inicial {
-    
         width: 90vw;
         margin-left: 5%;
         margin-top: 15vh;
     }
-
 
     .cabecalho_logo {
         width: 100%;
@@ -348,7 +331,6 @@ h1 {
         align-items: center; 
         justify-content: center; 
         position: fixed; 
-
         z-index: 100;
         box-shadow: 0px 0px 4px 1px rgba(167, 165, 165, 0.5);
     }
@@ -404,15 +386,12 @@ h1 {
         width: 14vw;
     }
 
-
     .rolagem {
         width: 100%;  
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
-
 
     .perfis_lista {
         display: flex;
@@ -425,9 +404,7 @@ h1 {
         padding: 10px; 
         margin-left: 0;
         align-items: center;
-
     }
-
 
     .divisoria {
         flex: 1 1 30%; 
@@ -442,8 +419,6 @@ h1 {
         box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
         position: relative;
         margin-bottom: 10vh;
-    
-
     }
 
     .imagem {
@@ -475,8 +450,6 @@ h1 {
         width: 80%;
         height: 20vh;
         margin-bottom: 3vh;
-
-
     }
 
     .elementos_divisoria h3 { 

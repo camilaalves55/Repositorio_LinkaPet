@@ -115,7 +115,6 @@ async function storePet(req, res) {
     const params = [
         req.body.nome_pet,
         req.body.raca,
-        // req.body.idade,
         req.body.sexo,
         imagemNome,
         req.body.descricao,

@@ -42,6 +42,11 @@ body {
 }
 
 .links_navegacao {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     list-style: none;
     padding: 0;
     text-align: center; 
@@ -72,12 +77,14 @@ body {
     background-color: rgba(48, 189, 209, 0.1); 
     transform: translateX(5px);
     border-radius: 5px;
+    width: 9vw;
 }
 
 .links_navegacao a.ativo {
     border-radius: 5px;
     background-color: #30bdd1; 
     color: white; 
+    width: 9vw;
 }
 
 .links_navegacao a.ativo i {
@@ -88,8 +95,6 @@ body {
     margin-left: 10.5vw;
     padding: 20px;
 }
-
-
 
 main{
     height: 100vh;
@@ -303,22 +308,9 @@ h1 {
     width: 30vw;
 }
 
-
-
-
-
-
-
-
 .cabecalho_logo {
     display: none;
 }
-
-
-
-
-
-
 
 /* --------------------------RESPONSIVO---------------------------- */
  
@@ -331,9 +323,7 @@ h1 {
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
-       
         overflow: scroll;
-       
     }
     
     .cabecalho_logo {
@@ -408,13 +398,11 @@ h1 {
         align-items: center;
         justify-content: space-between;
         flex-direction: column;
-
     }
 
     .main_secao {
         overflow-x: hidden;
         overflow-y: scroll;
-       
         height: 100%;
         width: 100%;
         display: flex;
@@ -428,82 +416,74 @@ h1 {
        display: none;
     } 
 
+    #servicos {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2vw; 
+        width: 100vw;
+        margin-top: 10vh;
+        margin-bottom: 27vh;
+        flex-direction: row;
+        margin-left: 0%;
+    }
 
+    .servico_item {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 17vh;
+        width: 80vw;
+        margin-right: 0vw;
+        background-color: #98f0fab3;
+        border-radius: 3vw;
+        font-size: 18px;
+    }
 
-    
-#servicos {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 2vw; 
-    width: 100vw;
-    margin-top: 10vh;
-    margin-bottom: 27vh;
-    flex-direction: row;
-    margin-left: 0%;
+    .servico_info {
+        height: 12vh;
+        width: 37vw;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        color: #635f5f;
+    }
 
-}
+    .servico_info h3 { 
+        color: #40A8B6;
+    }
 
-.servico_item {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 17vh;
-    width: 80vw;
-    margin-right: 0vw;
-    background-color: #98f0fab3;
-    border-radius: 3vw;
-    font-size: 18px;
-}
+    .servico_info .titulo{ 
+        color: #215a61;
+        font-weight: bold;
+    }
 
-.servico_info {
-    height: 12vh;
-    width: 37vw;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    color: #635f5f;
- 
-}
+    .servico_botao {
+        height: 15vh;
+        width: 37vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
 
-.servico_info h3 { 
-    color: #40A8B6;
-}
+    .servico_botao button {
+        font-size: 16px;
+        height: 6vh;
+        width: 22vw;
+        border: 1px solid #40A8B6;
+        color: #40A8B6;
+        background-color: transparent;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, border 0.3s;
+    }
 
-.servico_info .titulo{ 
-    color: #215a61;
-    font-weight: bold;
-}
-
-.servico_botao {
-    height: 15vh;
-    width: 37vw;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-   
-}
-
-.servico_botao button {
-    font-size: 16px;
-    height: 6vh;
-    width: 22vw;
-    border: 1px solid #40A8B6;
-    color: #40A8B6;
-    background-color: transparent;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, border 0.3s;
-}
-
-.servico_botao button:hover {
-    background-color: rgba(48, 190, 209, 0.429);
-    border: none;
-    color: var(--branco);
-}
-
-    
+    .servico_botao button:hover {
+        background-color: rgba(48, 190, 209, 0.429);
+        border: none;
+        color: var(--branco);
+    }
 
 }

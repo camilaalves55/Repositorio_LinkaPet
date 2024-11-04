@@ -1,7 +1,6 @@
 const app = require('./app');
 const port = app.get('port');
 
-
 const swaggerUi = require("swagger-ui-express")
 const swaggerJsDoc = require("swagger-jsdoc")
 

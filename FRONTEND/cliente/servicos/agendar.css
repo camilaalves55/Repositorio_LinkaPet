@@ -21,9 +21,6 @@ body {
     --marrom: #534E4E;
 }
 
-/* ---------------------HEADER------------------------ */
-
-
 .logo {
     display: flex;
     align-items: center;
@@ -47,6 +44,11 @@ body {
 }
 
 .links_navegacao {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     list-style: none;
     padding: 0;
     text-align: center; 
@@ -77,12 +79,14 @@ body {
     background-color: rgba(48, 189, 209, 0.1); 
     transform: translateX(5px);
     border-radius: 5px;
+    width: 9vw;
 }
 
 .links_navegacao a.ativo {
     border-radius: 5px;
     background-color: #30bdd1; 
     color: white; 
+    width: 9vw;
 }
 
 .links_navegacao a.ativo i {
@@ -94,15 +98,6 @@ body {
     padding: 20px;
 }
 
-@media (max-width: 768px) {
-    .barra_navegacao {
-        width: 200px;
-    }
-
-    .conteudo {
-        margin-left: 220px;
-    }
-}
 
 main{
     height: 100vh;
@@ -224,7 +219,7 @@ h1 {
     border: 2px solid #52eaff;
 }
 
-#dataNascimento {
+#dataAgendamento{
     padding-left: 2vw;
     height: 6vh;
     width: 33vw; 
@@ -254,30 +249,9 @@ h1 {
     color: var(--branco);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .cabecalho_logo {
     display: none;
 }
-
-
-
-
-
-
 
 /* --------------------------RESPONSIVO---------------------------- */
  
@@ -290,9 +264,7 @@ h1 {
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
-       
         overflow: scroll;
-       
     }
     
     .cabecalho_logo {
@@ -367,10 +339,7 @@ h1 {
         align-items: center;
         justify-content: space-between;
         flex-direction: column;
-
     }
-
-    
 
     .main_secao {
         margin-left: 0%;
@@ -389,13 +358,10 @@ h1 {
        display: none;
     } 
 
-
-
     .texto_inicial {
         margin-left: 10%;
     }
 
-        
     .form_consulta {
         display: flex;
         align-items: center;
@@ -422,7 +388,6 @@ h1 {
 
     #nome_servico {
         margin-left: 2vw;
-        color: #40A8B6;
         font-size: 30px;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
@@ -435,41 +400,33 @@ h1 {
     }
 
     .hora {
-        border: 1px solid #40A8B6;
         color: white;
         margin-left: 10px;
         width: 15vw; 
         border-radius: 5px;
         height: 4vh;
         font-size: 17px;
-        background-color: #53EAFF;
     }
 
-
-    #dataNascimento {
+    #dataAgendamento {
         padding-left: 2vw;
         height: 6vh;
         width: 77.5vw; 
         border-radius: 10px;
         border: none;
-        color: #40A8B6;
         font-size: 28px;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
-
 
     #agendar {
         height: 7vh;
         width: 30vw;
         font-size: 18px; 
-        border: 2px solid #40A8B6;
         color: #ffffff;
-        background-color: #30bdd1;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s, border 0.3s;
         font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     }
-        
 
 }
