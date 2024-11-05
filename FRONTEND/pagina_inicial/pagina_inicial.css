@@ -73,7 +73,7 @@ header {
 
 .boas_vindas {
     height: 40vh;
-    width: 30vw;
+    width: 25vw;
     display: flex;
     justify-content: start;
     align-items:first baseline;
@@ -157,13 +157,16 @@ a{
 }
 
 .texto {
-    font-size: 23px;
     height: 35vh;
     width: 30vw;
     display: flex;
     justify-content: space-around;
     align-items:center;
     flex-direction: column;
+}
+
+.texto p {
+    font-size: 25px;
 }
 
 .topico {
@@ -179,10 +182,17 @@ a{
 }
 
 .foto_pet {
-    height: 55vh;
-    width: 40vw;
+    height: 51vh;
+    width: 34vw;
     border-radius: 2vw;
-    background-color: #e8e8e8;
+    background-color: transparent;
+}
+
+.foto_pet img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 2vw;
+    object-fit: contain; 
 }
 
 .secao3 { 
@@ -305,12 +315,87 @@ a{
 }
 
 /* -------------------------------FOOTER------------------------------- */
-
-footer{
+footer {
     height: 50vh;
     width: 100%;
     background-color: var(--verde_agua);
+    color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
 }
+
+.footer-content {
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 10vh;
+    width: 5vw;
+    border-radius: 10px;
+}
+
+.footer-logo h3 {
+    margin: 5px 0;
+    font-size: 20px;
+    color: #40A8B6;
+}
+
+.info-texto {
+    font-size: 18px;
+    height: 20vh;
+    width: 25vw;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 10vh;
+    margin-bottom: 10px;
+}
+
+.contact-info p { 
+    color: #40A8B6;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #cdf9ff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.social-links i { 
+    color: #cdf9ff;
+}
+
+.footer-bottom {
+    width: 80%;
+    margin-top: 15px;
+    font-size: 0.8rem;
+}
+
+.footer-bottom p {
+   color: #2f8792;
+}
+
  
 /* --------------------------RESPONSIVO---------------------------- */
  
@@ -349,7 +434,7 @@ footer{
     }
  
     .boas_vindas {
-        height: 25vh;
+        height: 20vh;
         width: 45vw;
         justify-content: center;
         align-items:center;
@@ -358,6 +443,7 @@ footer{
    
     .boas_vindas h1 {
         font-size: 30px;
+        margin-bottom: 1vh;
     }
    
     .boas_vindas p {
@@ -430,6 +516,10 @@ footer{
         width: 45vw;
         font-size: 13px;
     }
+
+    .texto p {
+        font-size: 12px;
+    }
  
     .topico {
         font-size: 20px;
@@ -439,15 +529,99 @@ footer{
     }
    
     .foto_pet {
-        height: 20vh;
+        height: 15vh;
         width: 40vw;
         margin-left: 2vw;
         border-radius: 2vw;
-        background-color: #e8e8e8;
+        background-color: transparent;
     }
 
-    footer{
-        height: 28vh;
+    footer {
+        height: 33vh;
+        width: 100%;
+        background-color: var(--verde_agua);
+        color: #f1f1f1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .footer-logo {
+        margin-top: 15px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    
+    .footer-logo img {
+        height: 6vh;
+        width: 16vw;
+        border-radius: 10px;
+    }
+    
+    .footer-logo h3 {
+        margin: 5px 0;
+        font-size: 20px;
+        color: #40A8B6;
+    }
+    
+    .info-texto {
+        font-size: 18px;
+        height: 20vh;
+        width: 90vw;
+    }
+    
+    .contact-info {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 10vh;
+        margin-bottom: 5px;
+    }
+    
+    .contact-info p { 
+        color: #40A8B6;
+    }
+    
+    .social-links {
+        margin-top: 5px;
+    }
+    
+    .social-links a {
+        margin: 0 10px;
+        color: #cdf9ff;
+        font-size: 1.5em;
+        text-decoration: none;
+    }
+    
+    .social-links i { 
+        color: #cdf9ff;
+    }
+    
+    .footer-bottom {
+        background-color: white;
+        width: 100%;
+        height: 5vh;
+        margin-top: 0px;
+        font-size: 0.8rem;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .footer-bottom p {
+       color: #2f8792;
     }
  
 }

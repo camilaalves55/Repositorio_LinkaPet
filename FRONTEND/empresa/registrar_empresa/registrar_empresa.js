@@ -6,11 +6,10 @@ document.addEventListener('DOMContentLoaded', function () {
         };
     }
 
-    const serviceForm = document.getElementById('serviceForm');
-    if (serviceForm) {
-        serviceForm.addEventListener('submit', async function (event) {
-            event.preventDefault();
-
+    const formContainer = document.getElementById('formContainer');
+    if (formContainer) {
+        // Mova o listener para o botão "Salvar"
+        document.getElementById('salvarButton').onclick = async function () {
             const formData = new FormData();
             const logoInput = document.getElementById('logo');
 
@@ -78,6 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     confirmButtonText: 'OK'
                 });
             }
-        });
+        };
     }
 });

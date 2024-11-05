@@ -119,37 +119,58 @@ function removeStyles() {
     });
 }
 
+// function updateInformacao(id) {
+//     let foto = document.getElementById('info-foto');
+//     let texto = document.getElementById('info-texto');
+
+//     switch(id) {
+//         case 'banho':
+//             foto.style.backgroundImage = 'url("../../imagens/foto_perfil.png")';
+//             texto.innerHTML = '<p>O banho é fundamental para a higiene e bem-estar do seu pet. Ele remove sujeiras, alivia coceiras e deixa o pet mais confortável e cheirosinho.</p>';
+//             break;
+//         case 'tosa':
+//             foto.style.backgroundImage = 'url="../../imagens/logo_LinkaPet.png")';
+//             texto.innerHTML = '<p>A tosa regular ajuda a manter o pelo do seu pet limpo, sem nós e mais saudável. Ela é importante para controlar o calor, a sujeira e também evita problemas de pele.</p>';
+//             break;
+//         case 'vacinação':
+//             foto.style.backgroundImage = 'url="../../icones/logo_site.png")';
+//             texto.innerHTML = '<p>Vacinar seu pet é essencial para prevenir doenças e manter a saúde dele e de todos à sua volta. Com vacinas atualizadas, seu pet pode brincar e interagir com outros animais de forma segura.</p>';
+//             break;
+//         default:
+//             foto.style.backgroundImage = '';
+//             texto.innerHTML = '';
+//             break;
+//     }
+// }
+
 function updateInformacao(id) {
-    let foto = document.getElementById('info-foto');
-    let texto = document.getElementById('info-texto');
+    let foto = document.getElementById('info_foto');
+    let icon = foto.querySelector('i');
+    let texto = document.getElementById('info_texto');
+
+    // Limpar classes antigas de ícones antes de adicionar o novo
+    icon.className = 'fas';
 
     switch(id) {
         case 'banho':
-            foto.style.backgroundImage = 'url("../../imagens/foto_perfil.png")';
-            texto.innerHTML = '<p>Informações sobre banho.</p>';
+            icon.classList.add('fa-shower');
+            texto.innerHTML = '<p>O banho é fundamental para a higiene e bem-estar do seu pet. Ele remove sujeiras, alivia coceiras e deixa o pet mais confortável e cheirosinho.</p>';
             break;
         case 'tosa':
-            foto.style.backgroundImage = 'url="../../imagens/logo_LinkaPet.png")';
-            texto.innerHTML = '<p>Informações sobre tosa.</p>';
+            icon.classList.add('fa-cut');
+            texto.innerHTML = '<p>A tosa regular ajuda a manter o pelo do seu pet limpo, sem nós e mais saudável. Ela é importante para controlar o calor, a sujeira e também evita problemas de pele.</p>';
             break;
         case 'vacinação':
-            foto.style.backgroundImage = 'url="../../icones/logo_site.png")';
-            texto.innerHTML = '<p>Informações sobre vacinação.</p>';
-            break;
-        case 'medicação':
-            foto.style.backgroundImage = 'url="../../imagens/medicacao.png")';
-            texto.innerHTML = '<p>Informações sobre medicação.</p>';
-            break;
-        case 'texto':
-            foto.style.backgroundImage = 'url("../imagens/texto.png")';
-            texto.innerHTML = '<p>Informações sobre o texto.</p>';
+            icon.classList.add('fa-syringe');
+            texto.innerHTML = '<p>Vacinar seu pet é essencial para prevenir doenças e manter a saúde dele e de todos à sua volta. Com vacinas atualizadas, seu pet pode brincar e interagir com outros animais de forma segura.</p>';
             break;
         default:
-            foto.style.backgroundImage = '';
+            icon.className = 'fa-paw';
             texto.innerHTML = '';
             break;
     }
 }
+
 
 document.getElementById('sair').addEventListener('click', function (event) {
     event.preventDefault();
