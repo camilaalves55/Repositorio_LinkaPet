@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     } catch (error) {
         console.error("Erro ao buscar os agendamentos:", error);
-        alert('Ocorreu um erro ao buscar seus agendamentos. Por favor, tente novamente mais tarde.');
     }
 });
 

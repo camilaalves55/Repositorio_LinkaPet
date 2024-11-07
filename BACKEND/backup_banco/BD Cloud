@@ -1,6 +1,5 @@
-CREATE DATABASE linka_pet;
-drop database linka_pet;
-USE linka_pet;
+
+USE blvapy4vmmohh4hdtdfw;
 
 CREATE TABLE cadastro_cliente (
     id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -132,36 +131,3 @@ select * from linka_pet.perfil_empresa;
 select * from linka_pet.pets_cadastrados;
 select * from linka_pet.servicos;
 select * from linka_pet.agendamentos;
-
-INSERT INTO agendamentos (
-    cliente_id, nome_cliente, empresa_id, nome_empresa, servico_id, nome_servico, 
-    pet_id, nome_pet, raca, sexo, descricao, horario, data_agendada, status
-) VALUES (
-    1, 'João Silva', 1, 'PetShop Amigo', 3, 'Banho e Tosa',
-    1, 'Bobby', 'Labrador', 'Macho', 'Banho completo e tosa leve', '14:30', '2024-11-20', 'PENDENTE'
-);
-
-
-
-INSERT INTO perfil_empresa (empresa_id, logo, nome_empresa, sobre_empresa, tipos_servico, horario_funcionamento, telefone, endereco)
-VALUES 
-(1, 'logotipo1.png', 'Empresa A', 'Empresa especializada em serviços de tecnologia', 'Desenvolvimento de Software, Consultoria', 'Seg-Sex: 9h-18h', '(11) 1234-5678', 'Rua Exemplo, 123, São Paulo - SP'),
-(1, 'logotipo2.png', 'Empresa B', 'Empresa voltada para marketing digital', 'Marketing de Conteúdo, SEO, Redes Sociais', 'Seg-Sex: 10h-19h', '(11) 8765-4321', 'Avenida Digital, 456, São Paulo - SP'),
-(1, 'logotipo3.png', 'Empresa C', 'Consultoria em recursos humanos', 'Recrutamento, Seleção, Treinamento', 'Seg-Sex: 8h-17h', '(11) 1122-3344', 'Rua RH, 789, São Paulo - SP'),
-(1, 'logotipo4.png', 'Empresa D', 'Serviços contábeis e financeiros', 'Contabilidade, Planejamento Financeiro', 'Seg-Sex: 9h-18h', '(11) 5566-7788', 'Alameda Contábil, 101, São Paulo - SP'),
-(1, 'logotipo5.png', 'Empresa E', 'Soluções em tecnologia para empresas', 'Infraestrutura de TI, Segurança de Dados', 'Seg-Sex: 9h-18h', '(11) 9988-7766', 'Praça Tecnologia, 202, São Paulo - SP');
-
-
-ALTER TABLE agendamentos
-ADD COLUMN raca VARCHAR(255) NOT NULL,
-ADD COLUMN sexo VARCHAR(150) NOT NULL,
-ADD COLUMN descricao TEXT;
-
-
-
-
-ALTER TABLE pets_cadastrados
-DROP COLUMN idade;
-
-ALTER TABLE pets_cadastrados
-ADD COLUMN sexo VARCHAR(150) NOT NULL;

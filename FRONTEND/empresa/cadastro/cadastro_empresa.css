@@ -261,6 +261,7 @@ label {
     .submit {
         height: 5vh;
         width: 33vw;
+        z-index: 2;
     }
 
     #senha {
