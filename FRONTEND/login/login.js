@@ -36,7 +36,7 @@ async function handleSubmit(event) {
                 localStorage.setItem('id_empresa', result.data.id);
                 console.log("ID da empresa armazenado:", result.data.id);
 
-                const perfilResponse = await fetch('http://host:3005/api/store/get/empresa', {
+                const perfilResponse = await fetch('http://localhost:3005/api/store/get/empresa', {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ empresa_id: result.data.id })
