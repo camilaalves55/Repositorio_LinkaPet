@@ -215,6 +215,17 @@ label {
     display: none;
 }
 
+.texto_registro {
+    height: 27vh;
+    width: 38vw;
+    margin-bottom: 5vh;
+}
+
+.texto_registro p { 
+    font-size: 28px;
+    color: #534E4E;
+}
+
 .cabecalho_logo {
     display: none;
 }
@@ -334,6 +345,17 @@ label {
 
     #form-group-file {
         height: 6vh;
+    }
+
+    .texto_registro {
+        height: 25vh;
+        width: 89vw;
+        margin-bottom: 2vh;
+    }
+    
+    .texto_registro p { 
+        font-size: 23px;
+        color: #534E4E;
     }
     
 }

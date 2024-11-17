@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const formContainer = document.getElementById('formContainer');
     if (formContainer) {
-        // Mova o listener para o botão "Salvar"
         document.getElementById('salvarButton').onclick = async function () {
             const formData = new FormData();
             const logoInput = document.getElementById('logo');
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         confirmButtonText: 'OK'
                     }).then((result) => {
                         if (result.isConfirmed) {
-                            window.location.href = '../perfil/perfil_empresa.html';
+                            window.location.href = '../inicio/tela_principal.html';
                         }
                     });
                 } else {

@@ -7,8 +7,22 @@ const CONFIRMA_SENHA = document.getElementById('confirmaSenha');
 
 const BOTAO = document.querySelector('.submit');
 
+function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
 BOTAO.addEventListener('click', async function(e) {
     e.preventDefault();
+
+    if (!validateEmail(EMAIL.value)) {
+        Swal.fire({
+            title: 'Erro',
+            text: 'Por favor, insira um e-mail válido.',
+            icon: 'warning'
+        });
+        return;
+    }
 
     if (SENHA.value === CONFIRMA_SENHA.value && SENHA.value !== '') {
         let data = {

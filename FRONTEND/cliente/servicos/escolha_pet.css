@@ -203,12 +203,12 @@ article {
 }
 
 .foto_div {
-    margin: 0;
-    width: 8vw;
-    height: 16vh;
+    margin-right: 1vw;
+    width: 9vw;
+    height: 18vh;
     overflow: hidden; 
     border: 2px solid #53eaff;
-    border-radius: 50%;
+    border-radius: 1vw;
 }
 
 .bloco_card span {
@@ -406,12 +406,12 @@ h1 {
     }
 
     .foto_div {
-        margin: 0;
-        width: 28vw;
+        margin-right: 5vw;
+        width: 29vw;
         height: 15vh;
         overflow: hidden; 
         border: 2px solid #53eaff;
-        border-radius: 50%;
+        border-radius: 3vw;
     }
 
     .bloco_card span {
